@@ -14,9 +14,32 @@
 
 @implementation ViewController
 
+-(void)letterCombinationsKeyboard:(NSArray*) keyboard res:(NSMutableArray*)res digits:(NSString*)digits str:(NSString*)s {
+    if (s.length == digits.length) {
+        [res addObject:s];
+        return;
+    }
+
+    NSInteger letterIdx = [digits characterAtIndex:s.length] - '0';
+    NSString* letters = keyboard[letterIdx];
+    for (int i = 0; i < letters.length; ++i) {
+        NSString* istr = [s stringByAppendingFormat:@"%C",[letters characterAtIndex:i]];
+        [self letterCombinationsKeyboard:keyboard res:res digits:digits str:istr];
+    }
+}
+
+-(NSArray*)letterCombinations:(NSString*) digits{
+    NSMutableArray* res = [NSMutableArray array];
+    NSArray* keyboard = @[@"",@"",@"abc", @"def", @"ghi",
+    @"jkl", @"mno", @"pqrs", @"tuv", @"wxyz"];
+    [self letterCombinationsKeyboard:keyboard res:res digits:digits str:@""];
+    return res;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"%@",[self letterCombinations:@"23"]);
 }
 
 - (void)didReceiveMemoryWarning {
