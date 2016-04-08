@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A53074F1CAABAF900B63205 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ADFFC651CAAB663000C8C21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A53074E1CAABABA00B63205 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				2A53074F1CAABAF900B63205 /* Global.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
 		2ADFFC561CAAB662000C8C21 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +67,7 @@
 		2ADFFC611CAAB663000C8C21 /* Excellent */ = {
 			isa = PBXGroup;
 			children = (
+				2A53074E1CAABABA00B63205 /* Macro */,
 				2ADFFC651CAAB663000C8C21 /* AppDelegate.h */,
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
 				2ADFFC681CAAB663000C8C21 /* ViewController.h */,
@@ -302,6 +312,7 @@
 				2ADFFC781CAAB663000C8C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
