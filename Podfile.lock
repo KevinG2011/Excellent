@@ -31,17 +31,20 @@ PODS:
     - BlocksKit/DynamicDelegate
   - SystemServices (1.1.0)
   - UITableView+FDTemplateLayoutCell_Bell (1.4.1)
+  - YYModel (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - BlocksKit (~> 2.2.5)
   - SystemServices (~> 1.1.0)
   - UITableView+FDTemplateLayoutCell_Bell (~> 1.4.1)
+  - YYModel (~> 1.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   SystemServices: 00d3516e0f9c233ba7b61c9853d199dd5e9f5643
   UITableView+FDTemplateLayoutCell_Bell: 99fa3b3c1e200c8fceae1af39ba3787707d200cc
+  YYModel: 7a467eff45ae3641c33efb136c262d33b6f48c1a
 
 COCOAPODS: 0.39.0
