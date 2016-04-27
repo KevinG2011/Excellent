@@ -82,3 +82,22 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/BlocksKit.framework"
+  install_framework "Pods/IBAnimatable.framework"
+  install_framework "Pods/JHChainableAnimations.framework"
+  install_framework "Pods/SystemServices.framework"
+  install_framework "Pods/UITableView_FDTemplateLayoutCell_Bell.framework"
+  install_framework "Pods/YYModel.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AFNetworking.framework"
+  install_framework "Pods/BlocksKit.framework"
+  install_framework "Pods/IBAnimatable.framework"
+  install_framework "Pods/JHChainableAnimations.framework"
+  install_framework "Pods/SystemServices.framework"
+  install_framework "Pods/UITableView_FDTemplateLayoutCell_Bell.framework"
+  install_framework "Pods/YYModel.framework"
+fi
