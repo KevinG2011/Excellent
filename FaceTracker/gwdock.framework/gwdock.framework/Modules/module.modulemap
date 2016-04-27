@@ -1,0 +1,6 @@
+framework module gwdock {
+  umbrella header "gwdock.h"
+
+  export *
+  module * { export * }
+}

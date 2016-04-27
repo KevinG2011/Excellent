@@ -14,6 +14,7 @@
 		2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */; };
 		2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */; };
 		2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */; };
+		2AE7E9B21CD0ACA400DDECFB /* FaceTracker in Resources */ = {isa = PBXBuildFile; fileRef = 2AE7E9B11CD0ACA400DDECFB /* FaceTracker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFFC711CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADFFC731CAAB663000C8C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE7E9B11CD0ACA400DDECFB /* FaceTracker */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceTracker; sourceTree = "<group>"; };
 		49AEB19A766DEB7BA6EF1C12 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		72532BD13E6414251865A154 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B343AE0B1CB816F8000BF86F /* Excellent.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excellent.pch; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		12CC8DB7F2A1A7CEA29ADCB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2AE7E9B11CD0ACA400DDECFB /* FaceTracker */,
 				49AEB19A766DEB7BA6EF1C12 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -177,6 +180,7 @@
 			files = (
 				2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */,
 				2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */,
+				2AE7E9B21CD0ACA400DDECFB /* FaceTracker in Resources */,
 				2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -340,7 +344,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,7 +360,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
 				INFOPLIST_FILE = Excellent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazyhornets.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,7 +375,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
 				INFOPLIST_FILE = Excellent/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazyhornets.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
