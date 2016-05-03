@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ExcellentUI.h"
 
 @interface ViewController ()
 
@@ -35,22 +36,27 @@
 //    [self letterCombinationsKeyboard:keyboard res:res digits:digits str:@""];
 //    return res;
 //}
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    _currentIndex = indexPath.row;
+    [collectionView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSLog(@"%@",[self letterCombinations:@"23"]);
+    RWKnobControl* kControl = [[RWKnobControl alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
+    kControl.center = self.view.center;
+    [self.view addSubview:kControl];
     
-    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
-    view1.backgroundColor = [UIColor redColor];
-    view1.center = self.view.center;
-    [self.view addSubview:view1];
-    
-    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:view1.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(30, 30)];
-    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-    maskLayer.frame = view1.bounds;
-    maskLayer.path = maskPath.CGPath;
-    view1.layer.mask = maskLayer;
+//    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
+//    view1.backgroundColor = [UIColor redColor];
+//    view1.center = self.view.center;
+//    [self.view addSubview:view1];
+//    
+//    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:view1.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(30, 30)];
+//    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+//    maskLayer.frame = view1.bounds;
+//    maskLayer.path = maskPath.CGPath;
+//    view1.layer.mask = maskLayer;
 }
 
 - (void)didReceiveMemoryWarning {

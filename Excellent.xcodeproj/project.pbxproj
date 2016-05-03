@@ -6,9 +6,33 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2A7EE2751CD8573F0028D67C /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2A7EE2761CD8573F0028D67C /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				2A7EE27B1CD8575C0028D67C /* MultiPlatform Build */,
+			);
+			dependencies = (
+				2A7EE27A1CD857460028D67C /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		2A7EE24A1CD8444F0028D67C /* gwdock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE2481CD8444F0028D67C /* gwdock.framework */; };
 		2A7EE24B1CD8444F0028D67C /* TCPlayerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE2491CD8444F0028D67C /* TCPlayerSDK.framework */; };
+		2A7EE25B1CD84A000028D67C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE25A1CD84A000028D67C /* UIKit.framework */; };
+		2A7EE25E1CD84ABF0028D67C /* ExcellentUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7EE2591CD849CE0028D67C /* ExcellentUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A7EE26A1CD84F650028D67C /* RWKnobControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7EE2641CD84F650028D67C /* RWKnobControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A7EE26C1CD84F650028D67C /* RWKnobRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7EE2661CD84F650028D67C /* RWKnobRenderer.h */; };
+		2A7EE26D1CD84F650028D67C /* RWKnobRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EE2671CD84F650028D67C /* RWKnobRenderer.m */; };
+		2A7EE26E1CD84F650028D67C /* RWRotationGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7EE2681CD84F650028D67C /* RWRotationGestureRecognizer.h */; };
+		2A7EE26F1CD84F650028D67C /* RWRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EE2691CD84F650028D67C /* RWRotationGestureRecognizer.m */; };
+		2A7EE2701CD84FBE0028D67C /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EE2651CD84F650028D67C /* RWKnobControl.m */; };
+		2A7EE2731CD8517D0028D67C /* libExcellentUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE2501CD849800028D67C /* libExcellentUI.a */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
 		2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC691CAAB663000C8C21 /* ViewController.m */; };
@@ -17,11 +41,49 @@
 		2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2A7EE2711CD8513C0028D67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ADFFC571CAAB662000C8C21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A7EE24F1CD849800028D67C;
+			remoteInfo = ExcellentUI;
+		};
+		2A7EE2791CD857460028D67C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2ADFFC571CAAB662000C8C21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A7EE24F1CD849800028D67C;
+			remoteInfo = ExcellentUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2A7EE24E1CD849800028D67C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		22AC09D890611EF5CC32B17F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		2A7EE2481CD8444F0028D67C /* gwdock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gwdock.framework; sourceTree = "<group>"; };
 		2A7EE2491CD8444F0028D67C /* TCPlayerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TCPlayerSDK.framework; sourceTree = "<group>"; };
+		2A7EE2501CD849800028D67C /* libExcellentUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libExcellentUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A7EE2591CD849CE0028D67C /* ExcellentUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcellentUI.h; sourceTree = "<group>"; };
+		2A7EE25A1CD84A000028D67C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2A7EE2641CD84F650028D67C /* RWKnobControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWKnobControl.h; sourceTree = "<group>"; };
+		2A7EE2651CD84F650028D67C /* RWKnobControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobControl.m; sourceTree = "<group>"; };
+		2A7EE2661CD84F650028D67C /* RWKnobRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWKnobRenderer.h; sourceTree = "<group>"; };
+		2A7EE2671CD84F650028D67C /* RWKnobRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobRenderer.m; sourceTree = "<group>"; };
+		2A7EE2681CD84F650028D67C /* RWRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRotationGestureRecognizer.h; sourceTree = "<group>"; };
+		2A7EE2691CD84F650028D67C /* RWRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRotationGestureRecognizer.m; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ADFFC651CAAB663000C8C21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,10 +99,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A7EE24D1CD849800028D67C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7EE25B1CD84A000028D67C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2ADFFC5C1CAAB662000C8C21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7EE2731CD8517D0028D67C /* libExcellentUI.a in Frameworks */,
 				2A7EE24A1CD8444F0028D67C /* gwdock.framework in Frameworks */,
 				2A7EE24B1CD8444F0028D67C /* TCPlayerSDK.framework in Frameworks */,
 			);
@@ -60,16 +131,40 @@
 		2A7EE2471CD8441F0028D67C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A7EE25A1CD84A000028D67C /* UIKit.framework */,
 				2A7EE2481CD8444F0028D67C /* gwdock.framework */,
 				2A7EE2491CD8444F0028D67C /* TCPlayerSDK.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
+		2A7EE2511CD849800028D67C /* ExcellentUI */ = {
+			isa = PBXGroup;
+			children = (
+				2A7EE2591CD849CE0028D67C /* ExcellentUI.h */,
+				2A7EE2631CD84F650028D67C /* RWKnobControl */,
+			);
+			path = ExcellentUI;
+			sourceTree = "<group>";
+		};
+		2A7EE2631CD84F650028D67C /* RWKnobControl */ = {
+			isa = PBXGroup;
+			children = (
+				2A7EE2641CD84F650028D67C /* RWKnobControl.h */,
+				2A7EE2651CD84F650028D67C /* RWKnobControl.m */,
+				2A7EE2661CD84F650028D67C /* RWKnobRenderer.h */,
+				2A7EE2671CD84F650028D67C /* RWKnobRenderer.m */,
+				2A7EE2681CD84F650028D67C /* RWRotationGestureRecognizer.h */,
+				2A7EE2691CD84F650028D67C /* RWRotationGestureRecognizer.m */,
+			);
+			path = RWKnobControl;
+			sourceTree = "<group>";
+		};
 		2ADFFC561CAAB662000C8C21 = {
 			isa = PBXGroup;
 			children = (
 				2ADFFC611CAAB663000C8C21 /* Excellent */,
+				2A7EE2511CD849800028D67C /* ExcellentUI */,
 				2A7EE2471CD8441F0028D67C /* Frameworks */,
 				2ADFFC601CAAB662000C8C21 /* Products */,
 				64DC7AA7F40DE297D81BB90A /* Pods */,
@@ -80,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				2ADFFC5F1CAAB662000C8C21 /* Excellent.app */,
+				2A7EE2501CD849800028D67C /* libExcellentUI.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +217,40 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2A7EE25D1CD84AA90028D67C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7EE25E1CD84ABF0028D67C /* ExcellentUI.h in Headers */,
+				2A7EE26A1CD84F650028D67C /* RWKnobControl.h in Headers */,
+				2A7EE26C1CD84F650028D67C /* RWKnobRenderer.h in Headers */,
+				2A7EE26E1CD84F650028D67C /* RWRotationGestureRecognizer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		2A7EE24F1CD849800028D67C /* ExcellentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A7EE2561CD849800028D67C /* Build configuration list for PBXNativeTarget "ExcellentUI" */;
+			buildPhases = (
+				2A7EE24C1CD849800028D67C /* Sources */,
+				2A7EE24D1CD849800028D67C /* Frameworks */,
+				2A7EE24E1CD849800028D67C /* CopyFiles */,
+				2A7EE25D1CD84AA90028D67C /* Headers */,
+				2A7EE27D1CD876830028D67C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExcellentUI;
+			productName = ExcellentUI;
+			productReference = 2A7EE2501CD849800028D67C /* libExcellentUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		2ADFFC5E1CAAB662000C8C21 /* Excellent */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ADFFC761CAAB663000C8C21 /* Build configuration list for PBXNativeTarget "Excellent" */;
@@ -136,6 +265,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2A7EE2721CD8513C0028D67C /* PBXTargetDependency */,
 			);
 			name = Excellent;
 			productName = Excellent;
@@ -151,6 +281,12 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Li Jia";
 				TargetAttributes = {
+					2A7EE24F1CD849800028D67C = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					2A7EE2751CD8573F0028D67C = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					2ADFFC5E1CAAB662000C8C21 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -170,6 +306,8 @@
 			projectRoot = "";
 			targets = (
 				2ADFFC5E1CAAB662000C8C21 /* Excellent */,
+				2A7EE24F1CD849800028D67C /* ExcellentUI */,
+				2A7EE2751CD8573F0028D67C /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +340,33 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		2A7EE27B1CD8575C0028D67C /* MultiPlatform Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "MultiPlatform Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh multi_build.sh";
+		};
+		2A7EE27D1CD876830028D67C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh build.sh";
 		};
 		7D4B8F74E585902E5F97A28E /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -236,6 +401,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A7EE24C1CD849800028D67C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A7EE2701CD84FBE0028D67C /* RWKnobControl.m in Sources */,
+				2A7EE26F1CD84F650028D67C /* RWRotationGestureRecognizer.m in Sources */,
+				2A7EE26D1CD84F650028D67C /* RWKnobRenderer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2ADFFC5B1CAAB662000C8C21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,6 +422,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A7EE2721CD8513C0028D67C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A7EE24F1CD849800028D67C /* ExcellentUI */;
+			targetProxy = 2A7EE2711CD8513C0028D67C /* PBXContainerItemProxy */;
+		};
+		2A7EE27A1CD857460028D67C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A7EE24F1CD849800028D67C /* ExcellentUI */;
+			targetProxy = 2A7EE2791CD857460028D67C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */ = {
@@ -268,6 +456,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A7EE2571CD849800028D67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		2A7EE2581CD849800028D67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		2A7EE2771CD8573F0028D67C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2A7EE2781CD8573F0028D67C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2ADFFC741CAAB663000C8C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,6 +623,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A7EE2561CD849800028D67C /* Build configuration list for PBXNativeTarget "ExcellentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A7EE2571CD849800028D67C /* Debug */,
+				2A7EE2581CD849800028D67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2A7EE2761CD8573F0028D67C /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A7EE2771CD8573F0028D67C /* Debug */,
+				2A7EE2781CD8573F0028D67C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2ADFFC5A1CAAB662000C8C21 /* Build configuration list for PBXProject "Excellent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
