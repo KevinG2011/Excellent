@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ExcellentUI.h"
+#import <ExcellentUI/ExcellentUI.h>
 
 @interface ViewController ()
 
@@ -36,10 +36,6 @@
 //    [self letterCombinationsKeyboard:keyboard res:res digits:digits str:@""];
 //    return res;
 //}
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    _currentIndex = indexPath.row;
-    [collectionView reloadData];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

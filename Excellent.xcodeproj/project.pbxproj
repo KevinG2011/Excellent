@@ -32,7 +32,8 @@
 		2A7EE26E1CD84F650028D67C /* RWRotationGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A7EE2681CD84F650028D67C /* RWRotationGestureRecognizer.h */; };
 		2A7EE26F1CD84F650028D67C /* RWRotationGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EE2691CD84F650028D67C /* RWRotationGestureRecognizer.m */; };
 		2A7EE2701CD84FBE0028D67C /* RWKnobControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7EE2651CD84F650028D67C /* RWKnobControl.m */; };
-		2A7EE2731CD8517D0028D67C /* libExcellentUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE2501CD849800028D67C /* libExcellentUI.a */; };
+		2A7EE2891CD87D800028D67C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE2881CD87D800028D67C /* Pods.framework */; };
+		2A7EE28B1CD87E030028D67C /* ExcellentUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EE28A1CD87E030028D67C /* ExcellentUI.framework */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
 		2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC691CAAB663000C8C21 /* ViewController.m */; };
@@ -42,13 +43,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A7EE2711CD8513C0028D67C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2ADFFC571CAAB662000C8C21 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A7EE24F1CD849800028D67C;
-			remoteInfo = ExcellentUI;
-		};
 		2A7EE2791CD857460028D67C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2ADFFC571CAAB662000C8C21 /* Project object */;
@@ -84,6 +78,8 @@
 		2A7EE2671CD84F650028D67C /* RWKnobRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWKnobRenderer.m; sourceTree = "<group>"; };
 		2A7EE2681CD84F650028D67C /* RWRotationGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWRotationGestureRecognizer.h; sourceTree = "<group>"; };
 		2A7EE2691CD84F650028D67C /* RWRotationGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWRotationGestureRecognizer.m; sourceTree = "<group>"; };
+		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
+		2A7EE28A1CD87E030028D67C /* ExcellentUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ExcellentUI.framework; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2ADFFC651CAAB663000C8C21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,9 +107,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A7EE2731CD8517D0028D67C /* libExcellentUI.a in Frameworks */,
+				2A7EE2891CD87D800028D67C /* Pods.framework in Frameworks */,
 				2A7EE24A1CD8444F0028D67C /* gwdock.framework in Frameworks */,
 				2A7EE24B1CD8444F0028D67C /* TCPlayerSDK.framework in Frameworks */,
+				2A7EE28B1CD87E030028D67C /* ExcellentUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +128,8 @@
 		2A7EE2471CD8441F0028D67C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A7EE2881CD87D800028D67C /* Pods.framework */,
+				2A7EE28A1CD87E030028D67C /* ExcellentUI.framework */,
 				2A7EE25A1CD84A000028D67C /* UIKit.framework */,
 				2A7EE2481CD8444F0028D67C /* gwdock.framework */,
 				2A7EE2491CD8444F0028D67C /* TCPlayerSDK.framework */,
@@ -265,7 +264,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2A7EE2721CD8513C0028D67C /* PBXTargetDependency */,
 			);
 			name = Excellent;
 			productName = Excellent;
@@ -424,11 +422,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A7EE2721CD8513C0028D67C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A7EE24F1CD849800028D67C /* ExcellentUI */;
-			targetProxy = 2A7EE2711CD8513C0028D67C /* PBXContainerItemProxy */;
-		};
 		2A7EE27A1CD857460028D67C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2A7EE24F1CD849800028D67C /* ExcellentUI */;
@@ -589,6 +582,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
@@ -609,6 +603,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
@@ -630,6 +625,7 @@
 				2A7EE2581CD849800028D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A7EE2761CD8573F0028D67C /* Build configuration list for PBXAggregateTarget "Framework" */ = {
 			isa = XCConfigurationList;
@@ -638,6 +634,7 @@
 				2A7EE2781CD8573F0028D67C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ADFFC5A1CAAB662000C8C21 /* Build configuration list for PBXProject "Excellent" */ = {
 			isa = XCConfigurationList;
