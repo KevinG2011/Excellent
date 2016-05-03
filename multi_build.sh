@@ -82,3 +82,6 @@ cp -a "${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}" \
 
 # Copy the framework to the user's desktop
 ditto "${RW_FRAMEWORK_LOCATION}" "${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework"
+
+ditto "${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.bundle" \
+      "${HOME}/Desktop/${RW_FRAMEWORK_NAME}.bundle"
