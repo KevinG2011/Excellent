@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7A62F7F706FD11EFD2182FDA6E18B7F487D10CCC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7A62F7F706FD11EFD2182FDA6E18B7F487D10CCC" : 0,
+    "1A006E13FE2A4C15A9454D1732319819F00982FB" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D12C13CC-2805-4A46-8550-720C7F2C0A58",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7A62F7F706FD11EFD2182FDA6E18B7F487D10CCC" : "Excellent\/",
+    "1A006E13FE2A4C15A9454D1732319819F00982FB" : "huajiao_ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Excellent",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Excellent.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.corp.qihoo.net\/huajiao_ios\/huajiao_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1A006E13FE2A4C15A9454D1732319819F00982FB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/git.coding.net\/crime\/Excellent.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7A62F7F706FD11EFD2182FDA6E18B7F487D10CCC"
+    }
+  ]
+}
