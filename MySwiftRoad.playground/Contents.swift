@@ -1,6 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
+import Foundation
 
 var cstr = "Welcome!"
 let nstr:Float = 4
@@ -14,11 +15,32 @@ print(statusCode)
 let (sc,_) = httpError
 print(sc)
 
+//字符串
+var eStr = String("1233")
+for character in eStr.characters {
+    print(character,""," ")
+}
+let catchar: [Character] = ["C","a","t","!","?"]
+var catStr: String = String(catchar)
+catStr.characters.count
+catStr[catStr.startIndex]
+let index = catStr[catStr.startIndex.advancedBy(2)]
+catStr.insert("!", atIndex: catStr.endIndex)
+
 //数组
 var array = ["catfish","water","tulips","blue paint"]
-var aArray = [String]();
-aArray = []
-array[0]
+array[2...3] = ["beaf","sheep"]
+array.removeLast()
+for (index,value) in array.enumerate() {
+    print("Item \(String(index+1)): \(value)")
+}
+
+array = [String]()
+array = [String](count:3,repeatedValue:"2.5")
+
+let farmAnimals: Set = ["?","?","?","?","?"]
+let cityAnimals: Set = ["?","?"]
+print(farmAnimals.isDisjointWith(cityAnimals))
 
 //字典
 var dict = ["May":[5,15],"Feb":[2,"2"]]
@@ -31,39 +53,6 @@ for score in scores {
     if score > 80 {
         print(score)
     }
-}
-
-//类型标注
-var msg = "Hello"
-var red,green,blue: String?
-print(msg, terminator: "") //禁用换行符
-
-//类型别名
-typealias AudioSample = UInt16
-var maxAmplitudeFound = AudioSample.min
-
-//可选类型,可选绑定
-var optVal:String?
-if let opt = optVal {
-    print("hello, \(opt)")
-} else {
-    print("hello \(optVal ?? String(2))")
-}
-
-//switch用法
-let veg = "rg"
-switch veg {
-case "r":
-    print("r");
-case let x where x.hasSuffix("g"):
-    print("Is it a spicy \(x)");
-default:
-    print("k");
-}
-
-//迭代字典
-for (mon,num) in dict {
-    print("Month : \(mon), Num : \(num)")
 }
 
 //while,repeat循环
@@ -90,13 +79,71 @@ for i in 1...3 {
 }
 print(k)
 
+//switch用法
+let veg = "rg"
+switch veg {
+case "r":
+    print("r");
+case let x where x == "rg":
+    print("x == \(x)")
+case let x where x.hasSuffix("g"):
+    print("x hasSuffix \(x)")
+default:
+    print("k");
+}
+
+let vCount = 62
+switch vCount {     //区间匹配
+case 0:
+    print("0")
+case 1..<5:
+    print(vCount)
+default:
+    print("default")
+}
+
+func greet(){
+    guard let gCount = dict["Feb"] else {
+        return
+    }
+}
+
+//API可用性
+if #available(iOS 9, OSX 10.10,*) {
+    print("available iOS9")
+}
+
+
+//类型标注
+var msg = "Hello"
+var red,green,blue: String?
+print(msg, terminator: "") //禁用换行符
+
+
+//类型别名
+typealias AudioSample = UInt16
+var maxAmplitudeFound = AudioSample.min
+
+//可选类型,可选绑定
+var optVal:String?
+if let opt = optVal {
+    print("hello, \(opt)")
+} else {
+    print("hello \(optVal ?? String(2))")
+}
+
+//迭代字典
+for (mon,num) in dict {
+    print("Month : \(mon), Num : \(num)")
+}
+
 //函数定义与调用
 func greet(name:String, day:String, eat:String) -> String {
     return "Hello \(name), today is \(day). eat \(eat)"
 }
 greet("Bob", day: "Tue", eat: "noodles");
 
-//元组返回多个值
+//多重返回值
 func calculate(scores: [Int]) -> (Int,Int,Int) {
     var min = scores[0];
     var max = scores[0];
@@ -129,22 +176,16 @@ func sumOf(args:Int...) -> Int {
 sumOf()
 sumOf(1,2,3)
 
-func avgOf(args:Int...) -> Int {
-    var sum = 0
-    var count = 0
-    for num in args {
-        sum += num;
-        count += 1;
-    }
-    
-    if count > 0 {
-        return sum / count;
-    } else {
-        return 0;
-    }
+//输入输出参数
+func pad(inout str: String) -> String {
+    str = "-" + str
+    return str
 }
 
-avgOf(1,2,3)
+var inStr: String = "in"
+pad(&inStr)
+print(inStr)
+
 
 //嵌套函数
 func ret3rd() -> Int {
@@ -170,6 +211,7 @@ var itom = make();
 itom(3);
 
 //多种闭包
+
 func hasAnyMatches(list:[Int],cond:Int -> Bool) -> Bool {
     for item in list {
         if cond(item) {
@@ -192,6 +234,7 @@ print(retNums);
 retNums = nums.map{ $0 * 2 }
 print(retNums);
 retNums = nums.sort{ $0 < $1 }
+retNums = nums.sort( < )
 print(retNums);
 
 hasAnyMatches(nums, cond: numCompare);
@@ -205,19 +248,66 @@ var closure = {
 let result = nums.map(closure);
 print(result);
 
-//对象和类
-class Vehicle {
-    var wheels = 0;
-    var brand:String?;
-    //初始化
-    init(wheels:Int,brand:String) {
-        self.wheels = wheels;
-        self.brand = brand;
+func someFunc(@noescape closure: ()-> Void) {  //非逃逸闭包
+    closure()
+}
+
+var customers:[String] = ["Barry,","Daniella"]
+var providers: [() -> String] = []          //自动逃逸闭包
+func someAutoFunc(@autoclosure(escaping) provider: () -> String){
+    providers.append(provider)
+}
+someAutoFunc(customers.removeLast())
+someAutoFunc(customers.removeLast())
+print(providers)
+
+//枚举
+enum Barcode {
+    case UPCA(Int,Int,Int,Int)
+    case QRCode(String)
+}
+var prodBarcode = Barcode.UPCA(8, 85909, 51226, 3)
+
+enum ArithExpression {  //递归枚举
+    case Number(Int)
+    indirect case Addition(ArithExpression,ArithExpression)
+    indirect case Multiply(ArithExpression,ArithExpression)
+}
+
+func evaluate(exp:ArithExpression) -> Int {
+    switch exp {
+    case .Number(let v):
+        return v
+    case .Addition(let v1, let v2):
+        return evaluate(v1) + evaluate(v2)
+    case .Multiply(let v1, let v2):
+        return evaluate(v1) * evaluate(v2)
     }
+}
+
+let five = ArithExpression.Number(5)
+let sum = ArithExpression.Addition(.Number(3), .Number(2))
+
+//对象 类 基类 构造器
+class Vehicle {
+    var wheels = 0
+    let text:String?    //常量属性
+    var brand:String?   //可选属性类型
+    //初始化
+    init(_ wheels:Int,_ brand:String) { //不提供外部参数名字
+        self.wheels = wheels
+        self.text = ""
+        self.brand = brand
+    }
+    
+    convenience init() {
+        self.init(0,"Unnamed")
+    }
+    
     //析构
     deinit {
-        self.wheels = 0;
-        self.brand = nil;
+        self.wheels = 0
+        self.brand = nil
     }
     
     func desc() -> String {
@@ -229,7 +319,7 @@ class Vehicle {
 }
 
 //子类化
-var bez = Vehicle(wheels: 4,brand: "Benze")
+var bez = Vehicle(4,"Benze")
 print(bez.desc())
 
 //枚举定义
@@ -267,9 +357,9 @@ class Car: Vehicle {
     }
     
     init(driveType:DriveType) {
-        super.init(wheels: 4, brand: "")
+        super.init(4,"")
         self.driveType = driveType;
-        brand = "unknown";
+        self.brand = "unknown";
     }
     
     func shake() {
@@ -286,13 +376,81 @@ var car = Car(driveType: DriveType.FrontDrive)
 car.run(2)
 car.driveControl
 car.driveControl = "后驱"
-car.driveType
+
 
 let aCar:Car? = Car(driveType: DriveType.RearDrive)
 let dc = aCar?.driveControl
 print(aCar?.driveType?.rawValue)
 
-//枚举和结构体
+struct creature {
+    let species: String?
+    init?(species: String) {    //可失败构造器
+        if species.isEmpty {
+            return nil
+        }
+        self.species = species
+    }
+}
+
+//可失败枚举构造
+enum TemperatureUnit {
+    case Kelvin,Celsius,Fahrenheit
+    init?(symbol: Character) {
+        switch symbol {
+        case "K":
+            self = .Kelvin
+        case "C":
+            self = .Celsius
+        case "F":
+            self = .Fahrenheit
+        default:
+            return nil
+        }
+    }
+}
+
+class SomeClass {
+    let someAttr = 5
+    required init() { //必要构造器,子类必须实现
+        
+    }
+    
+    let closeureAttr: Int = {
+        print("closure init property!")
+//        return someAttr * 2    //闭包执行时,实例其他部分还未初始化,不能访问其他属性
+        return 10
+    }()
+}
+
+let clazz:SomeClass = SomeClass()
+
+class DataImporter {
+    var fileName = "data.txt"
+    static var totalCount:Int = 0 {
+        willSet(newTotalCount) {    //willSet观察器
+            print("Abount to set totalSteps to \(newTotalCount)")
+        }
+        didSet {
+            if totalCount > oldValue {  //didSet观察器
+                print("Added \(totalCount - oldValue) steps");
+            }
+        }
+    }
+}
+class DataManager {
+    lazy var importer = DataImporter()
+    var data = [String]()
+    subscript(index:Int)->String {
+        get {
+            return data[index]
+        }
+    }
+}
+let manager = DataManager()
+manager.data.append("Some data")
+manager.data.append("Some more data")
+
+//全局变量,枚举和结构体
 if let cvtDriverType = DriveType(rawValue: 1) {
     let twDesc = cvtDriverType.desc()
 }
@@ -359,12 +517,12 @@ switch unknown {
 //协议和扩展
 protocol AnimalProtocol {
     var age:Int { get }
-    mutating func run()
+    mutating func grow()
 }
 
 class Animal {
     var age:Int = 1
-    func run(){
+    func grow(){
         print("Animal is running!")
     }
 }
@@ -374,20 +532,21 @@ class Bird: Animal,AnimalProtocol {
     func eat() {
         print("Bird is Eating!")
     }
-    override func run() {
+    override func grow() {
+        
         print("Bird is flying!")
     }
 }
 
 var b:Bird = Bird()
-b.run()
+b.grow()
 
 let anim:AnimalProtocol = b
 //anim.eat()          //Uncomment to see the error
 
 struct Horse: AnimalProtocol {
     var age:Int = 1
-    mutating func run() {
+    mutating func grow() {
         print("Horse is galloping!")
         age += 1;
     }
@@ -401,13 +560,13 @@ enum Fish: Float,AnimalProtocol {
             return 10
         }
     }
-    func run() {
+    func grow() {
         print("Fish is swimming!");
     }
 }
 
 var f = Fish.GrossFish;
-f.run();
+f.grow();
 print(f.age)
 
 //extension class
