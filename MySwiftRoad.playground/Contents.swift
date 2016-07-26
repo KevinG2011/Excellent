@@ -438,7 +438,7 @@ class DataImporter {
     }
 }
 class DataManager {
-    lazy var importer = DataImporter()
+    lazy var importer = DataImporter() //懒加载
     var data = [String]()
     subscript(index:Int)->String {
         get {
@@ -494,11 +494,124 @@ struct Card {
 let card3rd = Card(suit: .Diamonds);
 let cardDesc = card3rd.desc();
 
+//弱引用
+class Person {
+    let name: String
+    var apartment: Apartment?
+    init(name: String) {
+        self.name = name
+    }
+    deinit {
+        print("\(name) is being deinitialized")
+    }
+}
+
+class Apartment {
+    let unit: String
+    weak var tenant: Person?
+    init(unit: String) {
+        self.unit = unit
+    }
+    deinit {
+        print("Apartment \(unit) is being deinitialized")
+    }
+}
+
+//无主引用
+class City {
+    let name: String
+    unowned let country: Country    //无主引用,非可选类型,永远有值
+    init(name:String,country:Country) {
+        self.name = name
+        self.country = country
+    }
+}
+
+class Country {
+    let name: String
+    var capitalCity:City!
+    init(name:String,capitalName:String) {
+        self.name = name
+        self.capitalCity = City(name: capitalName, country: self)
+    }
+}
+
+//闭包循环引用
+class HTMLElement {
+    let name: String
+    let text: String?
+    lazy var asHTML:Void -> String = {
+        [unowned self] in
+        if let text = self.text {
+            return "<\(self.name)>\(text)</\(self.name)>"
+        } else {
+            return "</\(self.name)>"
+        }
+    }
+    
+    init(name:String,text:String) {
+        self.name = name;
+        self.text = text;
+    }
+    
+    deinit {
+        print("<\(name)> dealloc")
+    }
+}
+
+var paragraph:HTMLElement? = HTMLElement(name: "p", text: "Hello World!")
+paragraph!.asHTML()
+paragraph = nil
+
+//抛异常,需要集成ErrorType
+enum VendingMachineError:ErrorType {
+    case InvalidSelection                       //选择无效
+    case InsufficientFunds(coinsNeeded: Int)    //金额不足
+    case OutOfStock                             //缺货
+}
+
+struct Item {
+    var price: Int
+    var count: Int
+}
+
+class VendingMachine {
+    var coinsDeposited = 0
+    var inventory = [
+        "Candy Bar": Item(price: 12, count: 7),
+        "Chips"    : Item(price: 10, count: 4),
+        "Pretzels" : Item(price: 12, count: 11),
+    ]
+    func dispenseSnack(snack:String) {
+        print("Dispensing \(snack) ...")
+    }
+    
+    func vend(itemNamed name:String) throws -> Void {
+        guard var item = inventory[name] else {
+            throw VendingMachineError.InvalidSelection
+        }
+        
+        guard item.count > 0 else {
+            throw VendingMachineError.OutOfStock
+        }
+        
+        guard item.price <= coinsDeposited else {
+            throw VendingMachineError.InsufficientFunds(coinsNeeded: item.price - coinsDeposited)
+        }
+        
+        coinsDeposited -= item.price
+        item.count -= 1
+        inventory[name] = item
+        dispenseSnack(name)
+    }
+}
+
 enum ServerResponse {
     case Result(String,String)
     case Error(String)
     case Unknown(String)
 }
+
 
 let success = ServerResponse.Result("6:00 am", "8:09 pm")
 let failure = ServerResponse.Error("Out of cheese.")
