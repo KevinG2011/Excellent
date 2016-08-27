@@ -584,11 +584,12 @@ class VendingMachine {
         "Chips"    : Item(price: 10, count: 4),
         "Pretzels" : Item(price: 12, count: 11),
     ]
-    func dispenseSnack(snack:String) {
+    func dispenseSnack(snack:String) -> Int {
         print("Dispensing \(snack) ...")
+        return 0
     }
     
-    func vend(itemNamed name:String) throws -> Void {
+    func vend(itemNamed name:String) throws -> Int {
         guard var item = inventory[name] else {
             throw VendingMachineError.InvalidSelection
         }
@@ -604,16 +605,61 @@ class VendingMachine {
         coinsDeposited -= item.price
         item.count -= 1
         inventory[name] = item
-        dispenseSnack(name)
+        return dispenseSnack(name)
     }
 }
+
+var vm:VendingMachine = VendingMachine()
+let ret = try? vm.vend(itemNamed: "kid")    //如果vend抛出异常则ret是nil,否则ret是函数返回值
+
+//扩展
+extension Double {
+    var km:Double {return self * 1_000.0}   //计算型属性
+    var  m:Double {return self }
+    var cm:Double {return self / 100.0}
+    var mm:Double {return self / 1_000.0 }
+    var ft:Double {return self / 3.28084 }
+    
+    func repetitions(task: () -> ()) {
+        for _ in 1 ... Int(self) {
+            task()
+        }
+    }
+    
+    func fr() -> Double {
+        return floor(self)
+    }
+    
+}
+
+let oneInch = 25.4.mm
+4.0.repetitions {
+    print("Hi!")
+}
+
+//协议
+protocol Serializable {
+    var name: String { get }    //属性规定
+    func toString() -> String   //方法规定
+}
+
+class LinerGenerator: Serializable {
+    var name: String {
+        return "Liner"
+    }
+    func toString() -> String {
+        return ""
+    }
+    
+    
+}
+
 
 enum ServerResponse {
     case Result(String,String)
     case Error(String)
     case Unknown(String)
 }
-
 
 let success = ServerResponse.Result("6:00 am", "8:09 pm")
 let failure = ServerResponse.Error("Out of cheese.")
