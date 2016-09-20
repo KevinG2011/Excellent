@@ -10,13 +10,14 @@ var cstr = "Welcome!"
 let nstr:Float = 4
 let ostr = cstr + "\(nstr)"
 
+//别名
+typealias PairTurple = (_:Int,_:String)
 //元组
-let httpError = (code:404,desc:"Not Found")
+var httpError = (code:404,desc:"Not Found")
+httpError = PairTurple(404,"Not Found")
 print(httpError.0)                      //下标访问
-let (statusCode,statusMsg) = httpError //decompose 
-print(statusCode)
-let (sc,_) = httpError
-print(sc)
+let (_,reason) = httpError //decompose
+print(reason)
 
 //字符串
 var eStr = String("1233")
@@ -32,7 +33,7 @@ var catStr: String = String(catchar)
 catStr.characters.count
 catStr[catStr.startIndex]
 let index = catStr[catStr.startIndex.advancedBy(2)]
-catStr.insert("!", atIndex: catStr.endIndex)
+catStr.insert("!", atIndex: catStr.endIndex)        //字符串插入
 
 //数组
 var array = ["catfish","water","tulips","blue paint"]
@@ -58,6 +59,7 @@ dict["Feb"]
 var aDict = [Double:Float]()
 aDict = [:]
 
+//数组
 let scores = [75,43,103,87,12]
 for score in scores {
     if score > 80 {
