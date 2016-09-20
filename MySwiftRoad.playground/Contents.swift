@@ -3,6 +3,9 @@
 import UIKit
 import Foundation
 
+import XCPlayground
+XCPSetExecutionShouldContinueIndefinitely(true)
+
 var cstr = "Welcome!"
 let nstr:Float = 4
 let ostr = cstr + "\(nstr)"
@@ -20,7 +23,11 @@ var eStr = String("1233")
 for character in eStr.characters {
     print(character,""," ")
 }
+
 let catchar: [Character] = ["C","a","t","!","?"]
+catchar.map {_ in 
+    "k"
+}
 var catStr: String = String(catchar)
 catStr.characters.count
 catStr[catStr.startIndex]
@@ -44,6 +51,9 @@ print(farmAnimals.isDisjointWith(cityAnimals))
 
 //字典
 var dict = ["May":[5,15],"Feb":[2,"2"]]
+let dictNames = dict.reduce("",combine: { $0 + "\($1.0), " })
+print(dictNames)
+
 dict["Feb"]
 var aDict = [Double:Float]()
 aDict = [:]
@@ -316,11 +326,42 @@ class Vehicle {
     func run(direction:Int) {
         print(brand ?? "Vehicle" + " is Running towards \(direction)")
     }
+    
+    class func rush() {
+        print("rush time!")
+    }
+}
+
+extension Vehicle : Equatable {}
+@warn_unused_result
+func ==(lhs: Vehicle, rhs: Vehicle) -> Bool {
+    return lhs.brand == rhs.brand && lhs.wheels == rhs.wheels
+}
+
+extension Vehicle : Comparable {}
+@warn_unused_result
+func <(lhs: Vehicle, rhs: Vehicle) -> Bool {
+    return lhs.wheels < rhs.wheels
+}
+@warn_unused_result
+func <=(lhs: Vehicle, rhs: Vehicle) -> Bool {
+    return lhs.wheels <= rhs.wheels
+}
+@warn_unused_result
+func >=(lhs: Vehicle, rhs: Vehicle) -> Bool {
+    return lhs.wheels > rhs.wheels
+}
+@warn_unused_result
+func >(lhs: Vehicle, rhs: Vehicle) -> Bool {
+    return lhs.wheels >= rhs.wheels
 }
 
 //子类化
-var bez = Vehicle(4,"Benze")
-print(bez.desc())
+var bz = Vehicle(4,"Benze")
+print(bz.desc())
+
+let bzType:Vehicle.Type = Vehicle.self
+bzType.rush()
 
 //枚举定义
 enum DriveType: Int {
@@ -752,6 +793,7 @@ extension Double {
 
 print((9.3).roundValue)
 
+
 //泛型
 func repeatItem<Item>(item:Item,times:Int) -> [Item] {
     var ret = [Item]()
@@ -771,9 +813,23 @@ enum OptionalValue<Wrapped> {
 var val:OptionalValue<Int> = .None
 val = .Some(100)
 
-//doc 23?
 
+func sumRecur(n:UInt) -> UInt {
+    if n == 0 {
+        return 0
+    }
+    return n + sumRecur(n - 1)
+}
 
-
-
+//tail recursive
+func sumTailRecur(n:UInt) -> UInt {
+    func sumInternal(n:UInt,current:UInt) -> UInt {
+        if n == 0 {
+            return current
+        } else {
+            return current + sumInternal(n - 1, current: current + n)
+        }
+    }
+    return sumInternal(n, current: 0)
+}
 
