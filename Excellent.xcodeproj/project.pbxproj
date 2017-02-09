@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0F42AD1E4C7559000B6CE5 /* THLevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */; };
+		2A0F42B01E4C7577000B6CE5 /* THLevelMeterColorThreshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */; };
+		2A0F42BB1E4C7EC3000B6CE5 /* THMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */; };
+		2A0F42BC1E4C7EC3000B6CE5 /* THMemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */; };
+		2A0F42BF1E4C8162000B6CE5 /* EXRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */; };
+		2A6053DF1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6053DD1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m */; };
+		2A6053E21E4C723C0043DF94 /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6053E11E4C723C0043DF94 /* AudioRecorderMemo.storyboard */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A63FAD71E49778400DA75D3 /* AVToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A63FAD61E49778400DA75D3 /* AVToy.m */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
@@ -21,7 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A0F42AB1E4C7559000B6CE5 /* THLevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THLevelMeterView.h; path = AVFoundation/THLevelMeterView.h; sourceTree = "<group>"; };
+		2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THLevelMeterView.m; path = AVFoundation/THLevelMeterView.m; sourceTree = "<group>"; };
+		2A0F42AE1E4C7577000B6CE5 /* THLevelMeterColorThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THLevelMeterColorThreshold.h; path = AVFoundation/THLevelMeterColorThreshold.h; sourceTree = "<group>"; };
+		2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THLevelMeterColorThreshold.m; path = AVFoundation/THLevelMeterColorThreshold.m; sourceTree = "<group>"; };
+		2A0F42B71E4C7EC3000B6CE5 /* THMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMemo.h; path = AVFoundation/THMemo.h; sourceTree = "<group>"; };
+		2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMemo.m; path = AVFoundation/THMemo.m; sourceTree = "<group>"; };
+		2A0F42B91E4C7EC3000B6CE5 /* THMemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMemoCell.h; path = AVFoundation/THMemoCell.h; sourceTree = "<group>"; };
+		2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMemoCell.m; path = AVFoundation/THMemoCell.m; sourceTree = "<group>"; };
+		2A0F42BD1E4C8162000B6CE5 /* EXRecorderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRecorderController.h; sourceTree = "<group>"; };
+		2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRecorderController.m; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* ExGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExGlobal.h; sourceTree = "<group>"; };
+		2A6053DC1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXAudioRecorderMemoViewController.h; path = AVFoundation/EXAudioRecorderMemoViewController.h; sourceTree = "<group>"; };
+		2A6053DD1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXAudioRecorderMemoViewController.m; path = AVFoundation/EXAudioRecorderMemoViewController.m; sourceTree = "<group>"; };
+		2A6053E11E4C723C0043DF94 /* AudioRecorderMemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AudioRecorderMemo.storyboard; path = AVFoundation/Audio/AudioRecorderMemo.storyboard; sourceTree = "<group>"; };
 		2A63FAD21E496D3C00DA75D3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		2A63FAD51E49778400DA75D3 /* AVToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AVToy.h; path = AVFoundation/AVToy.h; sourceTree = "<group>"; };
 		2A63FAD61E49778400DA75D3 /* AVToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVToy.m; path = AVFoundation/AVToy.m; sourceTree = "<group>"; };
@@ -71,6 +91,19 @@
 			children = (
 				2A63FAD51E49778400DA75D3 /* AVToy.h */,
 				2A63FAD61E49778400DA75D3 /* AVToy.m */,
+				2A0F42B71E4C7EC3000B6CE5 /* THMemo.h */,
+				2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */,
+				2A0F42B91E4C7EC3000B6CE5 /* THMemoCell.h */,
+				2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */,
+				2A0F42AE1E4C7577000B6CE5 /* THLevelMeterColorThreshold.h */,
+				2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */,
+				2A0F42AB1E4C7559000B6CE5 /* THLevelMeterView.h */,
+				2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */,
+				2A0F42BD1E4C8162000B6CE5 /* EXRecorderController.h */,
+				2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */,
+				2A6053DC1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.h */,
+				2A6053DD1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m */,
+				2A6053E11E4C723C0043DF94 /* AudioRecorderMemo.storyboard */,
 			);
 			name = AVFoundation;
 			sourceTree = "<group>";
@@ -211,6 +244,7 @@
 				2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */,
 				2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */,
 				2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */,
+				2A6053E21E4C723C0043DF94 /* AudioRecorderMemo.storyboard in Resources */,
 				2AAB463C1E28D0580072D903 /* Ray.png in Resources */,
 				2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */,
 			);
@@ -224,8 +258,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
+				2A0F42AD1E4C7559000B6CE5 /* THLevelMeterView.m in Sources */,
+				2A0F42B01E4C7577000B6CE5 /* THLevelMeterColorThreshold.m in Sources */,
 				2A63FAD71E49778400DA75D3 /* AVToy.m in Sources */,
+				2A6053DF1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m in Sources */,
+				2A0F42BB1E4C7EC3000B6CE5 /* THMemo.m in Sources */,
+				2A0F42BC1E4C7EC3000B6CE5 /* THMemoCell.m in Sources */,
 				2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */,
+				2A0F42BF1E4C8162000B6CE5 /* EXRecorderController.m in Sources */,
 				2ADFFC641CAAB663000C8C21 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

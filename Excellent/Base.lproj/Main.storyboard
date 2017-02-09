@@ -13,7 +13,7 @@
         <scene sceneID="6Mw-S6-EuE">
             <objects>
                 <navigationController id="HjJ-cl-wWl" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="c5l-PU-wBB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="c5l-PU-wBB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-820" y="449"/>
         </scene>
-        <!--View Controller-->
+        <!--AVDemo-->
         <scene sceneID="tgf-I6-D37">
             <objects>
                 <viewController id="hjd-4g-Brs" customClass="ViewController" sceneMemberID="viewController">
@@ -38,14 +38,14 @@
                         <viewControllerLayoutGuide type="bottom" id="gP8-5M-39j"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oZX-Yl-Kc5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3Ps-Zz-Hmo">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="5i1-bm-kWI" style="IBUITableViewCellStyleDefault" id="jgR-ki-fpR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="demoCell" textLabel="5i1-bm-kWI" style="IBUITableViewCellStyleDefault" id="jgR-ki-fpR">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jgR-ki-fpR" id="Klh-En-oVn">
@@ -77,7 +77,7 @@
                             <constraint firstItem="3Ps-Zz-Hmo" firstAttribute="leading" secondItem="oZX-Yl-Kc5" secondAttribute="leading" id="b1k-Tw-vg1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FV4-7k-aQN"/>
+                    <navigationItem key="navigationItem" title="AVDemo" id="FV4-7k-aQN"/>
                     <connections>
                         <outlet property="tableView" destination="3Ps-Zz-Hmo" id="qhm-ai-eDD"/>
                     </connections>

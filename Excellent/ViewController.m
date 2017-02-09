@@ -7,11 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "EXAudioRecorderMemoViewController.h"
 
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray*  scenes;
+
 @end
 
 @implementation ViewController
@@ -22,7 +24,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString* identifier = @"UITableViewCell";
+    static NSString* identifier = @"demoCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     cell.textLabel.text = _scenes[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -31,6 +33,18 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _scenes.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self runSceneAtIndex:indexPath.row];
+}
+
+- (void)runSceneAtIndex:(NSInteger)index {
+    if (index == 0) {
+        EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
