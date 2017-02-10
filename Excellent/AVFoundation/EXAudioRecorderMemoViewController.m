@@ -11,6 +11,8 @@
 #import "THMemoCell.h"
 #import "THMemo.h"
 #import <AVFoundation/AVFoundation.h>
+#import "EXRecorderController.h"
+#import "EXUtil.h"
 
 #define MEMO_CELL        @"memoCell"
 #define MEMOS_ARCHIVE    @"memos.archive"
@@ -25,6 +27,7 @@
 @property (strong, nonatomic) NSMutableArray *memos;
 @property (strong, nonatomic) CADisplayLink *levelTimer;
 @property (strong, nonatomic) NSTimer *timer;
+@property (nonatomic, strong) EXRecorderController* controller;
 @end
 
 @implementation EXAudioRecorderMemoViewController
@@ -36,7 +39,7 @@
 -(void)configAudio {
     AVAudioSession* session = [AVAudioSession sharedInstance];
     NSError* error = nil;
-    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) {
+    if (![session setCategory:AVAudioSessionCategoryPlayback error:&error]) { //播放录音
         NSLog(@"Category Error :%@",[error localizedDescription]);
     }
     
@@ -53,6 +56,8 @@
     } else {
         _memos = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
+    
+    _controller = [[EXRecorderController alloc] init];
 }
 
 - (void)setupView {
@@ -77,6 +82,14 @@
     cell.dateLabel.text = memo.dateString;
     cell.timeLabel.text = memo.timeString;
     return cell;
+}
+
+- (void)startTimer {
+    [self.timer invalidate];
+    __weak __typeof(self) wself = self;
+    self.timer = [NSTimer timerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
+        wself.timeLabel.text = [EXUtil formattedTime:_controller.recorder.currentTime];
+    }];
 }
 
 - (NSURL *)archiveURL {

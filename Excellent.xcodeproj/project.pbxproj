@@ -12,6 +12,8 @@
 		2A0F42BB1E4C7EC3000B6CE5 /* THMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */; };
 		2A0F42BC1E4C7EC3000B6CE5 /* THMemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */; };
 		2A0F42BF1E4C8162000B6CE5 /* EXRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */; };
+		2A0F42C21E4D6891000B6CE5 /* EXFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42C11E4D6891000B6CE5 /* EXFileUtils.m */; };
+		2A0F42C51E4D940A000B6CE5 /* EXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42C41E4D940A000B6CE5 /* EXUtil.m */; };
 		2A6053DF1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6053DD1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m */; };
 		2A6053E21E4C723C0043DF94 /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6053E11E4C723C0043DF94 /* AudioRecorderMemo.storyboard */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
@@ -38,6 +40,10 @@
 		2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMemoCell.m; path = AVFoundation/THMemoCell.m; sourceTree = "<group>"; };
 		2A0F42BD1E4C8162000B6CE5 /* EXRecorderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRecorderController.h; sourceTree = "<group>"; };
 		2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRecorderController.m; sourceTree = "<group>"; };
+		2A0F42C01E4D6891000B6CE5 /* EXFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFileUtils.h; sourceTree = "<group>"; };
+		2A0F42C11E4D6891000B6CE5 /* EXFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXFileUtils.m; sourceTree = "<group>"; };
+		2A0F42C31E4D940A000B6CE5 /* EXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXUtil.h; sourceTree = "<group>"; };
+		2A0F42C41E4D940A000B6CE5 /* EXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXUtil.m; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* ExGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExGlobal.h; sourceTree = "<group>"; };
 		2A6053DC1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXAudioRecorderMemoViewController.h; path = AVFoundation/EXAudioRecorderMemoViewController.h; sourceTree = "<group>"; };
 		2A6053DD1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXAudioRecorderMemoViewController.m; path = AVFoundation/EXAudioRecorderMemoViewController.m; sourceTree = "<group>"; };
@@ -162,6 +168,10 @@
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
 				2ADFFC681CAAB663000C8C21 /* ViewController.h */,
 				2ADFFC691CAAB663000C8C21 /* ViewController.m */,
+				2A0F42C01E4D6891000B6CE5 /* EXFileUtils.h */,
+				2A0F42C11E4D6891000B6CE5 /* EXFileUtils.m */,
+				2A0F42C31E4D940A000B6CE5 /* EXUtil.h */,
+				2A0F42C41E4D940A000B6CE5 /* EXUtil.m */,
 				2A63FAD41E49773600DA75D3 /* AVFoundation */,
 				2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */,
 				2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */,
@@ -259,6 +269,8 @@
 			files = (
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2A0F42AD1E4C7559000B6CE5 /* THLevelMeterView.m in Sources */,
+				2A0F42C51E4D940A000B6CE5 /* EXUtil.m in Sources */,
+				2A0F42C21E4D6891000B6CE5 /* EXFileUtils.m in Sources */,
 				2A0F42B01E4C7577000B6CE5 /* THLevelMeterColorThreshold.m in Sources */,
 				2A63FAD71E49778400DA75D3 /* AVToy.m in Sources */,
 				2A6053DF1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m in Sources */,
