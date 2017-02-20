@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
-@class THMemo;
+#import "THLevelPair.h"
 
+@class THMemo;
+@class THMeterTable;
 @protocol EXRecorderControllerDelegate <NSObject>
 //- (void)interruptionBegan;
 @end
@@ -21,7 +23,7 @@ typedef void(^EXRecordingSaveCompletionHandler)(BOOL,id);
 @property (nonatomic, strong) AVAudioPlayer* player;    //播放
 @property (nonatomic, strong) AVAudioRecorder* recorder;    //录制
 @property (nonatomic, copy) EXRecordingStopCompletionHandler completionHandler;
-
+@property (nonatomic, strong) THMeterTable* meterTable;
 
 -(BOOL)record;
 -(void)pause;

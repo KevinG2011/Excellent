@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A0F42AD1E4C7559000B6CE5 /* THLevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */; };
-		2A0F42B01E4C7577000B6CE5 /* THLevelMeterColorThreshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */; };
-		2A0F42BB1E4C7EC3000B6CE5 /* THMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */; };
-		2A0F42BC1E4C7EC3000B6CE5 /* THMemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */; };
 		2A0F42BF1E4C8162000B6CE5 /* EXRecorderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */; };
 		2A0F42C21E4D6891000B6CE5 /* EXFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42C11E4D6891000B6CE5 /* EXFileUtils.m */; };
 		2A0F42C51E4D940A000B6CE5 /* EXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0F42C41E4D940A000B6CE5 /* EXUtil.m */; };
@@ -27,17 +23,15 @@
 		2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */; };
 		2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */; };
 		2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */; };
+		2AF44A5C1E5AD37800764359 /* THLevelMeterColorThreshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A531E5AD37800764359 /* THLevelMeterColorThreshold.m */; };
+		2AF44A5D1E5AD37800764359 /* THLevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A551E5AD37800764359 /* THLevelMeterView.m */; };
+		2AF44A5E1E5AD37800764359 /* THMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A571E5AD37800764359 /* THMemo.m */; };
+		2AF44A5F1E5AD37800764359 /* THMemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A591E5AD37800764359 /* THMemoCell.m */; };
+		2AF44A601E5AD37800764359 /* THMeterTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A5B1E5AD37800764359 /* THMeterTable.m */; };
+		2AF44A6B1E5AF9A500764359 /* THLevelPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF44A6A1E5AF9A500764359 /* THLevelPair.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2A0F42AB1E4C7559000B6CE5 /* THLevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THLevelMeterView.h; path = AVFoundation/THLevelMeterView.h; sourceTree = "<group>"; };
-		2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THLevelMeterView.m; path = AVFoundation/THLevelMeterView.m; sourceTree = "<group>"; };
-		2A0F42AE1E4C7577000B6CE5 /* THLevelMeterColorThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THLevelMeterColorThreshold.h; path = AVFoundation/THLevelMeterColorThreshold.h; sourceTree = "<group>"; };
-		2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THLevelMeterColorThreshold.m; path = AVFoundation/THLevelMeterColorThreshold.m; sourceTree = "<group>"; };
-		2A0F42B71E4C7EC3000B6CE5 /* THMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMemo.h; path = AVFoundation/THMemo.h; sourceTree = "<group>"; };
-		2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMemo.m; path = AVFoundation/THMemo.m; sourceTree = "<group>"; };
-		2A0F42B91E4C7EC3000B6CE5 /* THMemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = THMemoCell.h; path = AVFoundation/THMemoCell.h; sourceTree = "<group>"; };
-		2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = THMemoCell.m; path = AVFoundation/THMemoCell.m; sourceTree = "<group>"; };
 		2A0F42BD1E4C8162000B6CE5 /* EXRecorderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRecorderController.h; sourceTree = "<group>"; };
 		2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRecorderController.m; sourceTree = "<group>"; };
 		2A0F42C01E4D6891000B6CE5 /* EXFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXFileUtils.h; sourceTree = "<group>"; };
@@ -68,6 +62,18 @@
 		2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFFC711CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADFFC731CAAB663000C8C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AF44A521E5AD37800764359 /* THLevelMeterColorThreshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLevelMeterColorThreshold.h; sourceTree = "<group>"; };
+		2AF44A531E5AD37800764359 /* THLevelMeterColorThreshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLevelMeterColorThreshold.m; sourceTree = "<group>"; };
+		2AF44A541E5AD37800764359 /* THLevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLevelMeterView.h; sourceTree = "<group>"; };
+		2AF44A551E5AD37800764359 /* THLevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLevelMeterView.m; sourceTree = "<group>"; };
+		2AF44A561E5AD37800764359 /* THMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMemo.h; sourceTree = "<group>"; };
+		2AF44A571E5AD37800764359 /* THMemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMemo.m; sourceTree = "<group>"; };
+		2AF44A581E5AD37800764359 /* THMemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMemoCell.h; sourceTree = "<group>"; };
+		2AF44A591E5AD37800764359 /* THMemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMemoCell.m; sourceTree = "<group>"; };
+		2AF44A5A1E5AD37800764359 /* THMeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THMeterTable.h; sourceTree = "<group>"; };
+		2AF44A5B1E5AD37800764359 /* THMeterTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THMeterTable.m; sourceTree = "<group>"; };
+		2AF44A691E5AF9A500764359 /* THLevelPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLevelPair.h; sourceTree = "<group>"; };
+		2AF44A6A1E5AF9A500764359 /* THLevelPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLevelPair.m; sourceTree = "<group>"; };
 		B343AE0B1CB816F8000BF86F /* Excellent.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excellent.pch; sourceTree = "<group>"; };
 		BD66AF2CEC700E1A08022F8A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,14 +103,7 @@
 			children = (
 				2A63FAD51E49778400DA75D3 /* AVToy.h */,
 				2A63FAD61E49778400DA75D3 /* AVToy.m */,
-				2A0F42B71E4C7EC3000B6CE5 /* THMemo.h */,
-				2A0F42B81E4C7EC3000B6CE5 /* THMemo.m */,
-				2A0F42B91E4C7EC3000B6CE5 /* THMemoCell.h */,
-				2A0F42BA1E4C7EC3000B6CE5 /* THMemoCell.m */,
-				2A0F42AE1E4C7577000B6CE5 /* THLevelMeterColorThreshold.h */,
-				2A0F42AF1E4C7577000B6CE5 /* THLevelMeterColorThreshold.m */,
-				2A0F42AB1E4C7559000B6CE5 /* THLevelMeterView.h */,
-				2A0F42AC1E4C7559000B6CE5 /* THLevelMeterView.m */,
+				2AF44A511E5AD37800764359 /* THMeter */,
 				2A0F42BD1E4C8162000B6CE5 /* EXRecorderController.h */,
 				2A0F42BE1E4C8162000B6CE5 /* EXRecorderController.m */,
 				2A6053DC1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.h */,
@@ -192,6 +191,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		2AF44A511E5AD37800764359 /* THMeter */ = {
+			isa = PBXGroup;
+			children = (
+				2AF44A521E5AD37800764359 /* THLevelMeterColorThreshold.h */,
+				2AF44A531E5AD37800764359 /* THLevelMeterColorThreshold.m */,
+				2AF44A541E5AD37800764359 /* THLevelMeterView.h */,
+				2AF44A551E5AD37800764359 /* THLevelMeterView.m */,
+				2AF44A691E5AF9A500764359 /* THLevelPair.h */,
+				2AF44A6A1E5AF9A500764359 /* THLevelPair.m */,
+				2AF44A561E5AD37800764359 /* THMemo.h */,
+				2AF44A571E5AD37800764359 /* THMemo.m */,
+				2AF44A581E5AD37800764359 /* THMemoCell.h */,
+				2AF44A591E5AD37800764359 /* THMemoCell.m */,
+				2AF44A5A1E5AD37800764359 /* THMeterTable.h */,
+				2AF44A5B1E5AD37800764359 /* THMeterTable.m */,
+			);
+			name = THMeter;
+			path = AVFoundation/THMeter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -267,18 +286,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF44A5E1E5AD37800764359 /* THMemo.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
-				2A0F42AD1E4C7559000B6CE5 /* THLevelMeterView.m in Sources */,
+				2AF44A6B1E5AF9A500764359 /* THLevelPair.m in Sources */,
 				2A0F42C51E4D940A000B6CE5 /* EXUtil.m in Sources */,
 				2A0F42C21E4D6891000B6CE5 /* EXFileUtils.m in Sources */,
-				2A0F42B01E4C7577000B6CE5 /* THLevelMeterColorThreshold.m in Sources */,
 				2A63FAD71E49778400DA75D3 /* AVToy.m in Sources */,
 				2A6053DF1E4C6F720043DF94 /* EXAudioRecorderMemoViewController.m in Sources */,
-				2A0F42BB1E4C7EC3000B6CE5 /* THMemo.m in Sources */,
-				2A0F42BC1E4C7EC3000B6CE5 /* THMemoCell.m in Sources */,
+				2AF44A5D1E5AD37800764359 /* THLevelMeterView.m in Sources */,
 				2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */,
 				2A0F42BF1E4C8162000B6CE5 /* EXRecorderController.m in Sources */,
+				2AF44A5F1E5AD37800764359 /* THMemoCell.m in Sources */,
 				2ADFFC641CAAB663000C8C21 /* main.m in Sources */,
+				2AF44A601E5AD37800764359 /* THMeterTable.m in Sources */,
+				2AF44A5C1E5AD37800764359 /* THLevelMeterColorThreshold.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,10 +9,10 @@
 #import "EXRecorderController.h"
 #import "THMemo.h"
 #import "EXFileUtils.h"
+#import "THMeterTable.h"
 
 @implementation EXRecorderController
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         NSString* tmpDir = NSTemporaryDirectory();
@@ -34,6 +34,7 @@
         } else {
             NSLog(@"Error: %@",[error localizedDescription]);
         }
+        _meterTable = [[THMeterTable alloc] init];
     }
     return self;
 }
@@ -85,6 +86,16 @@
         return YES;
     }
     return NO;
+}
+
+- (THLevelPair*)levels {
+    [self.recorder updateMeters]; //更新级别
+    float avgPower = [self.recorder averagePowerForChannel:0];
+    float peakPower = [self.recorder peakPowerForChannel:0];
+    float linearLevel = [self.meterTable valueForPower:avgPower];
+    float linearPeak = [self.meterTable valueForPower:peakPower];
+    THLevelPair* levelPair = [THLevelPair levelsWithLevel:linearLevel peakLevel:linearPeak];
+    return levelPair;
 }
 
 @end

@@ -87,9 +87,20 @@
 - (void)startTimer {
     [self.timer invalidate];
     __weak __typeof(self) wself = self;
-    self.timer = [NSTimer timerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
+    _timer = [NSTimer timerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
         wself.timeLabel.text = [EXUtil formattedTime:_controller.recorder.currentTime];
     }];
+}
+
+- (void)startMeterTimer {
+    [_levelTimer invalidate];
+    _levelTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateMeter)];
+    _levelTimer.frameInterval = 5;
+    [_levelTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+- (void)updateMeter {
+    
 }
 
 - (NSURL *)archiveURL {
