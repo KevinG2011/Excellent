@@ -30,4 +30,5 @@ typedef void(^EXRecordingSaveCompletionHandler)(BOOL,id);
 -(BOOL)playbackMemo:(THMemo*)memo;
 -(void)stopWithCompletionHandler:(EXRecordingStopCompletionHandler)handler;
 -(void)saveRecordWithName:(NSString*)name completionHandler:(EXRecordingSaveCompletionHandler)handler;
+-(THLevelPair*)levels;
 @end

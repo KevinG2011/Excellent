@@ -88,7 +88,7 @@
     return NO;
 }
 
-- (THLevelPair*)levels {
+-(THLevelPair*)levels {
     [self.recorder updateMeters]; //更新级别
     float avgPower = [self.recorder averagePowerForChannel:0];
     float peakPower = [self.recorder peakPowerForChannel:0];

@@ -100,7 +100,10 @@
 }
 
 - (void)updateMeter {
-    
+    THLevelPair* levels = [self.controller levels];
+    self.levelMeterView.level = levels.level;
+    self.levelMeterView.peakLevel = levels.peakLevel;
+    [self.levelMeterView setNeedsDisplay];
 }
 
 - (NSURL *)archiveURL {
