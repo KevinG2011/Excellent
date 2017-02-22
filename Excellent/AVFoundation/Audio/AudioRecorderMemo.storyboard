@@ -37,6 +37,9 @@
                                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <state key="selected" image="pause"/>
+                                                <connections>
+                                                    <action selector="record:" destination="hyG-lx-2vD" eventType="touchUpInside" id="P1u-hP-60i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1b-07-SCo" userLabel="Stop Button">
                                                 <rect key="frame" x="133" y="71" width="71" height="71"/>

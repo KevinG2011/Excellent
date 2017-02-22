@@ -48,7 +48,7 @@
     }
 }
 
-- (void)setUpData {
+- (void)setupData {
     _memos = [NSMutableArray array];
     NSData *data = [NSData dataWithContentsOfURL:[self archiveURL]];
     if (!data) {
@@ -67,7 +67,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configAudio];
-    [self setUpData];
+    [self setupData];
     [self setupView];
 }
 
@@ -92,6 +92,10 @@
     }];
 }
 
+- (void)stopTimer {
+    
+}
+
 - (void)startMeterTimer {
     [_levelTimer invalidate];
     _levelTimer = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateMeter)];
@@ -99,11 +103,31 @@
     [_levelTimer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
+- (void)stopMeterTimer {
+    [_levelTimer invalidate];
+    _levelTimer = nil;
+    [_levelMeterView resetLevelMeter];
+}
+
 - (void)updateMeter {
     THLevelPair* levels = [self.controller levels];
     self.levelMeterView.level = levels.level;
     self.levelMeterView.peakLevel = levels.peakLevel;
     [self.levelMeterView setNeedsDisplay];
+}
+
+- (IBAction)record:(id)sender {
+    self.stopButton.enabled = YES;
+    if (![sender isSelected]) {
+        [self startMeterTimer];
+        [self startTimer];
+        [self.controller record];
+    } else {
+        [self stopMeterTimer];
+        [self stopTimer];
+        [self.controller pause];
+    }
+    [sender setSelected:[sender isSelected]];
 }
 
 - (NSURL *)archiveURL {
@@ -115,16 +139,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
