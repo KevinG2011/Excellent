@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EXAudioRecorderMemoViewController : UIViewController
-+(instancetype)launchByStoryboard;
++(instancetype)instantiateWithStoryboardName:(NSString*)name;
 @end

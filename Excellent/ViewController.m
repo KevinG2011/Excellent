@@ -8,12 +8,11 @@
 
 #import "ViewController.h"
 #import "EXAudioRecorderMemoViewController.h"
-
+#import "EXVideoPlayerViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray*  scenes;
-
 @end
 
 @implementation ViewController
@@ -44,13 +43,13 @@
     switch (index) {
         case 0:
         {
-            EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
+            EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController instantiateWithStoryboardName:nil];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
         case 1:
         {
-            EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
+            EXVideoPlayerViewController* vc = [[EXVideoPlayerViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;

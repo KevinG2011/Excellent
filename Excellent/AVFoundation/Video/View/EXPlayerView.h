@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @import AVFoundation;
+@protocol THTransport;
 
 @interface EXPlayerView : UIView
 -(instancetype)initWithPlayer:(AVPlayer*)player;
+@property (nonatomic, strong) id<THTransport> transport;
 @end
