@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _scenes = @[@"Audio Recorder Memo"];
+    _scenes = @[@"Audio Recorder Memo",@"Video Player Item"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -41,9 +41,21 @@
 }
 
 - (void)runSceneAtIndex:(NSInteger)index {
-    if (index == 0) {
-        EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
-        [self.navigationController pushViewController:vc animated:YES];
+    switch (index) {
+        case 0:
+        {
+            EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController launchByStoryboard];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        default:
+            break;
     }
 }
 
