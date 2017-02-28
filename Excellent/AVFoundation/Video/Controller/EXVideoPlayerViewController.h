@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface EXVideoPlayerViewController : UIViewController
-
+@property (nonatomic, strong) NSURL* assetURL;
 @end
