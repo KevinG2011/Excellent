@@ -29,7 +29,15 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "THSubtitleViewController.h"
 
-@interface THOverlayView () <THSubtitleViewControllerDelegate>
+#ifndef ENABLE_SUBTITLES
+#define ENABLE_SUBTITLES 1
+#endif
+
+#ifndef ENABLE_AIRPLAY
+#define ENABLE_AIRPLAY 1
+#endif
+
+@interface THOverlayView () <THSubtitleViewControllerDelegate,THFilmstripViewDelegate>
 @property (nonatomic) BOOL controlsHidden;
 @property (nonatomic) BOOL filmstripHidden;
 @property (strong, nonatomic) NSArray *excludedViews;
@@ -64,14 +72,14 @@
     [self.scrubberSlider addTarget:self action:@selector(showPopupUI) forControlEvents:UIControlEventValueChanged];
     [self.scrubberSlider addTarget:self action:@selector(hidePopupUI) forControlEvents:UIControlEventTouchUpInside];
     [self.scrubberSlider addTarget:self action:@selector(unhidePopupUI) forControlEvents:UIControlEventTouchDown];
-
+    
+    self.filmStripView.delegate = self;
     self.filmStripView.layer.shadowOffset = CGSizeMake(0, 2);
     self.filmStripView.layer.shadowColor = [UIColor darkGrayColor].CGColor;
     self.filmStripView.layer.shadowRadius = 2.0f;
     self.filmStripView.layer.shadowOpacity = 0.8f;
 
     [self enableAirplay];
-
     [self resetTimer];
 }
 
@@ -296,6 +304,11 @@
 
 - (void)setTitle:(NSString *)title {
     self.navigationBar.topItem.title = title ? title : @"Video Player";
+}
+
+#pragma mark THFilmstripViewDelegate
+-(void)stripView:(THFilmstripView*)view didTappedThumbnail:(THThumbnail*)thumbnail {
+    [self setCurrentTime:CMTimeGetSeconds(thumbnail.time)];
 }
 
 @end

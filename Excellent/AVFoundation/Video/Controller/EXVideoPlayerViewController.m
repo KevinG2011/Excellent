@@ -7,6 +7,7 @@
 //
 
 #import "EXVideoPlayerViewController.h"
+#import <AVFoundation/AVFoundation.h>
 #import "THPlayerController.h"
 
 @interface EXVideoPlayerViewController ()
@@ -17,8 +18,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setMode:AVAudioSessionModeMoviePlayback error:nil];
+    self.assetURL = [[NSBundle mainBundle] URLForResource:@"hubblecast" withExtension:@"m4v"];
+    
     self.controller = [[THPlayerController alloc] initWithURL:self.assetURL];
-    [self.view addSubview:self.controller.view];
+    UIView* playerView = self.controller.view;
+    playerView.frame = self.view.frame;
+    [self.view addSubview:playerView];
 }
 
 - (BOOL)prefersStatusBarHidden {

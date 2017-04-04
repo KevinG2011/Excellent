@@ -51,11 +51,8 @@
 }
 
 - (void)buildScrubber:(NSNotification *)notification {
-
     self.thumbnails = [notification object];
-
     CGFloat currentX = 0.0f;
-
     CGSize size = [(UIImage *)[[self.thumbnails firstObject] image] size];
     // Scale retina image down to appropriate size
     CGSize imageSize = CGSizeApplyAffineTransform(size, CGAffineTransformMakeScale(0.5, 0.5));
@@ -80,8 +77,8 @@
 - (void)imageButtonTapped:(UIButton *)sender {
     THThumbnail *image = self.thumbnails[sender.tag];
     if (image) {
-        if ([self.superview respondsToSelector:@selector(setCurrentTime:)]) {
-            [(THOverlayView *)self.superview setCurrentTime:CMTimeGetSeconds(image.time)];
+        if ([self.delegate respondsToSelector:@selector(stripView:didTappedThumbnail:)]) {
+            [self.delegate stripView:self didTappedThumbnail:image];
         }
     }
 }

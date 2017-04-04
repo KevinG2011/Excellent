@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EXBaseViewController.h"
 
-@interface EXAudioRecorderMemoViewController : UIViewController
+@interface EXAudioRecorderMemoViewController : EXBaseViewController
 +(instancetype)instantiateWithStoryboardName:(NSString*)name;
 @end

@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "EXAudioRecorderMemoViewController.h"
 #import "EXVideoPlayerViewController.h"
+#import "EXUIKitViewController.h"
+
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -19,7 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _scenes = @[@"Audio Recorder Memo",@"Video Player Item"];
+    _scenes = @[@"Audio Recorder Memo",
+                @"Video Player Item",
+                @"UIKit Test"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -53,6 +57,12 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 2:
+        {
+            EXUIKitViewController* vc = [EXUIKitViewController instantiateWithStoryboardName:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -60,7 +70,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

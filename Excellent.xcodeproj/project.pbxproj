@@ -33,6 +33,11 @@
 		2A2DBB001E642873008C78AF /* EXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBAFE1E642873008C78AF /* EXUtil.m */; };
 		2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBB021E642B22008C78AF /* THPlayerController.m */; };
 		2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBB051E6430D4008C78AF /* EXVideoPlayerViewController.m */; };
+		2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E31541E8CB364006BE219 /* EXBaseViewController.m */; };
+		2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E31571E8CB497006BE219 /* EXUIKitViewController.m */; };
+		2A3E315C1E8CB4F6006BE219 /* EXUIKitMaster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */; };
+		2A3E31611E8CBBCE006BE219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */; };
+		2A3E31BA1E924956006BE219 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E31B91E924956006BE219 /* hubblecast.m4v */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
@@ -41,7 +46,6 @@
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
 		2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC691CAAB663000C8C21 /* ViewController.m */; };
 		2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */; };
-		2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */; };
 		2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +100,13 @@
 		2A2DBB021E642B22008C78AF /* THPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPlayerController.m; sourceTree = "<group>"; };
 		2A2DBB041E6430D4008C78AF /* EXVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXVideoPlayerViewController.h; sourceTree = "<group>"; };
 		2A2DBB051E6430D4008C78AF /* EXVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXVideoPlayerViewController.m; sourceTree = "<group>"; };
+		2A3E31531E8CB364006BE219 /* EXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBaseViewController.h; sourceTree = "<group>"; };
+		2A3E31541E8CB364006BE219 /* EXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBaseViewController.m; sourceTree = "<group>"; };
+		2A3E31561E8CB497006BE219 /* EXUIKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXUIKitViewController.h; sourceTree = "<group>"; };
+		2A3E31571E8CB497006BE219 /* EXUIKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXUIKitViewController.m; sourceTree = "<group>"; };
+		2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EXUIKitMaster.storyboard; sourceTree = "<group>"; };
+		2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A3E31B91E924956006BE219 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* ExGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExGlobal.h; sourceTree = "<group>"; };
 		2A63FAD21E496D3C00DA75D3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
@@ -112,7 +123,6 @@
 		2ADFFC681CAAB663000C8C21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		2ADFFC691CAAB663000C8C21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2ADFFC6C1CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2ADFFC711CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADFFC731CAAB663000C8C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B343AE0B1CB816F8000BF86F /* Excellent.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excellent.pch; sourceTree = "<group>"; };
@@ -250,6 +260,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2A3E314F1E8CB2CE006BE219 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2A3E31561E8CB497006BE219 /* EXUIKitViewController.h */,
+				2A3E31571E8CB497006BE219 /* EXUIKitViewController.m */,
+				2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		2A53074E1CAABABA00B63205 /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +308,8 @@
 		2A7EE29E1CD8876D0028D67C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */,
+				2A3E31B91E924956006BE219 /* hubblecast.m4v */,
 				2A63FAD21E496D3C00DA75D3 /* music.mp3 */,
 				2AAB463B1E28D0580072D903 /* Ray.png */,
 				2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */,
@@ -321,12 +343,14 @@
 				2A2DBAE71E642713008C78AF /* Categories */,
 				2A2DBAE31E6426C8008C78AF /* Notification */,
 				2A63FAD41E49773600DA75D3 /* AVFoundation */,
+				2A3E314F1E8CB2CE006BE219 /* UIKit */,
 				2ADFFC651CAAB663000C8C21 /* AppDelegate.h */,
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
+				2A3E31531E8CB364006BE219 /* EXBaseViewController.h */,
+				2A3E31541E8CB364006BE219 /* EXBaseViewController.m */,
 				2ADFFC681CAAB663000C8C21 /* ViewController.h */,
 				2ADFFC691CAAB663000C8C21 /* ViewController.m */,
 				2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */,
-				2ADFFC6E1CAAB663000C8C21 /* Assets.xcassets */,
 				2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */,
 				2ADFFC731CAAB663000C8C21 /* Info.plist */,
 				2A7EE29E1CD8876D0028D67C /* Resources */,
@@ -406,9 +430,11 @@
 				2A2DBAA71E641334008C78AF /* AudioRecorderMemo.storyboard in Resources */,
 				2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */,
 				2A2DBAE21E642659008C78AF /* THOverlayView.xib in Resources */,
+				2A3E31611E8CBBCE006BE219 /* Assets.xcassets in Resources */,
+				2A3E315C1E8CB4F6006BE219 /* EXUIKitMaster.storyboard in Resources */,
+				2A3E31BA1E924956006BE219 /* hubblecast.m4v in Resources */,
 				2A2DBAF81E642758008C78AF /* THSubtitleView.xib in Resources */,
 				2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */,
-				2ADFFC6F1CAAB663000C8C21 /* Assets.xcassets in Resources */,
 				2AAB463C1E28D0580072D903 /* Ray.png in Resources */,
 				2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */,
 			);
@@ -433,6 +459,7 @@
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,
 				2A2DBAA81E641334008C78AF /* AVToy.m in Sources */,
+				2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */,
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,
 				2A2DBB001E642873008C78AF /* EXUtil.m in Sources */,
@@ -444,6 +471,7 @@
 				2A2DBAF91E642758008C78AF /* THSubtitleViewController.m in Sources */,
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
+				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,
 				2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */,
 				2A2DBAF11E642713008C78AF /* NSTimer+Additions.m in Sources */,

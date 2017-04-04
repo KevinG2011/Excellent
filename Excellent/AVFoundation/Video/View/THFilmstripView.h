@@ -22,7 +22,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+#import "THThumbnail.h"
+
+@class THFilmstripView;
+@protocol THFilmstripViewDelegate <NSObject>
+-(void)stripView:(THFilmstripView*)view didTappedThumbnail:(THThumbnail*)thumbnail;
+@end
 
 @interface THFilmstripView : UIView
-
+@property (nonatomic, weak) id<THFilmstripViewDelegate>         delegate;
 @end

@@ -32,7 +32,6 @@
 
 @implementation EXAudioRecorderMemoViewController
 +(instancetype)instantiateWithStoryboardName:(NSString*)name {
-
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"AudioRecorderMemo" bundle:nil];
     return [storyboard instantiateViewControllerWithIdentifier:@"RecorderMemo"];
 }
