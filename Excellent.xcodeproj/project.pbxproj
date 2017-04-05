@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BC32D851E93F2F200963484 /* AlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC32D841E93F2F200963484 /* AlgorithmViewController.m */; };
 		2A2DBAA71E641334008C78AF /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */; };
 		2A2DBAA81E641334008C78AF /* AVToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA971E641334008C78AF /* AVToy.m */; };
 		2A2DBAA91E641334008C78AF /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA991E641334008C78AF /* EXAudioRecorderMemoViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BC32D831E93F2F200963484 /* AlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlgorithmViewController.h; sourceTree = "<group>"; };
+		0BC32D841E93F2F200963484 /* AlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlgorithmViewController.m; sourceTree = "<group>"; };
 		2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioRecorderMemo.storyboard; sourceTree = "<group>"; };
 		2A2DBA961E641334008C78AF /* AVToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVToy.h; sourceTree = "<group>"; };
 		2A2DBA971E641334008C78AF /* AVToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVToy.m; sourceTree = "<group>"; };
@@ -141,6 +144,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC32D821E93F2E000963484 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				0BC32D831E93F2F200963484 /* AlgorithmViewController.h */,
+				0BC32D841E93F2F200963484 /* AlgorithmViewController.m */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
 		2A2DBA941E641334008C78AF /* Audio */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +356,7 @@
 				2A2DBAE31E6426C8008C78AF /* Notification */,
 				2A63FAD41E49773600DA75D3 /* AVFoundation */,
 				2A3E314F1E8CB2CE006BE219 /* UIKit */,
+				0BC32D821E93F2E000963484 /* Algorithm */,
 				2ADFFC651CAAB663000C8C21 /* AppDelegate.h */,
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
 				2A3E31531E8CB364006BE219 /* EXBaseViewController.h */,
@@ -471,6 +484,7 @@
 				2A2DBAF91E642758008C78AF /* THSubtitleViewController.m in Sources */,
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
+				0BC32D851E93F2F200963484 /* AlgorithmViewController.m in Sources */,
 				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,
 				2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */,

@@ -10,7 +10,7 @@
 #import "EXAudioRecorderMemoViewController.h"
 #import "EXVideoPlayerViewController.h"
 #import "EXUIKitViewController.h"
-
+#import "AlgorithmViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
@@ -23,7 +23,8 @@
     [super viewDidLoad];
     _scenes = @[@"Audio Recorder Memo",
                 @"Video Player Item",
-                @"UIKit Test"];
+                @"UIKit Test",
+                @"Algorithm"];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,6 +61,12 @@
         case 2:
         {
             EXUIKitViewController* vc = [EXUIKitViewController instantiateWithStoryboardName:nil];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            AlgorithmViewController* vc = [[AlgorithmViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
