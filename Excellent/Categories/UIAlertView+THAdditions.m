@@ -27,7 +27,7 @@
 
 @implementation UIAlertView (THAdditions)
 
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message {
++ (void)ex_showAlertWithTitle:(NSString *)title message:(NSString *)message {
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:message
                                                        delegate:nil cancelButtonTitle:@"OK"

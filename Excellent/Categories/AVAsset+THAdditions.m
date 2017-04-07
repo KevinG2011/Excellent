@@ -27,7 +27,7 @@
 
 @implementation AVAsset (THAdditions)
 
-- (NSString *)title {
+- (NSString *)ex_title {
 
     AVKeyValueStatus status =
         [self statusOfValueForKey:@"commonMetadata" error:nil];

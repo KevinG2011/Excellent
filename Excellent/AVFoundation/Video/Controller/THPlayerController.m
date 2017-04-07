@@ -61,18 +61,18 @@ static const NSString* PlayerItemStatusContext;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.playerItem removeObserver:self forKeyPath:STATUS_KEYPATH];
             if (self.playerItem.status == AVPlayerItemStatusReadyToPlay) {
-                [self addPlayerItemTimeObserver];
-                [self addItemEndObserverForPlayerItem];
+                [self addPlayerItemTimeIntervalObserver];
+                [self addPlayerItemTimeEndObserver];
                 //synchronize time display
                 CMTime duration = self.playerItem.duration;
                 [self.transport setCurrentTime:CMTimeGetSeconds(kCMTimeZero) duration:CMTimeGetSeconds(duration)];
-                [self.transport setTitle:self.asset.title];
+                [self.transport setTitle:[self.asset ex_title]];
                 [self.player play];
                 
                 [self loadMediaOptions];
                 [self generateThumbnails];
             } else {
-                [UIAlertView showAlertWithTitle:@"Error" message:@"Failed to load vide"];
+                [UIAlertView ex_showAlertWithTitle:@"Error" message:@"Failed to load vide"];
             }
         });
     } else {
@@ -80,6 +80,7 @@ static const NSString* PlayerItemStatusContext;
     }
 }
 
+//加载媒体选项(字幕)
 - (void)loadMediaOptions {
     NSString* mc = AVMediaCharacteristicLegible;
     AVMediaSelectionGroup* group = [self.asset mediaSelectionGroupForMediaCharacteristic:mc];
@@ -94,12 +95,14 @@ static const NSString* PlayerItemStatusContext;
     }
 }
 
+//产生缩略图
 - (void)generateThumbnails {
     self.imageGenerator = [AVAssetImageGenerator assetImageGeneratorWithAsset:self.asset];
     self.imageGenerator.maximumSize = CGSizeMake(200, 0);
     CMTime duration = self.asset.duration;
-    NSMutableArray* times = [NSMutableArray array];
-    CMTimeValue increment = duration.value / 20;
+    unsigned int count = 20;
+    NSMutableArray* times = [NSMutableArray arrayWithCapacity:20];
+    CMTimeValue increment = duration.value / count;
     CMTimeValue currentValue = 2.0 * duration.timescale;
     while (currentValue <= duration.value) {
         CMTime time = CMTimeMake(currentValue, duration.timescale);
@@ -108,7 +111,7 @@ static const NSString* PlayerItemStatusContext;
     }
     
     __block NSUInteger imageCount = times.count;
-    __block NSMutableArray* thumbnails = [NSMutableArray array];
+    __block NSMutableArray* thumbnails = [NSMutableArray arrayWithCapacity:imageCount];
     
     AVAssetImageGeneratorCompletionHandler handler;
     handler = ^(CMTime requestedTime,
@@ -134,7 +137,8 @@ static const NSString* PlayerItemStatusContext;
     [self.imageGenerator generateCGImagesAsynchronouslyForTimes:times completionHandler:handler];
 }
 
-- (void)addPlayerItemTimeObserver {
+//时间间隔监听
+- (void)addPlayerItemTimeIntervalObserver {
     __weak __typeof(self) wself = self;
     void (^callback)(CMTime) = ^(CMTime time) {
         NSTimeInterval currentTime = CMTimeGetSeconds(time);
@@ -145,7 +149,8 @@ static const NSString* PlayerItemStatusContext;
     self.timeObserver = [self.player addPeriodicTimeObserverForInterval:interval queue:dispatch_get_main_queue() usingBlock:callback];
 }
 
-- (void)addItemEndObserverForPlayerItem {
+//时间结束监听
+- (void)addPlayerItemTimeEndObserver {
     __weak __typeof(self) wself = self;
     void(^callback)(id) = ^(NSNotification* note) {
         [wself.player seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
@@ -189,7 +194,7 @@ static const NSString* PlayerItemStatusContext;
 }
 
 - (void)scrubbingDidEnd {
-    [self addPlayerItemTimeObserver];
+    [self addPlayerItemTimeIntervalObserver];
     if (self.lastPlaybackRate > 0.f) {
         [self.player play];
     }
@@ -219,7 +224,6 @@ static const NSString* PlayerItemStatusContext;
 }
 
 - (void)dealloc {
-    [self.playerItem removeObserver:self forKeyPath:STATUS_KEYPATH];
     if (self.itemEndObserver) {
         NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
         [nc removeObserver:self.itemEndObserver

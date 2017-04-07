@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "AlgorithmController.h"
+#import "NSArray+Additions.h"
 
 @interface ExcellentTests : XCTestCase
 @property (nonatomic, strong) NSArray<NSNumber*>*   arr;
@@ -22,7 +23,7 @@
     for (int i = 0; i < capacity; ++i) {
         [mutArr addObject:@(i)];
     }
-    self.arr = [mutArr copy];
+    self.arr = [mutArr ex_shuffle];
 }
 
 - (void)tearDown {
@@ -30,16 +31,29 @@
     self.arr = nil;
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    __block int count = 0;
+- (void)testBinarySearch {
     [self measureBlock:^{
-        NSNumber* num = @(7600111);
-        NSInteger index = [AlgorithmController ordinarySearch:num inArray:self.arr];
+        NSNumber* num = @(78000);
+        NSInteger index = [AlgorithmController binarySearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
-        ++count;
-        NSLog(@"test count %d",count);
     }];
 }
+
+- (void)testSystemBinarySearch {
+    [self measureBlock:^{
+        NSNumber* num = @(78000);
+        NSInteger index = [AlgorithmController systemBinarySearch:num inArray:self.arr];
+        XCTAssertNotEqual(index, NSNotFound,@"error!");
+    }];
+}
+
+- (void)testOridinarySearch {
+    [self measureBlock:^{
+        NSNumber* num = @(78000);
+        NSInteger index = [AlgorithmController ordinarySearch:num inArray:self.arr];
+        XCTAssertNotEqual(index, NSNotFound,@"error!");
+    }];
+}
+
 
 @end

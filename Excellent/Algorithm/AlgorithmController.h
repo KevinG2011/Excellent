@@ -11,4 +11,6 @@
 @interface AlgorithmController : UIViewController
 + (int)gcd:(int)p q:(int)q;
 + (NSInteger)ordinarySearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array;
++ (NSInteger)binarySearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array;
++ (NSInteger)systemBinarySearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array;
 @end

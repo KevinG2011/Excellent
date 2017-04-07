@@ -34,4 +34,43 @@
     return index;
 }
 
++ (NSInteger)binarySearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array {
+    //sort first concurrent
+    array = [array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+        return [n1 compare:n2];
+    }];
+    NSUInteger lo = 0, hi = array.count - 1;
+    while (lo <= hi) {
+        NSUInteger mid = lo + (hi - lo) / 2;
+        NSNumber* midNum = array[mid];
+        NSComparisonResult result = [num compare:midNum];
+        
+        if (result == NSOrderedAscending) {
+            hi = mid - 1;
+        } else if (result == NSOrderedDescending) {
+            lo = mid + 1;
+        } else {
+            return mid;
+        }
+    }
+    
+    return NSNotFound;
+}
+
++ (NSInteger)systemBinarySearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array {
+    //also needs sort first concurrent
+    array = [array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+        return [n1 compare:n2];
+    }];
+    
+    NSRange range = NSMakeRange(0, array.count - 1);
+    NSInteger index = [array indexOfObject:num
+                             inSortedRange:range
+                                   options:NSBinarySearchingFirstEqual
+                           usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+                               return [n1 compare:n2];
+                           }
+                       ];
+    return index;
+}
 @end

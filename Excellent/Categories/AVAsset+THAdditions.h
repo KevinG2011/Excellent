@@ -26,7 +26,5 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface AVAsset (THAdditions)
-
-@property (nonatomic, readonly) NSString *title;
-
+- (NSString*)ex_title;
 @end

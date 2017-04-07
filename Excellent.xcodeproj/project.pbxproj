@@ -43,6 +43,7 @@
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
+		2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */; };
 		2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD7E2E71CED61AE005BD065 /* gwdock.framework */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
@@ -132,6 +133,8 @@
 		2AAB463B1E28D0580072D903 /* Ray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ray.png; sourceTree = "<group>"; };
 		2AAB46DB1E2E33C20072D903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		2AAB46DC1E2E33C20072D903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
+		2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
 		2AD7E2E71CED61AE005BD065 /* gwdock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gwdock.framework; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -273,6 +276,8 @@
 				2A2DBAED1E642713008C78AF /* UIAlertView+THAdditions.m */,
 				2A2DBAEE1E642713008C78AF /* UIView+THAdditions.h */,
 				2A2DBAEF1E642713008C78AF /* UIView+THAdditions.m */,
+				2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */,
+				2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -536,6 +541,7 @@
 				2A2DBAF01E642713008C78AF /* AVAsset+THAdditions.m in Sources */,
 				2A2DBABD1E641356008C78AF /* THLevelMeterColorThreshold.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
+				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
 				2A2DBAF21E642713008C78AF /* UIAlertView+THAdditions.m in Sources */,
 				2A2DBAC01E641356008C78AF /* THMemo.m in Sources */,
@@ -766,6 +772,7 @@
 				0B2674A31E968DFF00698715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2ADFFC5A1CAAB662000C8C21 /* Build configuration list for PBXProject "Excellent" */ = {
 			isa = XCConfigurationList;
