@@ -18,7 +18,7 @@
 
 - (void)setUp {
     [super setUp];
-    unsigned int capacity = 2000 * 10000;
+    unsigned int capacity = 200 * 10000;
     NSMutableArray* mutArr = [NSMutableArray arrayWithCapacity:capacity];
     for (int i = 0; i < capacity; ++i) {
         [mutArr addObject:@(i)];
@@ -47,13 +47,20 @@
     }];
 }
 
-- (void)testOridinarySearch {
+- (void)testBruteForceSearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [AlgorithmController ordinarySearch:num inArray:self.arr];
+        NSInteger index = [AlgorithmController bruteForceSearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
 
+- (void)testRecursiveSearch {
+    [self measureBlock:^{
+        NSNumber* num = @(78000);
+        NSInteger index = [AlgorithmController recursiveSearch:num inArray:self.arr];
+        XCTAssertNotEqual(index, NSNotFound,@"error!");
+    }];
+}
 
 @end
