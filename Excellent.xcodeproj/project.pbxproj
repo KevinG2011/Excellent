@@ -44,6 +44,8 @@
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
 		2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */; };
+		2ACF2CD31E9BA2B200636A14 /* EXStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CD21E9BA2B200636A14 /* EXStack.m */; };
+		2ACF2CD61E9BA2E600636A14 /* EXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CD51E9BA2E600636A14 /* EXQueue.m */; };
 		2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD7E2E71CED61AE005BD065 /* gwdock.framework */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
@@ -135,6 +137,10 @@
 		2AAB46DC1E2E33C20072D903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
+		2ACF2CD11E9BA2B200636A14 /* EXStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXStack.h; sourceTree = "<group>"; };
+		2ACF2CD21E9BA2B200636A14 /* EXStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXStack.m; sourceTree = "<group>"; };
+		2ACF2CD41E9BA2E600636A14 /* EXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXQueue.h; sourceTree = "<group>"; };
+		2ACF2CD51E9BA2E600636A14 /* EXQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXQueue.m; sourceTree = "<group>"; };
 		2AD7E2E71CED61AE005BD065 /* gwdock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gwdock.framework; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -303,6 +309,10 @@
 				2A2DBAFC1E642873008C78AF /* EXFileUtils.m */,
 				2A2DBAFD1E642873008C78AF /* EXUtil.h */,
 				2A2DBAFE1E642873008C78AF /* EXUtil.m */,
+				2ACF2CD11E9BA2B200636A14 /* EXStack.h */,
+				2ACF2CD21E9BA2B200636A14 /* EXStack.m */,
+				2ACF2CD41E9BA2E600636A14 /* EXQueue.h */,
+				2ACF2CD51E9BA2E600636A14 /* EXQueue.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -543,9 +553,11 @@
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
+				2ACF2CD61E9BA2E600636A14 /* EXQueue.m in Sources */,
 				2A2DBAF21E642713008C78AF /* UIAlertView+THAdditions.m in Sources */,
 				2A2DBAC01E641356008C78AF /* THMemo.m in Sources */,
 				2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */,
+				2ACF2CD31E9BA2B200636A14 /* EXStack.m in Sources */,
 				2A2DBAD01E6425B6008C78AF /* THThumbnail.m in Sources */,
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,

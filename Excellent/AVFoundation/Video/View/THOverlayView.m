@@ -137,7 +137,7 @@
         NSMutableArray *items = [NSMutableArray arrayWithArray:self.toolbar.items];
         UIImage *image = [UIImage imageNamed:@"subtitles"];
         UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image
-                                                                 style:UIBarButtonItemStyleBordered
+                                                                 style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(showSubtitles:)];
         [items addObject:item];
@@ -224,9 +224,14 @@
 
 - (IBAction)togglePlayback:(UIButton *)sender {
     sender.selected = !sender.selected;
-    if (self.delegate) {
-        SEL callback = sender.selected ? @selector(play) : @selector(pause);
-        [self.delegate performSelector:callback];
+    if (sender.selected) {
+        if ([self.delegate respondsToSelector:@selector(play)]) {
+            [self.delegate play];
+        }
+    } else {
+        if ([self.delegate respondsToSelector:@selector(pause)]) {
+            [self.delegate pause];            
+        }
     }
 }
 
