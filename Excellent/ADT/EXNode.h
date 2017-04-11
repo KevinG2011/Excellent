@@ -10,5 +10,6 @@
 
 @interface EXNode : NSObject
 @property (nonatomic, copy) NSString* iid;
+@property (nonatomic, copy) NSString* item;
 @property (nonatomic, strong) EXNode* next;
 @end

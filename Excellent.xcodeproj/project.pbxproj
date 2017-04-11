@@ -48,6 +48,7 @@
 		2ACF2CE31E9CBC3000636A14 /* EXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDE1E9CBC3000636A14 /* EXNode.m */; };
 		2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE01E9CBC3000636A14 /* EXQueue.m */; };
 		2ACF2CE51E9CBC3000636A14 /* EXStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE21E9CBC3000636A14 /* EXStack.m */; };
+		2ACF2CE81E9CDDD900636A14 /* EXDeque.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE71E9CDDD900636A14 /* EXDeque.m */; };
 		2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD7E2E71CED61AE005BD065 /* gwdock.framework */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
@@ -146,6 +147,8 @@
 		2ACF2CE01E9CBC3000636A14 /* EXQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXQueue.m; sourceTree = "<group>"; };
 		2ACF2CE11E9CBC3000636A14 /* EXStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXStack.h; sourceTree = "<group>"; };
 		2ACF2CE21E9CBC3000636A14 /* EXStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXStack.m; sourceTree = "<group>"; };
+		2ACF2CE61E9CDDD900636A14 /* EXDeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXDeque.h; sourceTree = "<group>"; };
+		2ACF2CE71E9CDDD900636A14 /* EXDeque.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXDeque.m; sourceTree = "<group>"; };
 		2AD7E2E71CED61AE005BD065 /* gwdock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gwdock.framework; sourceTree = "<group>"; };
 		2ADFFC5F1CAAB662000C8C21 /* Excellent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Excellent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADFFC631CAAB663000C8C21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -385,6 +388,8 @@
 				2ACF2CE01E9CBC3000636A14 /* EXQueue.m */,
 				2ACF2CE11E9CBC3000636A14 /* EXStack.h */,
 				2ACF2CE21E9CBC3000636A14 /* EXStack.m */,
+				2ACF2CE61E9CDDD900636A14 /* EXDeque.h */,
+				2ACF2CE71E9CDDD900636A14 /* EXDeque.m */,
 			);
 			path = ADT;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				2ADFFC5B1CAAB662000C8C21 /* Sources */,
 				2ADFFC5C1CAAB662000C8C21 /* Frameworks */,
 				2ADFFC5D1CAAB662000C8C21 /* Resources */,
+				2ACF2CE91E9CE2EC00636A14 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -550,6 +556,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2ACF2CE91E9CE2EC00636A14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export REVEAL_SERVER_FILENAME=\"RevealServer.framework\"\n\n# Update this path to point to the location of RevealServer.framework in your project.\nexport REVEAL_SERVER_PATH=\"${SRCROOT}/${REVEAL_SERVER_FILENAME}\"\n\n# If configuration is not Debug, skip this script.\n[ \"${CONFIGURATION}\" != \"Debug\" ] && exit 0\n\n# If RevealServer.framework exists at the specified path, run code signing script.\nif [ -d \"${REVEAL_SERVER_PATH}\" ]; then\n\"${REVEAL_SERVER_PATH}/Scripts/copy_and_codesign_revealserver.sh\"\nelse\necho \"Cannot find RevealServer.framework, so Reveal Server will not be started for your app.\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0B2674971E968DFF00698715 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -593,6 +615,7 @@
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
 				0BC32D851E93F2F200963484 /* AlgorithmController.m in Sources */,
+				2ACF2CE81E9CDDD900636A14 /* EXDeque.m in Sources */,
 				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,
 				2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */,
@@ -761,6 +784,7 @@
 				DEVELOPMENT_TEAM = 3KAP4AA829;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -768,6 +792,11 @@
 				INFOPLIST_FILE = Excellent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-weak_framework",
+					RevealServer,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazyhornets.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -780,6 +809,7 @@
 				DEVELOPMENT_TEAM = 3KAP4AA829;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

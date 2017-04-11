@@ -30,7 +30,6 @@
         root = root.next;
         k++;
     }
-    
 }
 
 - (void)tearDown {
