@@ -14,4 +14,5 @@
 - (ObjectType)pop;
 - (BOOL)isEmpty;
 - (ObjectType)peek;
+- (EXStack*)copyStack:(EXStack*)stack;
 @end

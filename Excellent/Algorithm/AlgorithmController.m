@@ -13,7 +13,7 @@
 @end
 
 @implementation AlgorithmController
-//最大公约数
+
 + (int)gcd:(int)p q:(int)q {
     if (q == 0) {
         return p;
@@ -22,7 +22,7 @@
     return [self gcd:p q:r];
 }
 
-//查找法
+
 + (NSInteger)bruteForceSearch:(NSNumber*)num inArray:(NSArray<NSNumber*>*)array {
     NSInteger index = [array indexOfObjectPassingTest:^BOOL(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([num isEqualToNumber:obj]) {

@@ -27,8 +27,8 @@
 }
 
 - (void)tearDown {
-    [super tearDown];
     self.arr = nil;
+    [super tearDown];
 }
 
 - (void)testBinarySearch {
