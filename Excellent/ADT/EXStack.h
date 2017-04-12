@@ -10,9 +10,9 @@
 
 @interface EXStack<__covariant ObjectType> : NSObject
 @property (nonatomic, assign,readonly) NSUInteger         size;
+- (EXStack*)copyStack:(EXStack*)s;
 - (void)push:(ObjectType)obj;
 - (ObjectType)pop;
 - (BOOL)isEmpty;
 - (ObjectType)peek;
-- (EXStack*)copyStack:(EXStack*)stack;
 @end

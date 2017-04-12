@@ -43,14 +43,14 @@
     return [self.array lastObject];
 }
 
-- (EXStack*)copyStack:(EXStack*)stack {
-    if (stack == nil) {
+- (EXStack*)copyStack:(EXStack*)s {
+    if (s == nil) {
         return nil;
     }
     
-    NSMutableArray* arr = [NSMutableArray arrayWithCapacity:stack.size];
-    while (![stack isEmpty]) {
-        [arr addObject:[stack pop]];
+    NSMutableArray* arr = [NSMutableArray arrayWithCapacity:s.size];
+    while (![s isEmpty]) {
+        [arr addObject:[s pop]];
     }
     EXStack* clone = [[EXStack alloc] init];
     for (id obj in arr) {

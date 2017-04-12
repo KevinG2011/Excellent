@@ -10,6 +10,7 @@
 
 @interface EXQueue : NSObject
 @property (nonatomic, assign,readonly) NSUInteger         size;
+- (EXQueue*)copyQueue:(EXQueue*)q;
 - (void)enqueue:(id)obj;
 - (id)dequeue;
 - (BOOL)isEmpty;

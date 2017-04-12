@@ -11,7 +11,6 @@
 @property (nonatomic, strong) NSMutableArray*        array;
 @end
 
-
 @implementation EXQueue
 - (instancetype)init
 {
@@ -20,6 +19,14 @@
         self.array = [NSMutableArray array];
     }
     return self;
+}
+
+- (EXQueue*)copyQueue:(EXQueue*)q {
+    EXQueue* queue = [[EXQueue alloc] init];
+    while (![q isEmpty]) {
+        [queue enqueue:[q dequeue]];
+    }
+    return queue;
 }
 
 - (void)enqueue:(id)obj {
