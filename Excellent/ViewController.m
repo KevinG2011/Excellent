@@ -10,7 +10,7 @@
 #import "EXAudioRecorderMemoViewController.h"
 #import "EXVideoPlayerViewController.h"
 #import "EXUIKitViewController.h"
-#import "AlgorithmController.h"
+#import "EXAlgorithmViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;

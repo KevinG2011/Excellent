@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "AlgorithmController.h"
+#import "EXAlgorithmViewController.h"
 #import "NSArray+Additions.h"
 
 @interface ExcellentTests : XCTestCase
@@ -34,7 +34,7 @@
 - (void)testBinarySearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [AlgorithmController binarySearch:num inArray:self.arr];
+        NSInteger index = [EXAlgorithmViewController binarySearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -42,7 +42,7 @@
 - (void)testSystemBinarySearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [AlgorithmController systemBinarySearch:num inArray:self.arr];
+        NSInteger index = [EXAlgorithmViewController systemBinarySearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -50,7 +50,7 @@
 - (void)testBruteForceSearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [AlgorithmController bruteForceSearch:num inArray:self.arr];
+        NSInteger index = [EXAlgorithmViewController bruteForceSearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -58,7 +58,7 @@
 - (void)testRecursiveSearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [AlgorithmController recursiveSearch:num inArray:self.arr];
+        NSInteger index = [EXAlgorithmViewController recursiveSearch:num inArray:self.arr];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }

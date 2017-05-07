@@ -6,13 +6,13 @@
 //  Copyright © 2017年 Li Jia. All rights reserved.
 //
 
-#import "AlgorithmController.h"
+#import "EXAlgorithmViewController.h"
 
-@interface AlgorithmController ()
+@interface EXAlgorithmViewController ()
 
 @end
 
-@implementation AlgorithmController
+@implementation EXAlgorithmViewController
 
 + (int)gcd:(int)p q:(int)q {
     if (q == 0) {
