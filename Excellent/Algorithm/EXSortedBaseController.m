@@ -8,34 +8,25 @@
 
 #import "EXSortedBaseController.h"
 @interface EXSortedBaseController ()
-@property (nonatomic, strong) NSMutableArray<NSNumber*>* arr;
+
 @end
 
 
 @implementation EXSortedBaseController
 -(void)rangeCheck:(NSUInteger)index {
-    NSAssert(index < _arr.count,@"IndexOutOfBoundsException");
+    NSAssert(index < _array.count,@"IndexOutOfBoundsException");
 }
 
 -(void)exchObjectAtIndex:(NSUInteger)idx1
        withObjectAtIndex:(NSUInteger)idx2 {
     [self rangeCheck:idx1];
     [self rangeCheck:idx2];
-    [_arr exchangeObjectAtIndex:idx1 withObjectAtIndex:idx2];
+    [_array exchangeObjectAtIndex:idx1 withObjectAtIndex:idx2];
 }
 
 -(void)show {
-    NSString* desc = [self.array componentsJoinedByString:@" "];
+    NSString* desc = [_array componentsJoinedByString:@" "];
     NSLog(@"%@",desc);
-}
-
-
--(NSArray<NSNumber *> *)array {
-    return [_arr copy];
-}
-
--(void)setArray:(NSArray<NSNumber *> *)array {
-    _arr = [NSMutableArray arrayWithArray:array];
 }
 
 @end

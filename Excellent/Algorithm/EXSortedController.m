@@ -13,11 +13,10 @@
 
 @implementation EXSortedController
 -(void)selectionSorted {
-    NSArray<NSNumber*>* stableArr = self.array;
-    for (NSUInteger i = 0; i < stableArr.count; ++i) {
+    for (NSUInteger i = 0; i < self.array.count; ++i) {
         NSUInteger min = i;
-        for (NSUInteger j = i + 1; j < stableArr.count; ++j) {
-            if (stableArr[j] < stableArr[i]) {
+        for (NSUInteger j = i + 1; j < self.array.count; ++j) {
+            if (self.array[j] < self.array[min]) {
                 min = j;
             }
         }
@@ -26,9 +25,8 @@
 }
 
 -(void)insertionSorted {
-    NSArray<NSNumber*>* stableArr = self.array;
-    for (NSUInteger i = 1; i < stableArr.count; ++i) {
-        for (NSUInteger j = i; j > 0 && stableArr[j] < stableArr[j - 1]; --j) {
+    for (NSUInteger i = 1; i < self.array.count; ++i) {
+        for (NSUInteger j = i; j > 0 && self.array[j] < self.array[j - 1]; --j) {
             [self exchObjectAtIndex:j withObjectAtIndex:j - 1];
         }
     }

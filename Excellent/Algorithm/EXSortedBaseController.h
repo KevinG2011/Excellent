@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface EXSortedBaseController : NSObject
-@property (nonatomic, strong) NSArray<NSNumber*>* array;
+@property (nonatomic, strong) NSMutableArray<NSNumber*>* array;
 -(void)rangeCheck:(NSUInteger)index;
 -(void)exchObjectAtIndex:(NSUInteger)idx1
        withObjectAtIndex:(NSUInteger)idx2;

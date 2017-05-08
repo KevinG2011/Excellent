@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSArray (Additions)
-- (NSArray*)ex_shuffle;
+- (id)ex_shuffle;
 @end

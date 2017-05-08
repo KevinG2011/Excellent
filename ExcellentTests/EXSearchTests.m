@@ -23,7 +23,7 @@
     for (int i = 0; i < capacity; ++i) {
         [mutArr addObject:@(i)];
     }
-    NSArray* arr = [mutArr ex_shuffle];
+    NSMutableArray* arr = [mutArr ex_shuffle];
     self.searchController = [[EXSearchController alloc] init];
     self.searchController.array = arr;
 }
