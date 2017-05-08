@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface EXSortedController : NSObject
-
+@property (nonatomic, strong) NSArray<NSNumber*>* array;
+-(void)selectionSorted;
 @end

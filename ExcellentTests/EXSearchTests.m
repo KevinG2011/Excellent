@@ -7,14 +7,14 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "EXAlgorithmViewController.h"
+#import "EXSearchController.h"
 #import "NSArray+Additions.h"
 
-@interface ExcellentTests : XCTestCase
-@property (nonatomic, strong) NSArray<NSNumber*>*   arr;
+@interface EXSearchTests : XCTestCase
+@property (nonatomic, strong) EXSearchController*   searchController;
 @end
 
-@implementation ExcellentTests
+@implementation EXSearchTests
 
 - (void)setUp {
     [super setUp];
@@ -23,18 +23,20 @@
     for (int i = 0; i < capacity; ++i) {
         [mutArr addObject:@(i)];
     }
-    self.arr = [mutArr ex_shuffle];
+    NSArray* arr = [mutArr ex_shuffle];
+    self.searchController = [[EXSearchController alloc] init];
+    self.searchController.array = arr;
 }
 
 - (void)tearDown {
-    self.arr = nil;
+    self.searchController = nil;
     [super tearDown];
 }
 
 - (void)testBinarySearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [EXAlgorithmViewController binarySearch:num inArray:self.arr];
+        NSInteger index = [self.searchController binarySearch:num];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -42,7 +44,7 @@
 - (void)testSystemBinarySearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [EXAlgorithmViewController systemBinarySearch:num inArray:self.arr];
+        NSInteger index = [self.searchController systemBinarySearch:num];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -50,7 +52,7 @@
 - (void)testBruteForceSearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [EXAlgorithmViewController bruteForceSearch:num inArray:self.arr];
+        NSInteger index = [self.searchController bruteForceSearch:num];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
@@ -58,7 +60,7 @@
 - (void)testRecursiveSearch {
     [self measureBlock:^{
         NSNumber* num = @(78000);
-        NSInteger index = [EXAlgorithmViewController recursiveSearch:num inArray:self.arr];
+        NSInteger index = [self.searchController recursiveSearch:num];
         XCTAssertNotEqual(index, NSNotFound,@"error!");
     }];
 }
