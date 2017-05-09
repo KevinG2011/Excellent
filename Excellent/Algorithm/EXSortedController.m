@@ -16,7 +16,7 @@
     for (NSUInteger i = 0; i < self.array.count; ++i) {
         NSUInteger min = i;
         for (NSUInteger j = i + 1; j < self.array.count; ++j) {
-            if (self.array[j] < self.array[min]) {
+            if ([self lessThan:self.array[j] anthor:self.array[min]]) {
                 min = j;
             }
         }
@@ -26,9 +26,28 @@
 
 -(void)insertionSorted {
     for (NSUInteger i = 1; i < self.array.count; ++i) {
-        for (NSUInteger j = i; j > 0 && self.array[j] < self.array[j - 1]; --j) {
+        for (NSUInteger j = i; j > 0 && [self lessThan:self.array[j] anthor:self.array[j - 1]]; --j) {
             [self exchObjectAtIndex:j withObjectAtIndex:j - 1];
         }
+    }
+}
+
+-(void)shellSorted {
+    int h = 1;
+    while (h < self.array.count / 3) {
+        h = 3 * h + 1;          //步长
+    }
+    while (h >= 1) {
+        for (NSUInteger i = h; i < self.array.count; ++i) {
+            for (NSInteger j = i; j > h; j -= h) {
+                NSInteger idx = j - h;
+                if ([self lessThan:self.array[j] anthor:self.array[idx]]) {
+                    [self exchObjectAtIndex:j withObjectAtIndex:idx];
+                }
+                j -= h;
+            }
+        }
+        h = h / 3;
     }
 }
 

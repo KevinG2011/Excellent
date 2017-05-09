@@ -10,4 +10,5 @@
 @interface EXSortedController : EXSortedBaseController
 -(void)selectionSorted;
 -(void)insertionSorted;
+-(void)shellSorted;
 @end

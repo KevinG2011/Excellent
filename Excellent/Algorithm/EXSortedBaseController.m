@@ -17,6 +17,10 @@
     NSAssert(index < _array.count,@"IndexOutOfBoundsException");
 }
 
+-(BOOL)lessThan:(NSNumber*)n1 anthor:(NSNumber*)n2 {
+    return ([n1 compare:n2] == NSOrderedAscending);
+}
+
 -(void)exchObjectAtIndex:(NSUInteger)idx1
        withObjectAtIndex:(NSUInteger)idx2 {
     [self rangeCheck:idx1];
