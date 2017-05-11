@@ -35,7 +35,7 @@
 -(void)shellSorted {
     int h = 1;
     while (h < self.array.count / 3) {
-        h = 3 * h + 1;          //步长
+        h = 3 * h + 1;          //step
     }
     while (h >= 1) {
         for (NSUInteger i = h; i < self.array.count; ++i) {
@@ -48,6 +48,27 @@
             }
         }
         h = h / 3;
+    }
+}
+
+-(void)p__mergeLow:(NSUInteger)low high:(NSUInteger)high {
+    
+}
+
+-(void)mergeSorted {
+    NSArray* cloneArray = [self.array copy];
+    NSUInteger lo = 0, hi = self.array.count - 1, mid = hi / 2;
+    NSUInteger m = lo , n = mid + 1;
+    for (NSUInteger i = 0 ; i < cloneArray.count; ++i) {
+        if (m > mid) {
+            self.array[i] = cloneArray[n++];
+        } else if (n > hi) {
+            self.array[i] = cloneArray[m++];
+        } else if ([self lessThan:cloneArray[m] anthor:cloneArray[n]]) {
+            self.array[i] = cloneArray[m++];
+        } else {
+            self.array[i] = cloneArray[n++];
+        }
     }
 }
 
