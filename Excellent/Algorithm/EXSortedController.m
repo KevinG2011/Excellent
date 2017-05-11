@@ -51,25 +51,40 @@
     }
 }
 
--(void)p__mergeLow:(NSUInteger)low high:(NSUInteger)high {
+-(void)p__mergeLow:(NSUInteger)lo mid:(NSUInteger)mid high:(NSUInteger)hi inArray:(NSMutableArray*)arr {
+    NSUInteger m = lo , n = mid + 1;
     
+    for (NSUInteger i = lo ; i <= hi; ++i) {
+        arr[i] = self.array[i];
+    }
+    
+    for (NSUInteger i = lo ; i <= hi; ++i) {
+        if (m > mid) {
+            self.array[i] = arr[n++];
+        } else if (n > hi) {
+            self.array[i] = arr[m++];
+        } else if ([self lessThan:arr[m] anthor:arr[n]]) {
+            self.array[i] = arr[m++];
+        } else {
+            self.array[i] = arr[n++];
+        }
+    }
+}
+
+- (void)p__mergeSortedLow:(NSUInteger)lo high:(NSUInteger)hi inArray:(NSMutableArray*)arr {
+    if (lo >= hi) {
+        return;
+    }
+    NSUInteger mid = lo + (hi - lo) / 2;
+    [self p__mergeSortedLow:lo high:mid inArray:arr];    //sorted left
+    [self p__mergeSortedLow:mid + 1 high:hi inArray:arr]; //sorted right
+    [self p__mergeLow:lo mid:mid high:hi inArray:arr];    //merge two part.
 }
 
 -(void)mergeSorted {
-    NSArray* cloneArray = [self.array copy];
-    NSUInteger lo = 0, hi = self.array.count - 1, mid = hi / 2;
-    NSUInteger m = lo , n = mid + 1;
-    for (NSUInteger i = 0 ; i < cloneArray.count; ++i) {
-        if (m > mid) {
-            self.array[i] = cloneArray[n++];
-        } else if (n > hi) {
-            self.array[i] = cloneArray[m++];
-        } else if ([self lessThan:cloneArray[m] anthor:cloneArray[n]]) {
-            self.array[i] = cloneArray[m++];
-        } else {
-            self.array[i] = cloneArray[n++];
-        }
-    }
+    NSMutableArray* arrayCopy = [self.array mutableCopy];
+    NSUInteger lo = 0, hi = self.array.count - 1;
+    [self p__mergeSortedLow:lo high:hi inArray:arrayCopy];
 }
 
 @end
