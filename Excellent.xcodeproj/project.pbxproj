@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B26749D1E968DFF00698715 /* EXSearchTests.m */; };
 		0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */; };
-		0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDEBF891EBF73D4007FB3EF /* EXSortedController.m */; };
+		0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */; };
 		2A2DBAA71E641334008C78AF /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */; };
 		2A2DBAA81E641334008C78AF /* AVToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA971E641334008C78AF /* AVToy.m */; };
 		2A2DBAA91E641334008C78AF /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA991E641334008C78AF /* EXAudioRecorderMemoViewController.m */; };
@@ -78,7 +78,7 @@
 		0BC32D831E93F2F200963484 /* EXAlgorithmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXAlgorithmViewController.h; sourceTree = "<group>"; };
 		0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXAlgorithmViewController.m; sourceTree = "<group>"; };
 		0BDEBF881EBF73D4007FB3EF /* EXSortedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSortedController.h; sourceTree = "<group>"; };
-		0BDEBF891EBF73D4007FB3EF /* EXSortedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSortedController.m; sourceTree = "<group>"; };
+		0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EXSortedController.mm; sourceTree = "<group>"; };
 		2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioRecorderMemo.storyboard; sourceTree = "<group>"; };
 		2A2DBA961E641334008C78AF /* AVToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVToy.h; sourceTree = "<group>"; };
 		2A2DBA971E641334008C78AF /* AVToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVToy.m; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 				2AAAA1241EC04610001C6A84 /* EXSortedBaseController.h */,
 				2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */,
 				0BDEBF881EBF73D4007FB3EF /* EXSortedController.h */,
-				0BDEBF891EBF73D4007FB3EF /* EXSortedController.m */,
+				0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -632,7 +632,7 @@
 				2A2DBAC11E641356008C78AF /* THMemoCell.m in Sources */,
 				2A2DBAE61E6426C8008C78AF /* THNotifications.m in Sources */,
 				2A2DBAF91E642758008C78AF /* THSubtitleViewController.m in Sources */,
-				0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.m in Sources */,
+				0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */,
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
 				0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */,

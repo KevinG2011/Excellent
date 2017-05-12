@@ -7,6 +7,7 @@
 //
 
 #import "EXSortedController.h"
+#include "EXQueue.h"
 @interface EXSortedController ()
 
 @end
@@ -78,7 +79,9 @@
     NSUInteger mid = lo + (hi - lo) / 2;
     [self p__mergeSortedLow:lo high:mid inArray:arr];    //sorted left
     [self p__mergeSortedLow:mid + 1 high:hi inArray:arr]; //sorted right
-    [self p__mergeLow:lo mid:mid high:hi inArray:arr];    //merge two part.
+    if (self.array[mid] > self.array[mid + 1]) {
+        [self p__mergeLow:lo mid:mid high:hi inArray:arr];    //merge two part.
+    }
 }
 
 -(void)mergeSorted {
@@ -86,5 +89,7 @@
     NSUInteger lo = 0, hi = self.array.count - 1;
     [self p__mergeSortedLow:lo high:hi inArray:arrayCopy];
 }
+
+
 
 @end
