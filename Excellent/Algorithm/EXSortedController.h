@@ -12,4 +12,5 @@
 -(void)insertionSorted;
 -(void)shellSorted;
 -(void)mergeSorted;
+-(void)quickSorted;
 @end

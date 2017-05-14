@@ -52,12 +52,11 @@
 }
 
 -(void)p__mergeLow:(NSUInteger)lo mid:(NSUInteger)mid high:(NSUInteger)hi inArray:(NSMutableArray*)arr {
-    NSUInteger m = lo , n = mid + 1;
-    
     for (NSUInteger i = lo ; i <= hi; ++i) {
         arr[i] = self.array[i];
     }
     
+    NSUInteger m = lo , n = mid + 1;
     for (NSUInteger i = lo ; i <= hi; ++i) {
         if (m > mid) {
             self.array[i] = arr[n++];
@@ -78,13 +77,52 @@
     NSUInteger mid = lo + (hi - lo) / 2;
     [self p__mergeSortedLow:lo high:mid inArray:arr];    //sorted left
     [self p__mergeSortedLow:mid + 1 high:hi inArray:arr]; //sorted right
-    [self p__mergeLow:lo mid:mid high:hi inArray:arr];    //merge two part.
+    if ([self lessThan:self.array[mid] anthor:self.array[mid + 1]] == NO) {
+        [self p__mergeLow:lo mid:mid high:hi inArray:arr];    //merge two part.
+    }
 }
 
 -(void)mergeSorted {
     NSMutableArray* arrayCopy = [self.array mutableCopy];
     NSUInteger lo = 0, hi = self.array.count - 1;
     [self p__mergeSortedLow:lo high:hi inArray:arrayCopy];
+}
+
+-(NSUInteger)p__partitionLow:(NSUInteger)lo high:(NSUInteger)hi {
+    NSUInteger i = lo,j = hi;
+    NSNumber* v = self.array[lo];
+    while (true) {
+        while ([self lessThan:self.array[++i] anthor:v]) {
+            if (i == j) {
+                break;
+            }
+        }
+        while ([self lessThan:v anthor:self.array[j--]]) {
+            if (j == i) {
+                break;
+            }
+        }
+        
+        if (i == j) {
+            break;
+        }
+    }
+    [self exchObjectAtIndex:lo withObjectAtIndex:j];
+    return j;
+}
+
+-(void)p__quickSortedLow:(NSUInteger)lo high:(NSUInteger)hi {
+    if (lo >= hi) {
+        return;
+    }
+    NSUInteger j = [self p__partitionLow:lo high:hi];
+    [self p__quickSortedLow:lo high:j - 1];
+    [self p__quickSortedLow:j + 1 high:hi];
+}
+
+-(void)quickSorted {
+    NSUInteger lo = 0,hi = self.array.count - 1;
+    [self p__quickSortedLow:lo high:hi];
 }
 
 @end
