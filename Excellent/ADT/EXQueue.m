@@ -46,4 +46,8 @@
     return (self.array.count == 0);
 }
 
+-(NSUInteger)size {
+    return self.array.count;
+}
+
 @end
