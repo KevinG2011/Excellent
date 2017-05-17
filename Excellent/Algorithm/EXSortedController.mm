@@ -25,12 +25,17 @@
     }
 }
 
--(void)insertionSorted {
-    for (NSUInteger i = 1; i < self.array.count; ++i) {
+- (void)p__insertionLow:(NSUInteger)lo high:(NSUInteger)hi {
+    for (NSUInteger i = lo; i <= hi; ++i) {
         for (NSUInteger j = i; j > 0 && [self lessThan:self.array[j] anthor:self.array[j - 1]]; --j) {
             [self exchObjectAtIndex:j withObjectAtIndex:j - 1];
         }
     }
+}
+
+-(void)insertionSorted {
+    NSUInteger lo = 0,hi = self.array.count - 1;
+    [self p__insertionLow:lo high:hi];
 }
 
 -(void)shellSorted {
@@ -113,7 +118,8 @@
 }
 
 -(void)p__quickSortedLow:(NSUInteger)lo high:(NSUInteger)hi {
-    if (lo >= hi) {
+    if (lo <= hi + 10) {
+        [self p__insertionLow:lo high:hi];  //apply insertion sorted to small slice
         return;
     }
     NSUInteger j = [self p__partitionLow:lo high:hi];
