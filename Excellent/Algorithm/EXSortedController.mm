@@ -132,4 +132,15 @@
     [self p__quickSortedLow:lo high:hi];
 }
 
+void repeat(int n, void (^blkPtr)(void)) {
+    while (n-- > 0) {
+        blkPtr();
+        @try {
+            throw [NSException new];
+        } @catch (NSException *exception) {
+            //
+        }
+    }
+}
+
 @end

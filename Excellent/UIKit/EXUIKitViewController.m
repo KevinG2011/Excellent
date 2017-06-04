@@ -7,8 +7,10 @@
 //
 
 #import "EXUIKitViewController.h"
+#import "EXCornerRadiusView.h"
 
 @interface EXUIKitViewController ()
+@property (weak, nonatomic) IBOutlet EXCornerRadiusView *roundCornerView;
 @property (nonatomic, strong) NSHashTable* delegates;
 @end
 
@@ -16,6 +18,10 @@
 +(instancetype)instantiateWithStoryboardName:(NSString*)name {
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"EXUIKitMaster" bundle:nil];
     return [storyboard instantiateViewControllerWithIdentifier:@"EXUIKitViewController"];
+}
+
+- (void)testRoundCorner {
+    self.roundCornerView.ex_cornerRadius = CGRectGetHeight(self.roundCornerView.bounds) / 4;
 }
 
 - (void)setupData {
@@ -55,6 +61,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self testRoundCorner];
     [self setupData];
     [self testAsset];
     [self testHashTable];
