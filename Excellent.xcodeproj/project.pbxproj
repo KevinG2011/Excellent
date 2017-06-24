@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B26749D1E968DFF00698715 /* EXSearchTests.m */; };
+		0B280EC11EFEB4C6001590F7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC01EFEB4C6001590F7 /* Alamofire.framework */; };
+		0B280EC31EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */; };
+		0B3261B51EFE58FA0008D0A4 /* BNItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */; };
+		0B3261B81EFE5A4F0008D0A4 /* BNUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */; };
+		0B3261BB1EFE787F0008D0A4 /* BNItemSummaryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */; };
 		0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99A9A11EE312BB0018564D /* EXRuntime.m */; };
 		0B99A9A51EE3144F0018564D /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99A9A41EE3144F0018564D /* EXCornerRadiusView.m */; };
 		0B99A9A71EE31B860018564D /* red_packet_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B99A9A61EE31B860018564D /* red_packet_top.png */; };
@@ -79,6 +84,14 @@
 		0B26749B1E968DFF00698715 /* ExcellentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExcellentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B26749D1E968DFF00698715 /* EXSearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXSearchTests.m; sourceTree = "<group>"; };
 		0B26749F1E968DFF00698715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B280EC01EFEB4C6001590F7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireSwiftyJSON.framework; path = Carthage/Build/iOS/AlamofireSwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
+		0B3261B31EFE58FA0008D0A4 /* BNItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNItemInfo.h; sourceTree = "<group>"; };
+		0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNItemInfo.m; sourceTree = "<group>"; };
+		0B3261B61EFE5A4F0008D0A4 /* BNUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUtils.h; sourceTree = "<group>"; };
+		0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUtils.m; sourceTree = "<group>"; };
+		0B3261B91EFE787F0008D0A4 /* BNItemSummaryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNItemSummaryInfo.h; sourceTree = "<group>"; };
+		0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNItemSummaryInfo.m; sourceTree = "<group>"; };
 		0B99A9A01EE312BB0018564D /* EXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRuntime.h; sourceTree = "<group>"; };
 		0B99A9A11EE312BB0018564D /* EXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRuntime.m; sourceTree = "<group>"; };
 		0B99A9A31EE3144F0018564D /* EXCornerRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXCornerRadiusView.h; sourceTree = "<group>"; };
@@ -197,6 +210,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B280EC31EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework in Frameworks */,
+				0B280EC11EFEB4C6001590F7 /* Alamofire.framework in Frameworks */,
 				2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +228,19 @@
 				0B26749F1E968DFF00698715 /* Info.plist */,
 			);
 			path = ExcellentTests;
+			sourceTree = "<group>";
+		};
+		0B3261B21EFE58950008D0A4 /* Bnade */ = {
+			isa = PBXGroup;
+			children = (
+				0B3261B31EFE58FA0008D0A4 /* BNItemInfo.h */,
+				0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */,
+				0B3261B91EFE787F0008D0A4 /* BNItemSummaryInfo.h */,
+				0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */,
+				0B3261B61EFE5A4F0008D0A4 /* BNUtils.h */,
+				0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */,
+			);
+			path = Bnade;
 			sourceTree = "<group>";
 		};
 		0B99A9901EE30B3B0018564D /* CornerRadius */ = {
@@ -403,6 +431,8 @@
 		2A7EE2471CD8441F0028D67C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */,
+				0B280EC01EFEB4C6001590F7 /* Alamofire.framework */,
 				2A7EE2881CD87D800028D67C /* Pods.framework */,
 				2AD7E2E71CED61AE005BD065 /* gwdock.framework */,
 				BD66AF2CEC700E1A08022F8A /* Pods.framework */,
@@ -477,6 +507,7 @@
 				2A63FAD41E49773600DA75D3 /* AVFoundation */,
 				2A3E314F1E8CB2CE006BE219 /* UIKit */,
 				0BC32D821E93F2E000963484 /* Algorithm */,
+				0B3261B21EFE58950008D0A4 /* Bnade */,
 				2ADFFC651CAAB663000C8C21 /* AppDelegate.h */,
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
 				2A3E31531E8CB364006BE219 /* EXBaseViewController.h */,
@@ -529,7 +560,8 @@
 				2ADFFC5B1CAAB662000C8C21 /* Sources */,
 				2ADFFC5C1CAAB662000C8C21 /* Frameworks */,
 				2ADFFC5D1CAAB662000C8C21 /* Resources */,
-				2ACF2CE91E9CE2EC00636A14 /* ShellScript */,
+				2ACF2CE91E9CE2EC00636A14 /* RevealServer */,
+				0B280EBF1EFEB32A001590F7 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -610,13 +642,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2ACF2CE91E9CE2EC00636A14 /* ShellScript */ = {
+		0B280EBF1EFEB32A001590F7 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireSwiftyJSON.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireSwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		2ACF2CE91E9CE2EC00636A14 /* RevealServer */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = RevealServer;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +697,7 @@
 				2A2DBABD1E641356008C78AF /* THLevelMeterColorThreshold.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
+				0B3261BB1EFE787F0008D0A4 /* BNItemSummaryInfo.m in Sources */,
 				0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */,
 				2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
@@ -661,6 +713,7 @@
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,
 				0B99A9A51EE3144F0018564D /* EXCornerRadiusView.m in Sources */,
 				2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */,
+				0B3261B51EFE58FA0008D0A4 /* BNItemInfo.m in Sources */,
 				2A2DBB001E642873008C78AF /* EXUtil.m in Sources */,
 				2A2DBABE1E641356008C78AF /* THLevelMeterView.m in Sources */,
 				2ADFFC641CAAB663000C8C21 /* main.m in Sources */,
@@ -670,6 +723,7 @@
 				2A2DBAC11E641356008C78AF /* THMemoCell.m in Sources */,
 				2A2DBAE61E6426C8008C78AF /* THNotifications.m in Sources */,
 				2A2DBAF91E642758008C78AF /* THSubtitleViewController.m in Sources */,
+				0B3261B81EFE5A4F0008D0A4 /* BNUtils.m in Sources */,
 				0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */,
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
@@ -846,6 +900,8 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
@@ -871,6 +927,8 @@
 					"$(inherited)",
 					"$(SRCROOT)",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;

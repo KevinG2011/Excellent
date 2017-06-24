@@ -11,6 +11,7 @@
 
 @interface EXUIKitViewController ()
 @property (weak, nonatomic) IBOutlet EXCornerRadiusView *roundCornerView;
+@property (weak, nonatomic) IBOutlet UILabel *feastLabel;
 @property (nonatomic, strong) NSHashTable* delegates;
 @end
 
@@ -19,6 +20,7 @@
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"EXUIKitMaster" bundle:nil];
     return [storyboard instantiateViewControllerWithIdentifier:@"EXUIKitViewController"];
 }
+
 
 - (void)testRoundCorner {
     self.roundCornerView.ex_cornerRadius = CGRectGetHeight(self.roundCornerView.bounds) / 4;
@@ -37,8 +39,8 @@
         NSString* path = [[NSBundle mainBundle] pathForResource:@"superstar" ofType:@"json"];
         NSData* data = [NSData dataWithContentsOfFile:path];
         NSLog(@"data :%@",data);
-
     }
+    
 }
 
 - (void)testHashTable {
@@ -59,6 +61,12 @@
     [invocation invoke];
 }
 
+- (void)testAvailability {
+    if ([NSJSONSerialization self]) { //weak linking for classes!
+        //then do something
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self testRoundCorner];
@@ -66,6 +74,7 @@
     [self testAsset];
     [self testHashTable];
     [self testInvocation];
+    [self testAvailability];
 }
 
 - (void)didReceiveMemoryWarning {

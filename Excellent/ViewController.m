@@ -18,6 +18,17 @@
 @end
 
 @implementation ViewController
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        if ([self respondsToSelector:@selector(restorationIdentifier)]) {
+            self.restorationIdentifier = @"RootViewController";
+            self.restorationClass = [self class];
+        }
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -72,6 +83,11 @@
         default:
             break;
     }
+}
+#define kSelectedSceneKey @"SelectedSceneKey"
+-(void)encodeRestorableStateWithCoder:(NSCoder *)coder {
+    
+    [super encodeRestorableStateWithCoder:coder];
 }
 
 - (void)didReceiveMemoryWarning {
