@@ -25,8 +25,15 @@
                             <view contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="GP1-qS-P22">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex6-TZ-W3m" customClass="THLevelMeterView">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="10"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Z3Z-ax-ChP"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3l-Le-tXP" userLabel="Container">
-                                        <rect key="frame" x="77" y="19" width="222" height="162"/>
+                                        <rect key="frame" x="76" y="19" width="222" height="162"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7o-uc-Fv8" userLabel="Record/Pause Button">
                                                 <rect key="frame" x="20" y="71" width="71" height="71"/>
@@ -61,13 +68,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="162" id="DhD-ja-uir"/>
                                             <constraint firstAttribute="width" constant="222" id="ExI-sy-Xr5"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex6-TZ-W3m" customClass="THLevelMeterView">
-                                        <rect key="frame" x="0.0" y="190" width="375" height="10"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="10" id="Z3Z-ax-ChP"/>
                                         </constraints>
                                     </view>
                                 </subviews>

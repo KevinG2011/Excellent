@@ -93,7 +93,7 @@
 
     for (int ledIndex = 0; ledIndex < self.ledCount; ledIndex++) {
 
-        UIColor *ledColor = [self.colorThresholds[0] color];
+        UIColor *ledColor = [(THLevelMeterColorThreshold*)self.colorThresholds[0] color];
 
         CGFloat ledMaxValue = (CGFloat) (ledIndex + 1) / self.ledCount;
 

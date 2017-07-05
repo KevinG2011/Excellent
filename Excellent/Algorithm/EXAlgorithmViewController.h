@@ -9,6 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface EXAlgorithmViewController : UIViewController
-+ (int)gcd:(int)p q:(int)q;
-
 @end

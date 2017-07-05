@@ -77,7 +77,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-UIViewShowAlignmentRects YES"
+            argument = "-UIViewShowAlignmentRects NO"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
