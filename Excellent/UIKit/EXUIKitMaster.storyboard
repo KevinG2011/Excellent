@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,21 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-bS-ftQ" customClass="EXCornerRadiusView">
-                                <rect key="frame" x="65.5" y="211.5" width="244" height="244"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="244" id="0rq-pc-bc6"/>
-                                    <constraint firstAttribute="width" secondItem="Oev-bS-ftQ" secondAttribute="height" multiplier="1:1" id="H7Y-2X-m2h"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineStart">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-qy-bcw">
-                                <rect key="frame" x="39" y="123" width="243" height="84"/>
+                                <rect key="frame" x="86" y="84" width="243" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="We need more space to  play.st ">
@@ -48,16 +36,56 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItU-ne-Y9A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nlI-6a-ap9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gB4-W2-Nzp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="20j-Ak-wSj">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-bS-ftQ" customClass="EXCornerRadiusView">
+                                <rect key="frame" x="65" y="211" width="244" height="244"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="0rq-pc-bc6"/>
+                                    <constraint firstAttribute="width" secondItem="Oev-bS-ftQ" secondAttribute="height" multiplier="1:1" id="mQm-Do-Fsx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineStart">
+                                        <real key="value" value="0.10000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerY" secondItem="aeb-ar-jTo" secondAttribute="centerY" id="XOW-Nc-Vw9"/>
-                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerX" secondItem="aeb-ar-jTo" secondAttribute="centerX" id="sSb-Im-lt3"/>
+                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerY" secondItem="aeb-ar-jTo" secondAttribute="centerY" id="02D-8d-Py9"/>
+                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerX" secondItem="aeb-ar-jTo" secondAttribute="centerX" id="Dd1-ws-Ncg"/>
+                            <constraint firstItem="xnh-cV-77v" firstAttribute="top" secondItem="ItU-ne-Y9A" secondAttribute="bottom" id="QM4-Fo-vY4"/>
+                            <constraint firstItem="ItU-ne-Y9A" firstAttribute="leading" secondItem="aeb-ar-jTo" secondAttribute="leadingMargin" constant="-16" id="VYh-fZ-Yub"/>
+                            <constraint firstItem="ItU-ne-Y9A" firstAttribute="top" secondItem="aeb-ar-jTo" secondAttribute="top" id="h4a-E0-Yw2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ItU-ne-Y9A" secondAttribute="trailing" constant="-16" id="yIv-hn-SWy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="UIKit Demo" id="ogH-HT-Djx"/>
                     <connections>
+                        <outlet property="blurEffectView" destination="ItU-ne-Y9A" id="CNq-f6-W8V"/>
                         <outlet property="feastLabel" destination="LYt-qy-bcw" id="A13-dC-BVj"/>
+                        <outlet property="ringView" destination="Oev-bS-ftQ" id="9KC-ub-j9q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFM-NO-9Iw" userLabel="First Responder" sceneMemberID="firstResponder"/>

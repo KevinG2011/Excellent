@@ -60,19 +60,19 @@
         case 0:
         {
             EXAudioRecorderMemoViewController* vc = [EXAudioRecorderMemoViewController instantiateWithStoryboardName:nil];
-            [self.navigationController pushViewController:vc animated:YES];
+            [self showViewController:vc sender:self];
         }
             break;
         case 1:
         {
             EXVideoPlayerViewController* vc = [[EXVideoPlayerViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            [self showViewController:vc sender:self];
         }
             break;
         case 2:
         {
             EXUIKitViewController* vc = [EXUIKitViewController instantiateWithStoryboardName:nil];
-            [self.navigationController pushViewController:vc animated:YES];
+            [self showViewController:vc sender:self];
         }
             break;
         case 3:

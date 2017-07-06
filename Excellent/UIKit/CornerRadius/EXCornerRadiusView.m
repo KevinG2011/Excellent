@@ -22,7 +22,6 @@ static const CGFloat lineWidth = 10.f;
     [super layoutSubviews];
     CGRect bounds = self.bounds;
     if (!_bgRingLayer) {
-        
         _bgRingLayer = [CAShapeLayer layer];
         _bgRingLayer.backgroundColor = [UIColor blackColor].CGColor;
         [self.layer addSublayer:_bgRingLayer];
@@ -40,6 +39,10 @@ static const CGFloat lineWidth = 10.f;
 
 -(void)prepareForInterfaceBuilder {
     [super prepareForInterfaceBuilder];
+}
+
+- (id)debugQuickLookObject {
+    return _bgRingLayer;
 }
 
 @end

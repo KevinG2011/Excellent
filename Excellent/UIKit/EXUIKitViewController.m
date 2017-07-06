@@ -10,8 +10,9 @@
 #import "EXCornerRadiusView.h"
 
 @interface EXUIKitViewController ()
-@property (weak, nonatomic) IBOutlet EXCornerRadiusView *roundCornerView;
+@property (weak, nonatomic) IBOutlet EXCornerRadiusView *ringView;
 @property (weak, nonatomic) IBOutlet UILabel *feastLabel;
+@property (weak, nonatomic) IBOutlet UIVisualEffectView *blurEffectView;
 @property (nonatomic, strong) NSHashTable* delegates;
 @end
 
@@ -23,7 +24,8 @@
 
 
 - (void)testRoundCorner {
-    
+    UIImage* image = [UIImage imageNamed:@"red_packet_top"];
+    NSLog(@"UIImageOrientation :%zd",image.imageOrientation);
 }
 
 - (void)setupData {
@@ -32,7 +34,7 @@
 
 - (void)testAsset {
     NSLog(@"min version :%zd",__IPHONE_OS_VERSION_MIN_REQUIRED);
-    if (__IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_9_0) {
+    if ([NSDataAsset self]) {
         NSDataAsset* asset = [[NSDataAsset alloc] initWithName:@"superstar"];
         NSLog(@"data :%@",asset.data);
     } else {
@@ -47,9 +49,7 @@
     UIViewController* vc = [UIViewController new];
     [_delegates addObject:vc];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        for (UIViewController* vc in _delegates) {
-            NSLog(@"vc :%@",vc);
-        }
+        NSLog(@"vc arr :%@",_delegates);
     });
 }
 
@@ -67,6 +67,16 @@
     }
 }
 
+- (void)testVisualEffectAlpha {
+    [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:.7
+            initialSpringVelocity:0 options:UIViewAnimationOptionAutoreverse
+                        animations:^{
+        self.blurEffectView.effect = nil;
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self testRoundCorner];
@@ -75,6 +85,11 @@
     [self testHashTable];
     [self testInvocation];
     [self testAvailability];
+    [self testVisualEffectAlpha];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
