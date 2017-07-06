@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 IB_DESIGNABLE
 @interface EXCornerRadiusView : UIView
-
+@property (nonatomic, assign) IBInspectable CGFloat         lineStart;
 @end

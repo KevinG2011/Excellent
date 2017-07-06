@@ -22,12 +22,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-bS-ftQ" customClass="EXCornerRadiusView">
-                                <rect key="frame" x="65.5" y="235" width="244" height="197"/>
+                                <rect key="frame" x="65.5" y="211.5" width="244" height="244"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="244" id="0rq-pc-bc6"/>
-                                    <constraint firstAttribute="width" secondItem="Oev-bS-ftQ" secondAttribute="height" multiplier="244:197" id="H7Y-2X-m2h"/>
+                                    <constraint firstAttribute="width" secondItem="Oev-bS-ftQ" secondAttribute="height" multiplier="1:1" id="H7Y-2X-m2h"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineStart">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-qy-bcw">
                                 <rect key="frame" x="39" y="123" width="243" height="84"/>
