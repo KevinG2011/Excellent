@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,13 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbZ-ZN-IWW" customClass="EXCornerRadiusView">
-                                <rect key="frame" x="125" y="290" width="125" height="87"/>
-                                <state key="normal" backgroundImage="red_packet_top.png"/>
-                                <connections>
-                                    <segue destination="xR0-RL-Rvp" kind="show" action="showDetailViewController:sender:" id="uDZ-Y7-MkT"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oev-bS-ftQ" customClass="EXCornerRadiusView">
+                                <rect key="frame" x="65.5" y="235" width="244" height="197"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="0rq-pc-bc6"/>
+                                    <constraint firstAttribute="width" secondItem="Oev-bS-ftQ" secondAttribute="height" multiplier="244:197" id="H7Y-2X-m2h"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYt-qy-bcw">
                                 <rect key="frame" x="39" y="123" width="243" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,14 +46,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AbZ-ZN-IWW" firstAttribute="centerY" secondItem="aeb-ar-jTo" secondAttribute="centerY" id="5vj-Hk-B7Q"/>
-                            <constraint firstItem="AbZ-ZN-IWW" firstAttribute="centerX" secondItem="aeb-ar-jTo" secondAttribute="centerX" id="r6N-D3-sYf"/>
+                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerY" secondItem="aeb-ar-jTo" secondAttribute="centerY" id="XOW-Nc-Vw9"/>
+                            <constraint firstItem="Oev-bS-ftQ" firstAttribute="centerX" secondItem="aeb-ar-jTo" secondAttribute="centerX" id="sSb-Im-lt3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="UIKit Demo" id="ogH-HT-Djx"/>
                     <connections>
                         <outlet property="feastLabel" destination="LYt-qy-bcw" id="A13-dC-BVj"/>
-                        <outlet property="roundCornerView" destination="AbZ-ZN-IWW" id="H9g-ib-Kbt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hFM-NO-9Iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,7 +111,4 @@
             <point key="canvasLocation" x="-234.40000000000001" y="124.58770614692655"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="red_packet_top.png" width="125" height="87"/>
-    </resources>
 </document>

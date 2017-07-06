@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+IB_DESIGNABLE
+@interface EXCornerRadiusView : UIView
 
-@interface EXCornerRadiusView : UIButton
-@property (nonatomic, assign) CGFloat         ex_cornerRadius;
 @end

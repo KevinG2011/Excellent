@@ -12,7 +12,6 @@
 		0B3261B81EFE5A4F0008D0A4 /* BNUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */; };
 		0B3261BB1EFE787F0008D0A4 /* BNItemSummaryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */; };
 		0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99A9A11EE312BB0018564D /* EXRuntime.m */; };
-		0B99A9A51EE3144F0018564D /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99A9A41EE3144F0018564D /* EXCornerRadiusView.m */; };
 		0B99A9A71EE31B860018564D /* red_packet_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B99A9A61EE31B860018564D /* red_packet_top.png */; };
 		0BA68DA51EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA68DA41EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m */; };
 		0BBB1D0D1F07722C001669FD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBB1D0B1F077212001669FD /* SwiftyJSON.framework */; };
@@ -54,6 +53,7 @@
 		2A3E315C1E8CB4F6006BE219 /* EXUIKitMaster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */; };
 		2A3E31611E8CBBCE006BE219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */; };
 		2A3E31BA1E924956006BE219 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E31B91E924956006BE219 /* hubblecast.m4v */; };
+		2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2AAAA11B1EC01BED001C6A84 /* EXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */; };
@@ -114,8 +114,6 @@
 		0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNItemSummaryInfo.m; sourceTree = "<group>"; };
 		0B99A9A01EE312BB0018564D /* EXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRuntime.h; sourceTree = "<group>"; };
 		0B99A9A11EE312BB0018564D /* EXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRuntime.m; sourceTree = "<group>"; };
-		0B99A9A31EE3144F0018564D /* EXCornerRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXCornerRadiusView.h; sourceTree = "<group>"; };
-		0B99A9A41EE3144F0018564D /* EXCornerRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXCornerRadiusView.m; sourceTree = "<group>"; };
 		0B99A9A61EE31B860018564D /* red_packet_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_packet_top.png; sourceTree = "<group>"; };
 		0BA68DA31EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXCheckmarkGestureRecognizer.h; sourceTree = "<group>"; };
 		0BA68DA41EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXCheckmarkGestureRecognizer.m; sourceTree = "<group>"; };
@@ -181,6 +179,8 @@
 		2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EXUIKitMaster.storyboard; sourceTree = "<group>"; };
 		2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3E31B91E924956006BE219 /* hubblecast.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = hubblecast.m4v; sourceTree = "<group>"; };
+		2A4497A31F0DD328000F94BA /* EXCornerRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXCornerRadiusView.h; sourceTree = "<group>"; };
+		2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXCornerRadiusView.m; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* ExGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExGlobal.h; sourceTree = "<group>"; };
 		2A63FAD21E496D3C00DA75D3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
@@ -268,8 +268,8 @@
 		0B99A9901EE30B3B0018564D /* CornerRadius */ = {
 			isa = PBXGroup;
 			children = (
-				0B99A9A31EE3144F0018564D /* EXCornerRadiusView.h */,
-				0B99A9A41EE3144F0018564D /* EXCornerRadiusView.m */,
+				2A4497A31F0DD328000F94BA /* EXCornerRadiusView.h */,
+				2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */,
 			);
 			path = CornerRadius;
 			sourceTree = "<group>";
@@ -730,6 +730,7 @@
 				2A2DBAF21E642713008C78AF /* UIAlertView+THAdditions.m in Sources */,
 				2A2DBAC01E641356008C78AF /* THMemo.m in Sources */,
 				2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */,
+				2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */,
 				2A2DBAD01E6425B6008C78AF /* THThumbnail.m in Sources */,
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,
@@ -737,7 +738,6 @@
 				2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */,
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,
-				0B99A9A51EE3144F0018564D /* EXCornerRadiusView.m in Sources */,
 				2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */,
 				0B3261B51EFE58FA0008D0A4 /* BNItemInfo.m in Sources */,
 				2A2DBB001E642873008C78AF /* EXUtil.m in Sources */,

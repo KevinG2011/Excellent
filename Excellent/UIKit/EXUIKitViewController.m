@@ -23,7 +23,7 @@
 
 
 - (void)testRoundCorner {
-    self.roundCornerView.ex_cornerRadius = CGRectGetHeight(self.roundCornerView.bounds) / 4;
+    
 }
 
 - (void)setupData {

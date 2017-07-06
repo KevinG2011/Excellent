@@ -7,20 +7,12 @@
 //
 
 #import "EXCornerRadiusView.h"
+@interface EXCornerRadiusView ()
+@end
+
 
 @implementation EXCornerRadiusView
-
-- (void)setEx_cornerRadius:(CGFloat)ex_cornerRadius {
-    _ex_cornerRadius = ex_cornerRadius;
-    if (_ex_cornerRadius > 0.f) {
-        UIBezierPath* maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:_ex_cornerRadius];
-        CAShapeLayer *maskLayer = [CAShapeLayer layer];
-        maskLayer.path = maskPath.CGPath;
-        self.layer.mask = maskLayer;
-    } else {
-        self.layer.mask = nil;
-    }
+-(void)layoutSubviews {
+    [super layoutSubviews];
 }
-
-
 @end
