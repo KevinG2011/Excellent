@@ -9,7 +9,7 @@
 #import "EXUIKitViewController.h"
 #import "EXCornerRadiusView.h"
 
-@interface EXUIKitViewController ()
+@interface EXUIKitViewController ()<UIPopoverPresentationControllerDelegate>
 @property (weak, nonatomic) IBOutlet EXCornerRadiusView *ringView;
 @property (weak, nonatomic) IBOutlet UILabel *feastLabel;
 @property (weak, nonatomic) IBOutlet UIVisualEffectView *blurEffectView;
@@ -69,7 +69,7 @@
 
 - (void)testVisualEffectAlpha {
     [UIView animateWithDuration:1 delay:0 usingSpringWithDamping:.7
-            initialSpringVelocity:0 options:UIViewAnimationOptionAutoreverse
+            initialSpringVelocity:0 options:UIViewAnimationOptionBeginFromCurrentState|UIViewAnimationOptionAutoreverse
                         animations:^{
         self.blurEffectView.effect = nil;
     } completion:^(BOOL finished) {
@@ -79,8 +79,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self testRoundCorner];
     [self setupData];
+    [self testRoundCorner];
     [self testAsset];
     [self testHashTable];
     [self testInvocation];
@@ -88,8 +88,22 @@
     [self testVisualEffectAlpha];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Popover"]) {
+        segue.destinationViewController.popoverPresentationController.delegate = self;
+    }
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationPopover;
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+}
+
+- (IBAction)testPopoverPresentation:(id)sender {
+	
 }
 
 - (void)didReceiveMemoryWarning {
