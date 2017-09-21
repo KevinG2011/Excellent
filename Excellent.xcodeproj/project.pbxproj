@@ -613,7 +613,7 @@
 					};
 					2ADFFC5E1CAAB662000C8C21 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 3KAP4AA829;
+						DevelopmentTeam = 8DHLQ2UE6S;
 					};
 				};
 			};
@@ -922,7 +922,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3KAP4AA829;
+				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -940,7 +940,7 @@
 					"-weak_framework",
 					RevealServer,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazyhornets.Excellent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.living.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -950,7 +950,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3KAP4AA829;
+				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)",
@@ -963,7 +963,7 @@
 				INFOPLIST_FILE = Excellent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazyhornets.Excellent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.living.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
