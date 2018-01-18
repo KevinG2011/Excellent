@@ -8,18 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B26749D1E968DFF00698715 /* EXSearchTests.m */; };
-		0B3261B51EFE58FA0008D0A4 /* BNItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */; };
-		0B3261B81EFE5A4F0008D0A4 /* BNUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */; };
-		0B3261BB1EFE787F0008D0A4 /* BNItemSummaryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */; };
 		0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B99A9A11EE312BB0018564D /* EXRuntime.m */; };
 		0B99A9A71EE31B860018564D /* red_packet_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B99A9A61EE31B860018564D /* red_packet_top.png */; };
 		0BA68DA51EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA68DA41EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m */; };
-		0BBB1D0D1F07722C001669FD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBB1D0B1F077212001669FD /* SwiftyJSON.framework */; };
-		0BBB1D0E1F07722C001669FD /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0BBB1D0B1F077212001669FD /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0BBB1D101F077236001669FD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC01EFEB4C6001590F7 /* Alamofire.framework */; };
-		0BBB1D111F077236001669FD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC01EFEB4C6001590F7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0BBB1D121F077239001669FD /* AlamofireSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */; };
-		0BBB1D131F077239001669FD /* AlamofireSwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */; };
 		0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */; };
 		2A049C821F790770007C0567 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A049C811F790770007C0567 /* NotificationService.m */; };
@@ -68,7 +59,6 @@
 		2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE01E9CBC3000636A14 /* EXQueue.m */; };
 		2ACF2CE51E9CBC3000636A14 /* EXStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE21E9CBC3000636A14 /* EXStack.m */; };
 		2ACF2CE81E9CDDD900636A14 /* EXDeque.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE71E9CDDD900636A14 /* EXDeque.m */; };
-		2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD7E2E71CED61AE005BD065 /* gwdock.framework */; };
 		2ADFFC641CAAB663000C8C21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC631CAAB663000C8C21 /* main.m */; };
 		2ADFFC671CAAB663000C8C21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC661CAAB663000C8C21 /* AppDelegate.m */; };
 		2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC691CAAB663000C8C21 /* ViewController.m */; };
@@ -94,19 +84,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0BBB1D0F1F07722C001669FD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0BBB1D0E1F07722C001669FD /* SwiftyJSON.framework in Embed Frameworks */,
-				0BBB1D131F077239001669FD /* AlamofireSwiftyJSON.framework in Embed Frameworks */,
-				0BBB1D111F077236001669FD /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2A049C8A1F790770007C0567 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,12 +103,6 @@
 		0B26749F1E968DFF00698715 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B280EC01EFEB4C6001590F7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		0B280EC21EFEB4D5001590F7 /* AlamofireSwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireSwiftyJSON.framework; path = Carthage/Build/iOS/AlamofireSwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
-		0B3261B31EFE58FA0008D0A4 /* BNItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNItemInfo.h; sourceTree = "<group>"; };
-		0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNItemInfo.m; sourceTree = "<group>"; };
-		0B3261B61EFE5A4F0008D0A4 /* BNUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNUtils.h; sourceTree = "<group>"; };
-		0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNUtils.m; sourceTree = "<group>"; };
-		0B3261B91EFE787F0008D0A4 /* BNItemSummaryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNItemSummaryInfo.h; sourceTree = "<group>"; };
-		0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNItemSummaryInfo.m; sourceTree = "<group>"; };
 		0B99A9A01EE312BB0018564D /* EXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXRuntime.h; sourceTree = "<group>"; };
 		0B99A9A11EE312BB0018564D /* EXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXRuntime.m; sourceTree = "<group>"; };
 		0B99A9A61EE31B860018564D /* red_packet_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_packet_top.png; sourceTree = "<group>"; };
@@ -262,10 +233,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AD7E2E81CED61AE005BD065 /* gwdock.framework in Frameworks */,
-				0BBB1D121F077239001669FD /* AlamofireSwiftyJSON.framework in Frameworks */,
-				0BBB1D101F077236001669FD /* Alamofire.framework in Frameworks */,
-				0BBB1D0D1F07722C001669FD /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,19 +248,6 @@
 				0B26749F1E968DFF00698715 /* Info.plist */,
 			);
 			path = ExcellentTests;
-			sourceTree = "<group>";
-		};
-		0B3261B21EFE58950008D0A4 /* Bnade */ = {
-			isa = PBXGroup;
-			children = (
-				0B3261B31EFE58FA0008D0A4 /* BNItemInfo.h */,
-				0B3261B41EFE58FA0008D0A4 /* BNItemInfo.m */,
-				0B3261B91EFE787F0008D0A4 /* BNItemSummaryInfo.h */,
-				0B3261BA1EFE787F0008D0A4 /* BNItemSummaryInfo.m */,
-				0B3261B61EFE5A4F0008D0A4 /* BNUtils.h */,
-				0B3261B71EFE5A4F0008D0A4 /* BNUtils.m */,
-			);
-			path = Bnade;
 			sourceTree = "<group>";
 		};
 		0B99A9901EE30B3B0018564D /* CornerRadius */ = {
@@ -573,7 +527,6 @@
 				2A63FAD41E49773600DA75D3 /* AVFoundation */,
 				2A3E314F1E8CB2CE006BE219 /* UIKit */,
 				0BC32D821E93F2E000963484 /* Algorithm */,
-				0B3261B21EFE58950008D0A4 /* Bnade */,
 				2ADFFC651CAAB663000C8C21 /* AppDelegate.h */,
 				2ADFFC661CAAB663000C8C21 /* AppDelegate.m */,
 				2A3E31531E8CB364006BE219 /* EXBaseViewController.h */,
@@ -645,7 +598,6 @@
 				2ADFFC5D1CAAB662000C8C21 /* Resources */,
 				2ACF2CE91E9CE2EC00636A14 /* RevealServer */,
 				0B280EBF1EFEB32A001590F7 /* Carthage */,
-				0BBB1D0F1F07722C001669FD /* Embed Frameworks */,
 				2A049C8A1F790770007C0567 /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -806,7 +758,6 @@
 				2A2DBABD1E641356008C78AF /* THLevelMeterColorThreshold.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
-				0B3261BB1EFE787F0008D0A4 /* BNItemSummaryInfo.m in Sources */,
 				0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */,
 				2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
@@ -822,7 +773,6 @@
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,
 				2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */,
-				0B3261B51EFE58FA0008D0A4 /* BNItemInfo.m in Sources */,
 				2A2DBB001E642873008C78AF /* EXUtil.m in Sources */,
 				2A2DBABE1E641356008C78AF /* THLevelMeterView.m in Sources */,
 				2ADFFC641CAAB663000C8C21 /* main.m in Sources */,
@@ -832,7 +782,6 @@
 				2A2DBAC11E641356008C78AF /* THMemoCell.m in Sources */,
 				2A2DBAE61E6426C8008C78AF /* THNotifications.m in Sources */,
 				2A2DBAF91E642758008C78AF /* THSubtitleViewController.m in Sources */,
-				0B3261B81EFE5A4F0008D0A4 /* BNUtils.m in Sources */,
 				0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */,
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
@@ -1066,7 +1015,6 @@
 		2ADFFC771CAAB663000C8C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
@@ -1082,7 +1030,7 @@
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
 				INFOPLIST_FILE = Excellent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-weak_framework",
@@ -1096,7 +1044,6 @@
 		2ADFFC781CAAB663000C8C21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
@@ -1112,7 +1059,7 @@
 				GCC_PREFIX_HEADER = Excellent/Excellent.pch;
 				INFOPLIST_FILE = Excellent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.living.Excellent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
