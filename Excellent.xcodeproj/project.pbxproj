@@ -13,8 +13,6 @@
 		0BA68DA51EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BA68DA41EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m */; };
 		0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */; };
 		0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */; };
-		2A049C821F790770007C0567 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A049C811F790770007C0567 /* NotificationService.m */; };
-		2A049C861F790770007C0567 /* notification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2A049C7E1F790770007C0567 /* notification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A2DBAA71E641334008C78AF /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */; };
 		2A2DBAA81E641334008C78AF /* AVToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA971E641334008C78AF /* AVToy.m */; };
 		2A2DBAA91E641334008C78AF /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA991E641334008C78AF /* EXAudioRecorderMemoViewController.m */; };
@@ -74,28 +72,7 @@
 			remoteGlobalIDString = 2ADFFC5E1CAAB662000C8C21;
 			remoteInfo = Excellent;
 		};
-		2A049C841F790770007C0567 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2ADFFC571CAAB662000C8C21 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2A049C7D1F790770007C0567;
-			remoteInfo = notification;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2A049C8A1F790770007C0567 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				2A049C861F790770007C0567 /* notification.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0B26749B1E968DFF00698715 /* ExcellentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExcellentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,10 +90,6 @@
 		0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXAlgorithmViewController.m; sourceTree = "<group>"; };
 		0BDEBF881EBF73D4007FB3EF /* EXSortedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSortedController.h; sourceTree = "<group>"; };
 		0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EXSortedController.mm; sourceTree = "<group>"; };
-		2A049C7E1F790770007C0567 /* notification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A049C801F790770007C0567 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
-		2A049C811F790770007C0567 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
-		2A049C831F790770007C0567 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioRecorderMemo.storyboard; sourceTree = "<group>"; };
 		2A2DBA961E641334008C78AF /* AVToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVToy.h; sourceTree = "<group>"; };
 		2A2DBA971E641334008C78AF /* AVToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVToy.m; sourceTree = "<group>"; };
@@ -222,13 +195,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2A049C7B1F790770007C0567 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2ADFFC5C1CAAB662000C8C21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,16 +247,6 @@
 				0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */,
 			);
 			path = Algorithm;
-			sourceTree = "<group>";
-		};
-		2A049C7F1F790770007C0567 /* notification */ = {
-			isa = PBXGroup;
-			children = (
-				2A049C801F790770007C0567 /* NotificationService.h */,
-				2A049C811F790770007C0567 /* NotificationService.m */,
-				2A049C831F790770007C0567 /* Info.plist */,
-			);
-			path = notification;
 			sourceTree = "<group>";
 		};
 		2A2DBA941E641334008C78AF /* Audio */ = {
@@ -500,7 +456,6 @@
 				2ADFFC611CAAB663000C8C21 /* Excellent */,
 				2A7EE2911CD8835F0028D67C /* ExcellentUIResources */,
 				0B26749C1E968DFF00698715 /* ExcellentTests */,
-				2A049C7F1F790770007C0567 /* notification */,
 				2A7EE2471CD8441F0028D67C /* Frameworks */,
 				2ADFFC601CAAB662000C8C21 /* Products */,
 			);
@@ -511,7 +466,6 @@
 			children = (
 				2ADFFC5F1CAAB662000C8C21 /* Excellent.app */,
 				0B26749B1E968DFF00698715 /* ExcellentTests.xctest */,
-				2A049C7E1F790770007C0567 /* notification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -572,23 +526,6 @@
 			productReference = 0B26749B1E968DFF00698715 /* ExcellentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2A049C7D1F790770007C0567 /* notification */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2A049C891F790770007C0567 /* Build configuration list for PBXNativeTarget "notification" */;
-			buildPhases = (
-				2A049C7A1F790770007C0567 /* Sources */,
-				2A049C7B1F790770007C0567 /* Frameworks */,
-				2A049C7C1F790770007C0567 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = notification;
-			productName = notification;
-			productReference = 2A049C7E1F790770007C0567 /* notification.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		2ADFFC5E1CAAB662000C8C21 /* Excellent */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2ADFFC761CAAB663000C8C21 /* Build configuration list for PBXNativeTarget "Excellent" */;
@@ -597,13 +534,10 @@
 				2ADFFC5C1CAAB662000C8C21 /* Frameworks */,
 				2ADFFC5D1CAAB662000C8C21 /* Resources */,
 				2ACF2CE91E9CE2EC00636A14 /* RevealServer */,
-				0B280EBF1EFEB32A001590F7 /* Carthage */,
-				2A049C8A1F790770007C0567 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2A049C851F790770007C0567 /* PBXTargetDependency */,
 			);
 			name = Excellent;
 			productName = Excellent;
@@ -625,11 +559,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2ADFFC5E1CAAB662000C8C21;
 					};
-					2A049C7D1F790770007C0567 = {
-						CreatedOnToolsVersion = 9.0;
-						DevelopmentTeam = 8DHLQ2UE6S;
-						ProvisioningStyle = Automatic;
-					};
 					2ADFFC5E1CAAB662000C8C21 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 8DHLQ2UE6S;
@@ -650,7 +579,6 @@
 			projectRoot = "";
 			targets = (
 				2ADFFC5E1CAAB662000C8C21 /* Excellent */,
-				2A049C7D1F790770007C0567 /* notification */,
 				0B26749A1E968DFF00698715 /* ExcellentTests */,
 			);
 		};
@@ -658,13 +586,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		0B2674991E968DFF00698715 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A049C7C1F790770007C0567 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -693,26 +614,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0B280EBF1EFEB32A001590F7 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireSwiftyJSON.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireSwiftyJSON.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
 		2ACF2CE91E9CE2EC00636A14 /* RevealServer */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,14 +638,6 @@
 				0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */,
 				2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */,
 				2ACF2CDB1E9CBBE300636A14 /* CollectionTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2A049C7A1F790770007C0567 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2A049C821F790770007C0567 /* NotificationService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,11 +696,6 @@
 			target = 2ADFFC5E1CAAB662000C8C21 /* Excellent */;
 			targetProxy = 0B2674A01E968DFF00698715 /* PBXContainerItemProxy */;
 		};
-		2A049C851F790770007C0567 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2A049C7D1F790770007C0567 /* notification */;
-			targetProxy = 2A049C841F790770007C0567 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -865,64 +753,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yingxiang.ExcellentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Excellent.app/Excellent";
-			};
-			name = Release;
-		};
-		2A049C871F790770007C0567 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = notification/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.living.Excellent.notification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		2A049C881F790770007C0567 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = notification/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.living.Excellent.notification;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1073,15 +903,6 @@
 			buildConfigurations = (
 				0B2674A21E968DFF00698715 /* Debug */,
 				0B2674A31E968DFF00698715 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2A049C891F790770007C0567 /* Build configuration list for PBXNativeTarget "notification" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2A049C871F790770007C0567 /* Debug */,
-				2A049C881F790770007C0567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
