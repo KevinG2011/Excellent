@@ -35,6 +35,7 @@
     _scenes = @[@"Audio Recorder Memo",
                 @"Video Player Item",
                 @"UIKit Test",
+                @"Algorithm Test"
                 ];
 }
 
@@ -77,7 +78,8 @@
             break;
         case 3:
         {
-            
+            EXAlgorithmViewController *vc = [[EXAlgorithmViewController alloc] init];
+            [self showViewController:vc sender:self];
         }
             break;
         default:
