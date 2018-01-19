@@ -47,12 +47,13 @@
 		2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
+		2AA64B1820119CF100D72084 /* EXNodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA64B1720119CF100D72084 /* EXNodeViewController.m */; };
 		2AAAA11B1EC01BED001C6A84 /* EXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */; };
 		2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */; };
 		2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
 		2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */; };
-		2ACF2CDB1E9CBBE300636A14 /* CollectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDA1E9CBBE300636A14 /* CollectionTests.m */; };
+		2ACF2CDB1E9CBBE300636A14 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */; };
 		2ACF2CE31E9CBC3000636A14 /* EXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDE1E9CBC3000636A14 /* EXNode.m */; };
 		2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE01E9CBC3000636A14 /* EXQueue.m */; };
 		2ACF2CE51E9CBC3000636A14 /* EXStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE21E9CBC3000636A14 /* EXStack.m */; };
@@ -154,6 +155,8 @@
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
 		2A7EE2921CD8835F0028D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ExcellentUI.bundle; sourceTree = "<group>"; };
+		2AA64B1620119CF100D72084 /* EXNodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXNodeViewController.h; sourceTree = "<group>"; };
+		2AA64B1720119CF100D72084 /* EXNodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXNodeViewController.m; sourceTree = "<group>"; };
 		2AAAA1191EC01BED001C6A84 /* EXSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchController.h; sourceTree = "<group>"; };
 		2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchController.m; sourceTree = "<group>"; };
 		2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSortedTests.m; sourceTree = "<group>"; };
@@ -164,7 +167,7 @@
 		2AAB46DC1E2E33C20072D903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
-		2ACF2CDA1E9CBBE300636A14 /* CollectionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTests.m; sourceTree = "<group>"; };
+		2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
 		2ACF2CDD1E9CBC3000636A14 /* EXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXNode.h; sourceTree = "<group>"; };
 		2ACF2CDE1E9CBC3000636A14 /* EXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXNode.m; sourceTree = "<group>"; };
 		2ACF2CDF1E9CBC3000636A14 /* EXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXQueue.h; sourceTree = "<group>"; };
@@ -210,7 +213,7 @@
 			children = (
 				0B26749D1E968DFF00698715 /* EXSearchTests.m */,
 				2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */,
-				2ACF2CDA1E9CBBE300636A14 /* CollectionTests.m */,
+				2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */,
 				0B26749F1E968DFF00698715 /* Info.plist */,
 			);
 			path = ExcellentTests;
@@ -237,14 +240,11 @@
 		0BC32D821E93F2E000963484 /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				2AA64B1520119CBB00D72084 /* Search */,
+				2AA64B1420119C8900D72084 /* Sort */,
+				2AA64B1320119C8100D72084 /* Node */,
 				0BC32D831E93F2F200963484 /* EXAlgorithmViewController.h */,
 				0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */,
-				2AAAA1191EC01BED001C6A84 /* EXSearchController.h */,
-				2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */,
-				2AAAA1241EC04610001C6A84 /* EXSortedBaseController.h */,
-				2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */,
-				0BDEBF881EBF73D4007FB3EF /* EXSortedController.h */,
-				0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -435,6 +435,35 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		2AA64B1320119C8100D72084 /* Node */ = {
+			isa = PBXGroup;
+			children = (
+				2AA64B1620119CF100D72084 /* EXNodeViewController.h */,
+				2AA64B1720119CF100D72084 /* EXNodeViewController.m */,
+			);
+			path = Node;
+			sourceTree = "<group>";
+		};
+		2AA64B1420119C8900D72084 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				2AAAA1241EC04610001C6A84 /* EXSortedBaseController.h */,
+				2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */,
+				0BDEBF881EBF73D4007FB3EF /* EXSortedController.h */,
+				0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		2AA64B1520119CBB00D72084 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2AAAA1191EC01BED001C6A84 /* EXSearchController.h */,
+				2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		2ACF2CDC1E9CBC3000636A14 /* ADT */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,7 +584,7 @@
 				TargetAttributes = {
 					0B26749A1E968DFF00698715 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 3KAP4AA829;
+						DevelopmentTeam = 8DHLQ2UE6S;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2ADFFC5E1CAAB662000C8C21;
 					};
@@ -637,7 +666,7 @@
 			files = (
 				0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */,
 				2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */,
-				2ACF2CDB1E9CBBE300636A14 /* CollectionTests.m in Sources */,
+				2ACF2CDB1E9CBBE300636A14 /* NodeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +691,7 @@
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,
 				2A2DBAA81E641334008C78AF /* AVToy.m in Sources */,
+				2AA64B1820119CF100D72084 /* EXNodeViewController.m in Sources */,
 				2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */,
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,
@@ -728,7 +758,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = 3KAP4AA829;
+				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
 				INFOPLIST_FILE = ExcellentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -746,7 +776,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				DEVELOPMENT_TEAM = 3KAP4AA829;
+				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
 				INFOPLIST_FILE = ExcellentTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -9,11 +9,11 @@
 #import <XCTest/XCTest.h>
 #import "EXNode.h"
 
-@interface CollectionTest : XCTestCase
+@interface NodeTest : XCTestCase
 @property (nonatomic, strong) EXNode*         node;
 @end
 
-@implementation CollectionTest
+@implementation NodeTest
 
 - (void)setUp {
     [super setUp];
