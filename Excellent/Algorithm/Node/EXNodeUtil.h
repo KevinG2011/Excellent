@@ -15,10 +15,10 @@
  */
 +(NSUInteger)getNodeLength:(EXNode*)headNode;
 /**
- *  是环形链表返回相遇节点
+ *  是环形链表返回相遇交点
  *  不是的话返回空
  */
-+(EXNode*)getMeetNode:(EXNode*)headNode;
++(EXNode*)getCrossNode:(EXNode*)headNode;
 /**
  *  链表是否为环形链表
  */
@@ -30,7 +30,7 @@
  *     慢指针      快指针
  *  a = r - x
  */
-+(EXNode*)getCircleEnterNode:(EXNode*)headNode meetNode:(EXNode*)meetNode;
++(EXNode*)getCircleEnterNode:(EXNode*)headNode crossNode:(EXNode*)meetNode;
 /**
  *  如果是环形列表, 返回环入口点; 否则返回空
  *
