@@ -18,7 +18,7 @@
  *  是环形链表返回相遇交点
  *  不是的话返回空
  */
-+(EXNode*)getCrossNode:(EXNode*)headNode;
++(EXNode*)findCircleCrossNode:(EXNode*)headNode;
 /**
  *  链表是否为环形链表
  */
@@ -30,10 +30,11 @@
  *     慢指针      快指针
  *  a = r - x
  */
-+(EXNode*)getCircleEnterNode:(EXNode*)headNode crossNode:(EXNode*)meetNode;
++(EXNode*)findCircleEnterNode:(EXNode*)headNode crossNode:(EXNode*)crossNode;
 /**
  *  如果是环形列表, 返回环入口点; 否则返回空
- *
  */
-+(EXNode*)getCircleEnterNode:(EXNode*)headNode;
++(EXNode*)findCircleEnterNode:(EXNode*)headNode;
+
+
 @end

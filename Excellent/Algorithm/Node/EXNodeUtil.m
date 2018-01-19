@@ -26,7 +26,7 @@
     return len;
 }
 
-+(EXNode*)getCrossNode:(EXNode*)headNode {
++(EXNode*)findCircleCrossNode:(EXNode*)headNode {
     if (headNode == nil) {
         return nil;
     }
@@ -45,10 +45,10 @@
 }
 
 +(BOOL)isCircleNode:(EXNode*)headNode {
-    return ([self getCrossNode:headNode] != nil);
+    return ([self findCircleCrossNode:headNode] != nil);
 }
 
-+(EXNode*)getCircleEnterNode:(EXNode*)headNode crossNode:(EXNode*)crossNode {
++(EXNode*)findCircleEnterNode:(EXNode*)headNode crossNode:(EXNode*)crossNode {
     if (headNode == crossNode) {
         return nil;
     }
@@ -64,11 +64,13 @@
     return p1;
 }
 
-+(EXNode*)getCircleEnterNode:(EXNode*)headNode {
-    EXNode *crossNode = [self getCrossNode:headNode];
++(EXNode*)findCircleEnterNode:(EXNode*)headNode {
+    EXNode *crossNode = [self findCircleCrossNode:headNode];
     if (crossNode) {
-        return [self getCircleEnterNode:headNode crossNode:crossNode];
+        return [self findCircleEnterNode:headNode crossNode:crossNode];
     }
     return nil;
 }
+
+
 @end

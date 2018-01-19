@@ -14,9 +14,9 @@
     EXNode* node = self;
     NSMutableString* desc = [[NSMutableString alloc] init];
     [desc setString:node.iid];
-    EXNode *crossNode = [EXNodeUtil getCrossNode:node];
+    EXNode *crossNode = [EXNodeUtil findCircleCrossNode:node];
     if (crossNode) {
-        EXNode *enterNode = [EXNodeUtil getCircleEnterNode:node crossNode:crossNode];
+        EXNode *enterNode = [EXNodeUtil findCircleEnterNode:node crossNode:crossNode];
         unsigned int loopCount = 0;
         while (node.next && loopCount < 2) {
             node = node.next;
