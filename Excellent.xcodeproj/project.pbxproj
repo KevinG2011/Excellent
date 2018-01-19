@@ -47,7 +47,7 @@
 		2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
-		2AA64B1820119CF100D72084 /* EXNodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA64B1720119CF100D72084 /* EXNodeViewController.m */; };
+		2AA64B1820119CF100D72084 /* EXNodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA64B1720119CF100D72084 /* EXNodeController.m */; };
 		2AAAA11B1EC01BED001C6A84 /* EXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */; };
 		2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */; };
 		2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */; };
@@ -155,8 +155,8 @@
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
 		2A7EE2921CD8835F0028D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ExcellentUI.bundle; sourceTree = "<group>"; };
-		2AA64B1620119CF100D72084 /* EXNodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXNodeViewController.h; sourceTree = "<group>"; };
-		2AA64B1720119CF100D72084 /* EXNodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXNodeViewController.m; sourceTree = "<group>"; };
+		2AA64B1620119CF100D72084 /* EXNodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXNodeController.h; sourceTree = "<group>"; };
+		2AA64B1720119CF100D72084 /* EXNodeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXNodeController.m; sourceTree = "<group>"; };
 		2AAAA1191EC01BED001C6A84 /* EXSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchController.h; sourceTree = "<group>"; };
 		2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchController.m; sourceTree = "<group>"; };
 		2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSortedTests.m; sourceTree = "<group>"; };
@@ -438,8 +438,8 @@
 		2AA64B1320119C8100D72084 /* Node */ = {
 			isa = PBXGroup;
 			children = (
-				2AA64B1620119CF100D72084 /* EXNodeViewController.h */,
-				2AA64B1720119CF100D72084 /* EXNodeViewController.m */,
+				2AA64B1620119CF100D72084 /* EXNodeController.h */,
+				2AA64B1720119CF100D72084 /* EXNodeController.m */,
 			);
 			path = Node;
 			sourceTree = "<group>";
@@ -691,7 +691,7 @@
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,
 				2A2DBAA81E641334008C78AF /* AVToy.m in Sources */,
-				2AA64B1820119CF100D72084 /* EXNodeViewController.m in Sources */,
+				2AA64B1820119CF100D72084 /* EXNodeController.m in Sources */,
 				2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */,
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
 				2A2DBAD61E64260F008C78AF /* EXRecorderController.m in Sources */,

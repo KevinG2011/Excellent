@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "EXNodeController.h"
 #import "EXNode.h"
 
 @interface NodeTest : XCTestCase

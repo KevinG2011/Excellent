@@ -1,5 +1,5 @@
 //
-//  EXNodeViewController.h
+//  EXNodeController.h
 //  Excellent
 //
 //  Created by lijia on 2018/1/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXNodeViewController : UIViewController
+@interface EXNodeController : NSObject
 
 @end
