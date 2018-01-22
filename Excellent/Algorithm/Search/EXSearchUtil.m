@@ -12,65 +12,79 @@
 
 @end
 
-
 @implementation EXSearchUtil
-- (NSInteger)bruteForceSearch:(NSNumber*)num {
-    NSInteger index = [self.array indexOfObjectPassingTest:^BOOL(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        if ([num isEqualToNumber:obj]) {
-            *stop = YES;
-            return YES;
-        }
-        return NO;
-    }];
++ (NSInteger)bruteForceSearch:(NSNumber*)num
+                      inArray:(NSArray*)array {
+    NSInteger index = NSNotFound;
+    if (array.count > 0) {
+        index = [array indexOfObjectPassingTest:^BOOL(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if ([num isEqualToNumber:obj]) {
+                *stop = YES;
+                return YES;
+            }
+            return NO;
+        }];
+    }
     return index;
 }
 
-- (NSInteger)binarySearch:(NSNumber*)num {
-    //sort first concurrent
-    NSArray* array = [self.array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
-        return [n1 compare:n2];
-    }];
-    NSUInteger lo = 0, hi = array.count - 1;
-    while (lo <= hi) {
-        NSUInteger mid = lo + (hi - lo) / 2;
-        NSNumber* midNum = array[mid];
-        NSComparisonResult result = [num compare:midNum];
++ (NSInteger)binarySearch:(NSNumber*)num
+                  inArray:(NSArray*)array {
+    NSInteger index = NSNotFound;
+    if (array.count > 0) {
+        //sort first concurrent
+        array = [array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+            return [n1 compare:n2];
+        }];
         
-        if (result == NSOrderedAscending) {
-            hi = mid - 1;
-        } else if (result == NSOrderedDescending) {
-            lo = mid + 1;
-        } else {
-            return mid;
+        NSUInteger lo = 0, hi = array.count - 1;
+        while (lo <= hi) {
+            NSUInteger mid = lo + (hi - lo) / 2;
+            NSNumber* midNum = array[mid];
+            NSComparisonResult result = [num compare:midNum];
+            
+            if (result == NSOrderedAscending) {
+                hi = mid - 1;
+            } else if (result == NSOrderedDescending) {
+                lo = mid + 1;
+            } else {
+                return mid;
+            }
         }
     }
-    
-    return NSNotFound;
-}
-
-- (NSInteger)systemBinarySearch:(NSNumber*)num {
-    //also needs sort first concurrent
-    NSArray* array = [self.array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
-        return [n1 compare:n2];
-    }];
-    
-    NSRange range = NSMakeRange(0, array.count - 1);
-    NSInteger index = [array indexOfObject:num
-                             inSortedRange:range
-                                   options:NSBinarySearchingFirstEqual
-                           usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
-                               return [n1 compare:n2];
-                           }
-                       ];
     return index;
 }
 
-- (NSInteger)p__recursiveSearch:(NSNumber*)num low:(NSUInteger)lo high:(NSUInteger)hi inArray:(NSArray*)array {
++ (NSInteger)systemBinarySearch:(NSNumber*)num
+                        inArray:(NSArray*)array {
+    NSInteger index = NSNotFound;
+    if (array.count > 0) {
+        //sort first concurrent
+        array = [array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+            return [n1 compare:n2];
+        }];
+
+        NSRange range = NSMakeRange(0, array.count - 1);
+        index = [array indexOfObject:num
+                      inSortedRange:range
+                            options:NSBinarySearchingFirstEqual
+                    usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
+                       return [n1 compare:n2];
+                    }
+                 ];
+    }
+    return index;
+}
+
++ (NSInteger)p__recursiveSearch:(NSNumber*)num
+                            low:(NSUInteger)lo
+                           high:(NSUInteger)hi
+                        inArray:(NSArray*)array {
     if (lo > hi) {
         return NSNotFound;
     }
     NSUInteger mid = lo + (hi - lo) / 2;
-    NSNumber* midNum = array[mid];
+    NSNumber  *midNum = array[mid];
     NSComparisonResult result = [num compare:midNum];
     if (result == NSOrderedAscending) {
         return [self p__recursiveSearch:num low:lo high:mid - 1 inArray:array];
@@ -81,8 +95,9 @@
     }
 }
 
-- (NSInteger)recursiveSearch:(NSNumber*)num {
-    NSArray* array = [self.array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
++ (NSInteger)recursiveSearch:(NSNumber*)num
+                     inArray:(NSArray*)array {
+    array = [array sortedArrayWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSNumber* n1, NSNumber* n2) {
         return [n1 compare:n2];
     }];
     return [self p__recursiveSearch:num low:0 high:array.count - 1 inArray:array];

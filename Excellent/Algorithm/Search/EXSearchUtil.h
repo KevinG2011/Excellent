@@ -9,23 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @interface EXSearchUtil : NSObject
-@property (nonatomic, strong) NSArray<NSNumber*>* array;
 /**
  *  暴力搜索
  */
-- (NSInteger)bruteForceSearch:(NSNumber*)num;
++ (NSInteger)bruteForceSearch:(NSNumber*)num inArray:(NSArray*)array;
 /**
  *  二分查找法
  */
-- (NSInteger)binarySearch:(NSNumber*)num;
++ (NSInteger)binarySearch:(NSNumber*)num inArray:(NSArray*)array;
 /**
  *  OC系统二分查找法
  */
-- (NSInteger)systemBinarySearch:(NSNumber*)num;
++ (NSInteger)systemBinarySearch:(NSNumber*)num inArray:(NSArray*)array;
 /**
  *  递归查找
  */
-- (NSInteger)recursiveSearch:(NSNumber*)num;
++ (NSInteger)recursiveSearch:(NSNumber*)num inArray:(NSArray*)array;
 
 /**
  *  递增二维数组查找指定数字
