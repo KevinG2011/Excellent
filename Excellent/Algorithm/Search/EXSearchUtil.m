@@ -1,19 +1,19 @@
 //
-//  EXSearchController.m
+//  EXSearchUtil.m
 //  Excellent
 //
 //  Created by lijia on 08/05/2017.
 //  Copyright © 2017 Li Jia. All rights reserved.
 //
 
-#import "EXSearchController.h"
+#import "EXSearchUtil.h"
 
-@interface EXSearchController ()
+@interface EXSearchUtil ()
 
 @end
 
 
-@implementation EXSearchController
+@implementation EXSearchUtil
 - (NSInteger)bruteForceSearch:(NSNumber*)num {
     NSInteger index = [self.array indexOfObjectPassingTest:^BOOL(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([num isEqualToNumber:obj]) {

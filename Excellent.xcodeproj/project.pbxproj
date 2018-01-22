@@ -48,7 +48,7 @@
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2AA64B1820119CF100D72084 /* EXNodeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA64B1720119CF100D72084 /* EXNodeUtil.m */; };
-		2AAAA11B1EC01BED001C6A84 /* EXSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */; };
+		2AAAA11B1EC01BED001C6A84 /* EXSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchUtil.m */; };
 		2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */; };
 		2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
@@ -157,8 +157,8 @@
 		2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ExcellentUI.bundle; sourceTree = "<group>"; };
 		2AA64B1620119CF100D72084 /* EXNodeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXNodeUtil.h; sourceTree = "<group>"; };
 		2AA64B1720119CF100D72084 /* EXNodeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXNodeUtil.m; sourceTree = "<group>"; };
-		2AAAA1191EC01BED001C6A84 /* EXSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchController.h; sourceTree = "<group>"; };
-		2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchController.m; sourceTree = "<group>"; };
+		2AAAA1191EC01BED001C6A84 /* EXSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchUtil.h; sourceTree = "<group>"; };
+		2AAAA11A1EC01BED001C6A84 /* EXSearchUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchUtil.m; sourceTree = "<group>"; };
 		2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSortedTests.m; sourceTree = "<group>"; };
 		2AAAA1241EC04610001C6A84 /* EXSortedBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSortedBaseController.h; sourceTree = "<group>"; };
 		2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSortedBaseController.m; sourceTree = "<group>"; };
@@ -458,8 +458,8 @@
 		2AA64B1520119CBB00D72084 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				2AAAA1191EC01BED001C6A84 /* EXSearchController.h */,
-				2AAAA11A1EC01BED001C6A84 /* EXSearchController.m */,
+				2AAAA1191EC01BED001C6A84 /* EXSearchUtil.h */,
+				2AAAA11A1EC01BED001C6A84 /* EXSearchUtil.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -709,7 +709,7 @@
 				2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */,
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
 				0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */,
-				2AAAA11B1EC01BED001C6A84 /* EXSearchController.m in Sources */,
+				2AAAA11B1EC01BED001C6A84 /* EXSearchUtil.m in Sources */,
 				2ACF2CE81E9CDDD900636A14 /* EXDeque.m in Sources */,
 				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,

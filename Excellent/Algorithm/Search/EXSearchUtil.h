@@ -1,5 +1,5 @@
 //
-//  EXSearchController.h
+//  EXSearchUtil.h
 //  Excellent
 //
 //  Created by lijia on 08/05/2017.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EXSearchController : NSObject
+@interface EXSearchUtil : NSObject
 @property (nonatomic, strong) NSArray<NSNumber*>* array;
 /**
  *  暴力搜索
@@ -26,7 +26,6 @@
  *  递归查找
  */
 - (NSInteger)recursiveSearch:(NSNumber*)num;
-@end
 
 /**
  *  递增二维数组查找指定数字
@@ -36,3 +35,7 @@
  * 6  9  14  17  21
  */
 bool searchNumberInOrderedMatrix(int *matrix, int rows, int columns, int number);
+
+@end
+
+

@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "EXSearchController.h"
+#import "EXSearchUtil.h"
 #import "NSArray+Additions.h"
 
 @interface EXSearchTests : XCTestCase
-@property (nonatomic, strong) EXSearchController*   searchController;
+@property (nonatomic, strong) EXSearchUtil*   searchController;
 @end
 
 @implementation EXSearchTests
@@ -24,7 +24,7 @@
 //        [mutArr addObject:@(i)];
 //    }
 //    NSMutableArray* arr = [mutArr ex_shuffle];
-    self.searchController = [[EXSearchController alloc] init];
+    self.searchController = [[EXSearchUtil alloc] init];
 //    self.searchController.array = arr;
 }
 
