@@ -27,7 +27,7 @@
 + (NSInteger)recursiveSearch:(NSNumber*)num inArray:(NSArray*)array;
 
 /**
- *  递增二维数组查找指定数字
+ *  水平和垂直方向递增二维数组查找指定数字
  * 1  3   5   6   9
  * 2  5   8  11  14
  * 4  7  12  14  19
