@@ -88,40 +88,30 @@
     return [self p__recursiveSearch:num low:0 high:array.count - 1 inArray:array];
 }
 
-struct Index {
-    int row;
-    int col;
-};
-
-bool searchNumberInOrderedMatrix(int *matrix, int rows, int columns, int number) {
-    if (matrix == NULL || rows < 1 || columns < 1) {
-        return -1;
-    }
-    
-    struct Index lowIndex = {0, 0};
-    struct Index highIndex = {rows - 1, columns - 1};
-    
-    return internalSearch(matrix, &lowIndex, &highIndex, number);
-}
-
-bool internalSearch(int *matrix, struct Index *lowIdx, struct Index *highIdx, int number) {
-    if (lowIdx->row >= highIdx->row && lowIdx->col >= highIdx->col) {
-        return -1;
-    }
-    int midRow = lowIdx->row + (highIdx->row - lowIdx->row) / 2;
-    int midCol = lowIdx->col + (highIdx->col - lowIdx->col) / 2;
-    
-    if (matrix[midRow * midCol + midCol] > number) {
-        highIdx->row = midRow - 1;
-        highIdx->col = midCol - 1;
-        return internalSearch(matrix, lowIdx, highIdx, number);
-    } else if (matrix[midRow * midCol + midCol] < number) {
-        lowIdx->row = midRow + 1;
-        lowIdx->col = midCol + 1;
-        return internalSearch(matrix, lowIdx, highIdx, number);
-    } else {
-        return true;
-    }
-}
-
 @end
+
+bool searchNumberInOrderedMatrix(int *matrix,
+                                 int rows,
+                                 int columns,
+                                 int number) {
+    bool found = false;
+    
+    if (matrix != NULL && rows > 0 && columns > 0) {
+        int row = 0;
+        int column = columns - 1;
+        while (row < rows && column >= 0) {
+            int value = matrix[row * columns + column];
+            if (value > number) {
+                column -= 1;
+                row = 0;
+            } else if(value < number) {
+                row += 1;
+            } else {
+                found = true;
+                break;
+            }
+        }
+    }
+    
+    return found;
+}

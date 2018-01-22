@@ -26,8 +26,13 @@
  *  递归查找
  */
 - (NSInteger)recursiveSearch:(NSNumber*)num;
+@end
+
 /**
- *  二维数组查找指定数字
+ *  递增二维数组查找指定数字
+ * 1  3   5   6   9
+ * 2  5   8  11  14
+ * 4  7  12  14  19
+ * 6  9  14  17  21
  */
 bool searchNumberInOrderedMatrix(int *matrix, int rows, int columns, int number);
-@end
