@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface EXOfferCase : NSObject
-void replaceBlankStr(char str[], int length);
+/**
+ *  替换字符串中的空格
+ *  参数 str: 字符串数组的空格
+ *  参数 length: 字符串数组的总容量
+ */
+void replaceBlankString(char str[], int length, bool *success);
 @end
