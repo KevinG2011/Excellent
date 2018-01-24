@@ -35,6 +35,8 @@
  *  如果是环形列表, 返回环入口点; 否则返回空
  */
 +(EXNode*)findCircleEnterNode:(EXNode*)headNode;
-
-
+/**
+ *  从尾到头反相打印链表(不改变原有链表结构)
+ */
++(void)reversePrintNode:(EXNode*)headNode;
 @end

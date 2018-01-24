@@ -8,16 +8,37 @@
 
 #import <XCTest/XCTest.h>
 #import "EXOfferCase.h"
+#import "EXNode.h"
+#import "EXNodeUtil.h"
 
-@interface EXOfferCaseTests : XCTestCase {
-    
-}
-
+@interface EXOfferCaseTests : XCTestCase
+@property (nonatomic, strong) EXNode         *nodeList;
 @end
 
 @implementation EXOfferCaseTests
+
+- (void)setUpNodeList {
+    
+}
+
 - (void)setUp {
     [super setUp];
+    _nodeList = [[EXNode alloc] init];
+    _nodeList.iid = @"0";
+    
+    unsigned int capacity = 2 * 5;
+    NSMutableArray* mutArr = [NSMutableArray arrayWithCapacity:capacity];
+    for (int i = 1; i < capacity; ++i) {
+        [mutArr addObject:@(i)];
+    }
+    EXNode *curNode = _nodeList;
+    for (NSNumber *num in mutArr) {
+        EXNode *node = [[EXNode alloc] init];
+        node.iid = num.stringValue;
+        curNode.next = node;
+        curNode = node;
+    }
+    NSLog(@"%@",_nodeList);
 }
 
 - (void)tearDown {
@@ -34,6 +55,10 @@
     replaceBlankString(testCharset, 40, &success);
     printf("after: %s\n",testCharset);
     XCTAssertTrue(success);
+}
+
+- (void)testReversePrintNode {
+    [EXNodeUtil reversePrintNode:_nodeList];
 }
 
 - (void)PerformanceExample {

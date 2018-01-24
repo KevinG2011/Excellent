@@ -72,5 +72,23 @@
     return nil;
 }
 
++(void)reversePrintNode:(EXNode*)headNode {
+    EXNode *nextNode = headNode;
+    if (nextNode) {
+        unsigned int len = 128;
+        int arr[len];
+        int index = len - 1;
+        while (nextNode) {
+            arr[index] = nextNode.iid.intValue;
+            nextNode = nextNode.next;
+            --index;
+        }
+        
+        for (int i = index + 1; i < len; ++i) {
+            printf("%d, ", arr[i]);
+        }
+        printf("\n");
+    }
+}
 
 @end

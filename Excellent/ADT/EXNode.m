@@ -14,15 +14,21 @@
     EXNode* node = self;
     NSMutableString* desc = [[NSMutableString alloc] init];
     [desc setString:node.iid];
+    /* 判断链表是否带环, 如果带环则返回快慢指针交点 */
     EXNode *crossNode = [EXNodeUtil findCircleCrossNode:node];
     if (crossNode) {
+        /* 查找环入口节点 */
         EXNode *enterNode = [EXNodeUtil findCircleEnterNode:node crossNode:crossNode];
         unsigned int loopCount = 0;
-        while (node.next && loopCount < 2) {
+        while (node.next) {
             node = node.next;
             [desc appendFormat:@"->%@",node.iid];
             if (node == enterNode) {
                 loopCount += 1;
+                /* 遍历环一圈, 第二圈退出 */
+                if (loopCount >= 2) {
+                    break;
+                }
             }
         }
         [desc appendFormat:@"->@"];
