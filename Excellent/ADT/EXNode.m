@@ -13,7 +13,7 @@
 -(NSString *)description {
     EXNode* node = self;
     NSMutableString* desc = [[NSMutableString alloc] init];
-    [desc setString:node.iid];
+    [desc setString:node.value];
     /* 判断链表是否带环, 如果带环则返回快慢指针交点 */
     EXNode *crossNode = [EXNodeUtil findCircleCrossNode:node];
     if (crossNode) {
@@ -22,7 +22,7 @@
         unsigned int loopCount = 0;
         while (node.next) {
             node = node.next;
-            [desc appendFormat:@"->%@",node.iid];
+            [desc appendFormat:@"->%@",node.value];
             if (node == enterNode) {
                 loopCount += 1;
                 /* 遍历环一圈, 第二圈退出 */
@@ -35,7 +35,7 @@
     } else {
         while (node.next) {
             node = node.next;
-            [desc appendFormat:@"->%@",node.iid];
+            [desc appendFormat:@"->%@",node.value];
         }
     }
 

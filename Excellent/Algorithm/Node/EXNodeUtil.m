@@ -80,7 +80,7 @@
         bzero(arr, len);
         int index = len - 1;
         while (nextNode) {
-            arr[index] = nextNode.iid.intValue;
+            arr[index] = nextNode.value.intValue;
             nextNode = nextNode.next;
             --index;
         }
@@ -97,7 +97,7 @@
         if (headNode.next) {
             [self printNodeReversingRecursively:headNode.next];
         }
-        printf("%d, ", headNode.iid.intValue);
+        printf("%d, ", headNode.value.intValue);
     }
 }
 

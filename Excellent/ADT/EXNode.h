@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface EXNode : NSObject
-@property (nonatomic, copy) NSString* iid;
-@property (nonatomic, copy) NSString* item;
+@property (nonatomic, copy) NSString* value;
 @property (nonatomic, strong) EXNode* next;
 @end

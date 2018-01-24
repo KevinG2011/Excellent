@@ -24,7 +24,7 @@
 - (void)setUp {
     [super setUp];
     _nodeList = [[EXNode alloc] init];
-    _nodeList.iid = @"0";
+    _nodeList.value = @"0";
     
     unsigned int capacity = 2 * 5;
     NSMutableArray* mutArr = [NSMutableArray arrayWithCapacity:capacity];
@@ -34,7 +34,7 @@
     EXNode *curNode = _nodeList;
     for (NSNumber *num in mutArr) {
         EXNode *node = [[EXNode alloc] init];
-        node.iid = num.stringValue;
+        node.value = num.stringValue;
         curNode.next = node;
         curNode = node;
     }

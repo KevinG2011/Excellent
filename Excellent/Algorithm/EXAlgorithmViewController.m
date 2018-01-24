@@ -16,11 +16,11 @@
 @implementation EXAlgorithmViewController
 - (void)setupNodeList {
     EXNode *node = [[EXNode alloc] init];
-    node.iid = @"0";
+    node.value = @"0";
     _nodeList = node;
     for (int i = 1 ; i < 10; ++i) {
         EXNode *nextNode = [[EXNode alloc] init];
-        nextNode.iid = [NSString stringWithFormat:@"%d",i];
+        nextNode.value = [NSString stringWithFormat:@"%d",i];
         node.next = nextNode;
         node = nextNode;
     }
@@ -30,11 +30,11 @@
     NSLog(@"%@", _nodeList);
     EXNode* currentNode = _nodeList;
     EXNode* reverseNode = [[EXNode alloc] init];
-    reverseNode.iid = currentNode.iid;
+    reverseNode.value = currentNode.value;
     while (currentNode.next) {
         EXNode *nextNode = currentNode.next;
         EXNode *revNextNode = [[EXNode alloc] init];
-        revNextNode.iid = nextNode.iid;
+        revNextNode.value = nextNode.value;
         revNextNode.next = reverseNode;
         
         reverseNode = revNextNode;

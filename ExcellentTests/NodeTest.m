@@ -29,11 +29,11 @@
     //线性链表
     self.node = [[EXNode alloc] init];
     EXNode* currentNode = self.node;
-    currentNode.iid = @"1";
+    currentNode.value = @"1";
     
     for (int i = 0 ; i < 15; ++i) {
         EXNode* node = [[EXNode alloc] init];
-        node.iid = [NSString stringWithFormat:@"%d",i + 2];
+        node.value = [NSString stringWithFormat:@"%d",i + 2];
         
         currentNode.next = node;
         currentNode = currentNode.next;
@@ -42,13 +42,13 @@
     //环形链表A
     self.circleNodeA = [[EXNode alloc] init];
     currentNode = self.circleNodeA;
-    currentNode.iid = @"1";
+    currentNode.value = @"1";
     
     EXNode *enterNode = currentNode;
     EXNode *commonNode = currentNode;
     for (int i = 2 ; i < 17; ++i) {
         EXNode* node = [[EXNode alloc] init];
-        node.iid = [NSString stringWithFormat:@"%d", i];
+        node.value = [NSString stringWithFormat:@"%d", i];
         
         currentNode.next = node;
         currentNode = currentNode.next;
@@ -67,11 +67,11 @@
     //环形链表B
     self.circleNodeB = [[EXNode alloc] init];
     currentNode = self.circleNodeB;
-    currentNode.iid = @"-5";
+    currentNode.value = @"-5";
     
     for (int i = -4 ; i < 0; ++i) {
         EXNode* node = [[EXNode alloc] init];
-        node.iid = [NSString stringWithFormat:@"%d",i];
+        node.value = [NSString stringWithFormat:@"%d",i];
         
         currentNode.next = node;
         currentNode = currentNode.next;

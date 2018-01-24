@@ -39,6 +39,7 @@
 		2A2DBB001E642873008C78AF /* EXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBAFE1E642873008C78AF /* EXUtil.m */; };
 		2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBB021E642B22008C78AF /* THPlayerController.m */; };
 		2A2DBB061E6430D4008C78AF /* EXVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBB051E6430D4008C78AF /* EXVideoPlayerViewController.m */; };
+		2A3527FC2018AF3F00F5B769 /* EXBinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3527FB2018AF3F00F5B769 /* EXBinaryTreeNode.m */; };
 		2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E31541E8CB364006BE219 /* EXBaseViewController.m */; };
 		2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E31571E8CB497006BE219 /* EXUIKitViewController.m */; };
 		2A3E315C1E8CB4F6006BE219 /* EXUIKitMaster.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315B1E8CB4F6006BE219 /* EXUIKitMaster.storyboard */; };
@@ -143,6 +144,8 @@
 		2A2DBB021E642B22008C78AF /* THPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THPlayerController.m; sourceTree = "<group>"; };
 		2A2DBB041E6430D4008C78AF /* EXVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXVideoPlayerViewController.h; sourceTree = "<group>"; };
 		2A2DBB051E6430D4008C78AF /* EXVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXVideoPlayerViewController.m; sourceTree = "<group>"; };
+		2A3527FA2018AF3F00F5B769 /* EXBinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXBinaryTreeNode.h; sourceTree = "<group>"; };
+		2A3527FB2018AF3F00F5B769 /* EXBinaryTreeNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXBinaryTreeNode.m; sourceTree = "<group>"; };
 		2A3E31531E8CB364006BE219 /* EXBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXBaseViewController.h; sourceTree = "<group>"; };
 		2A3E31541E8CB364006BE219 /* EXBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXBaseViewController.m; sourceTree = "<group>"; };
 		2A3E31561E8CB497006BE219 /* EXUIKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXUIKitViewController.h; sourceTree = "<group>"; };
@@ -485,6 +488,8 @@
 			children = (
 				2ACF2CDD1E9CBC3000636A14 /* EXNode.h */,
 				2ACF2CDE1E9CBC3000636A14 /* EXNode.m */,
+				2A3527FA2018AF3F00F5B769 /* EXBinaryTreeNode.h */,
+				2A3527FB2018AF3F00F5B769 /* EXBinaryTreeNode.m */,
 				2ACF2CDF1E9CBC3000636A14 /* EXQueue.h */,
 				2ACF2CE01E9CBC3000636A14 /* EXQueue.m */,
 				2ACF2CE11E9CBC3000636A14 /* EXStack.h */,
@@ -728,6 +733,7 @@
 				2A2DBADF1E642659008C78AF /* EXPlayerView.m in Sources */,
 				0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */,
 				2AAAA11B1EC01BED001C6A84 /* EXSearchUtil.m in Sources */,
+				2A3527FC2018AF3F00F5B769 /* EXBinaryTreeNode.m in Sources */,
 				2ACF2CE81E9CDDD900636A14 /* EXDeque.m in Sources */,
 				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,
