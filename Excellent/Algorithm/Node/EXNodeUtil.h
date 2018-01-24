@@ -36,7 +36,16 @@
  */
 +(EXNode*)findCircleEnterNode:(EXNode*)headNode;
 /**
- *  从尾到头反相打印链表(不改变原有链表结构)
+ *  从尾到头反相打印链表(不改变原有链表结构), 循环方式
  */
-+(void)reversePrintNode:(EXNode*)headNode;
++(void)printNodeReversingly:(EXNode*)headNode;
+/**
+ *  从尾到头反相打印链表(不改变原有链表结构), 递归方式,
+ *  可能会导致栈溢出
+ */
++(void)printNodeReversingRecursively:(EXNode*)headNode;
+
 @end
+
+
+

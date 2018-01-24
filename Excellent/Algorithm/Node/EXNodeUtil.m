@@ -72,11 +72,12 @@
     return nil;
 }
 
-+(void)reversePrintNode:(EXNode*)headNode {
++(void)printNodeReversingly:(EXNode*)headNode {
     EXNode *nextNode = headNode;
     if (nextNode) {
         unsigned int len = 128;
         int arr[len];
+        bzero(arr, len);
         int index = len - 1;
         while (nextNode) {
             arr[index] = nextNode.iid.intValue;
@@ -91,4 +92,16 @@
     }
 }
 
++(void)printNodeReversingRecursively:(EXNode*)headNode {
+    if (headNode) {
+        if (headNode.next) {
+            [self printNodeReversingRecursively:headNode.next];
+        }
+        printf("%d, ", headNode.iid.intValue);
+    }
+}
+
 @end
+
+
+

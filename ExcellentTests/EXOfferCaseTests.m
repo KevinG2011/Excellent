@@ -58,7 +58,9 @@
 }
 
 - (void)testReversePrintNode {
-    [EXNodeUtil reversePrintNode:_nodeList];
+//    [EXNodeUtil printNodeReversingly:_nodeList];
+    [EXNodeUtil printNodeReversingRecursively:_nodeList];
+    printf("\n");
 }
 
 - (void)PerformanceExample {
