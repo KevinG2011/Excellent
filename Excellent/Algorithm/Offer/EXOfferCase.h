@@ -15,4 +15,5 @@
  *  参数 length: 字符串数组的总容量
  */
 void replaceBlankString(char str[], int length, bool *success);
+
 @end

@@ -29,9 +29,10 @@
     size_t len = testString.length + 4*2 + 1;
     char testCharset[len];
     strcpy(testCharset, testString.UTF8String);
-    printf("%s",testCharset);
+    printf("before: %s\n",testCharset);
     bool success = false;
     replaceBlankString(testCharset, 40, &success);
+    printf("after: %s\n",testCharset);
     XCTAssertTrue(success);
 }
 

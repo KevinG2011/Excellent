@@ -34,9 +34,9 @@ void replaceBlankString(char str[], int length, bool *success) {
         int indexOfNew = newLength - 1;
         while (indexOfOrigin >= 0 && indexOfNew >= indexOfOrigin) {
             if (str[indexOfOrigin] == ' ') {
-                str[indexOfNew--] = '%';
-                str[indexOfNew--] = '2';
                 str[indexOfNew--] = '0';
+                str[indexOfNew--] = '2';
+                str[indexOfNew--] = '%';
             } else {
                 str[indexOfNew--] = str[indexOfOrigin];
             }
