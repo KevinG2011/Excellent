@@ -63,6 +63,15 @@
     printf("\n");
 }
 
+- (void)testConstructBinaryTree {
+    //    [EXNodeUtil printNodeReversingly:_nodeList];
+    int preorderArr[] = {1, 2, 4, 7, 3, 5, 6, 8};
+    int inorderArr[] = {4, 7, 2, 1, 5, 3, 8, 6};
+    
+    EXBinaryTreeNode *binaryTree = constructBinaryTree(preorderArr, inorderArr, 8);
+    recursivePrintTree(binaryTree);
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
     }];

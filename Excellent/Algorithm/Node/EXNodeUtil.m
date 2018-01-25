@@ -101,6 +101,60 @@
     }
 }
 
+EXBinaryTreeNode* constructCore(int *startPreorder,  int *endPreorder, int *startInorder, int *endInorder) {
+    /* 找到根节点 */
+    int rootValue = *startPreorder;
+    EXBinaryTreeNode *rootTree = [[EXBinaryTreeNode alloc] init];
+    rootTree.value = [NSString stringWithFormat:@"%d",rootValue];
+    rootTree.leftNode = rootTree.rightNode = NULL;
+    
+    /* 确定中序排列根节点 */
+    if (startInorder == endPreorder) {
+        if (startInorder == endInorder && *startInorder == *endInorder) {
+            return rootTree;
+        } else {
+            printf("invalid input");
+        }
+    } else {
+        int *rootInorder = startInorder;
+        while (rootInorder <= endInorder && *rootInorder != rootValue) {
+            ++rootInorder;
+        }
+        
+        if (rootInorder == endInorder && *rootInorder != rootValue) {
+            printf("invalid input");
+        }
+        
+        int leftLength = (int)(rootInorder - startInorder);
+        int *leftPreorderEnd = startPreorder + leftLength;
+        if (leftLength > 0) {
+            rootTree.leftNode = constructCore(startPreorder + 1, leftPreorderEnd, startInorder, rootInorder - 1);
+        }
+        if (leftLength < endPreorder - startPreorder) {
+            rootTree.rightNode = constructCore(leftPreorderEnd + 1, endPreorder, rootInorder + 1, endInorder);
+        }
+    }
+    return rootTree;
+}
+
+EXBinaryTreeNode* constructBinaryTree(int preorder[], int inorder[], int length) {
+    if (preorder == NULL || inorder == NULL || length <= 0) {
+        return nil;
+    }
+    int *endPreorder = preorder + length - 1;
+    int *endInorder = inorder + length - 1;
+    return constructCore(preorder, endPreorder, inorder, endInorder);
+}
+
+void recursivePrintTree(EXBinaryTreeNode* tree) {
+    if (tree.leftNode) {
+        recursivePrintTree(tree.leftNode);
+    }
+    if (tree.rightNode) {
+        recursivePrintTree(tree.rightNode);
+    }
+    NSLog(@"value :%@",tree.value);
+}
 @end
 
 

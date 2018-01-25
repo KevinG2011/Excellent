@@ -12,4 +12,5 @@
 @property (nonatomic, assign) NSString                 *value;
 @property (nonatomic, strong) EXBinaryTreeNode         *leftNode;
 @property (nonatomic, strong) EXBinaryTreeNode         *rightNode;
+@property (nonatomic, strong) EXBinaryTreeNode         *parentNode;
 @end
