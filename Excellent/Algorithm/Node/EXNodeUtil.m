@@ -155,6 +155,32 @@ void recursivePrintTree(EXBinaryTreeNode* tree) {
     }
     NSLog(@"value :%@",tree.value);
 }
+
+EXBinaryTreeNode* findInorderNextTreeNode(EXBinaryTreeNode* treeNode) {
+    if (treeNode == nil) {
+        return nil;
+    }
+    EXBinaryTreeNode *nextNode = nil;
+    if (treeNode.rightNode) {
+        /* 有右节点找到最深的左节点, 如没有选右节点 */
+        EXBinaryTreeNode *rightNode = treeNode.rightNode;
+        while (rightNode.leftNode) {
+            rightNode = rightNode.leftNode;
+        }
+        nextNode = rightNode;
+    } else if (treeNode.parentNode) {
+        /* 往上一层找, 直到找到一个左节点 */
+        EXBinaryTreeNode *currentNode = treeNode;
+        EXBinaryTreeNode *parentNode = treeNode.parentNode;
+        while (parentNode && currentNode == parentNode.rightNode) {
+            currentNode = parentNode;
+            parentNode = parentNode.parentNode;
+        }
+        nextNode = parentNode;
+    }
+    return nextNode;
+}
+
 @end
 
 

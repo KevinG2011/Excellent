@@ -67,6 +67,17 @@ EXBinaryTreeNode* constructBinaryTree(int preorder[], int inorder[], int length)
  */
 void recursivePrintTree(EXBinaryTreeNode* tree);
 
+/**
+ *  查找二叉树中序遍历的下一个节点
+ *        2
+ *       / \
+ *      1   5
+ *       \ / \
+ *       4 3  8
+ *       /   / \
+ *      3   6  11
+ */
+EXBinaryTreeNode* findInorderNextTreeNode(EXBinaryTreeNode* tree);
 @end
 
 
