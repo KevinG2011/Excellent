@@ -46,6 +46,7 @@
 		2A3E31611E8CBBCE006BE219 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E315F1E8CBBCE006BE219 /* Assets.xcassets */; };
 		2A3E31BA1E924956006BE219 /* hubblecast.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 2A3E31B91E924956006BE219 /* hubblecast.m4v */; };
 		2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */; };
+		2A5DBB57201F30730008EEDA /* EXStackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DBB56201F30730008EEDA /* EXStackQueue.m */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2A92BE3C2016D13400428DE5 /* EXOfferCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A92BE3A2015FBAA00428DE5 /* EXOfferCase.m */; };
@@ -156,6 +157,8 @@
 		2A4497A31F0DD328000F94BA /* EXCornerRadiusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXCornerRadiusView.h; sourceTree = "<group>"; };
 		2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXCornerRadiusView.m; sourceTree = "<group>"; };
 		2A53074F1CAABAF900B63205 /* ExGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExGlobal.h; sourceTree = "<group>"; };
+		2A5DBB55201F30730008EEDA /* EXStackQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXStackQueue.h; sourceTree = "<group>"; };
+		2A5DBB56201F30730008EEDA /* EXStackQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXStackQueue.m; sourceTree = "<group>"; };
 		2A63FAD21E496D3C00DA75D3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
 		2A7EE2921CD8835F0028D67C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -492,6 +495,8 @@
 				2A3527FB2018AF3F00F5B769 /* EXBinaryTreeNode.m */,
 				2ACF2CDF1E9CBC3000636A14 /* EXQueue.h */,
 				2ACF2CE01E9CBC3000636A14 /* EXQueue.m */,
+				2A5DBB55201F30730008EEDA /* EXStackQueue.h */,
+				2A5DBB56201F30730008EEDA /* EXStackQueue.m */,
 				2ACF2CE11E9CBC3000636A14 /* EXStack.h */,
 				2ACF2CE21E9CBC3000636A14 /* EXStack.m */,
 				2ACF2CE61E9CDDD900636A14 /* EXDeque.h */,
@@ -713,6 +718,7 @@
 				2A2DBAE01E642659008C78AF /* THFilmstripView.m in Sources */,
 				2A2DBABF1E641356008C78AF /* THLevelPair.m in Sources */,
 				2A2DBAA81E641334008C78AF /* AVToy.m in Sources */,
+				2A5DBB57201F30730008EEDA /* EXStackQueue.m in Sources */,
 				2AA64B1820119CF100D72084 /* EXNodeUtil.m in Sources */,
 				2A3E31551E8CB364006BE219 /* EXBaseViewController.m in Sources */,
 				2A2DBAFF1E642873008C78AF /* EXFileUtils.m in Sources */,
