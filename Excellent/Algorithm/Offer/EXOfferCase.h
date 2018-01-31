@@ -10,10 +10,15 @@
 
 @interface EXOfferCase : NSObject
 /**
- *  替换字符串中的空格
+ *  使用%20替换字符串中的空格,从后置前
  *  参数 str: 字符串数组的空格
  *  参数 length: 字符串数组的总容量
  */
 void replaceBlankString(char str[], int length, bool *success);
-
+/**
+ *  求斐波那契数列的第n项
+ *  参数 n: 输入数字
+ *  返回值: 第n项的值
+ */
+long long fibonacciN(unsigned n);
 @end

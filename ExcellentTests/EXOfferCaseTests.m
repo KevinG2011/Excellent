@@ -72,6 +72,11 @@
     recursivePrintTree(binaryTree);
 }
 
+- (void)testFibonacciN {
+    long long n = fibonacciN(6);
+    printf("fibonacciN :%lld \n",n);
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
     }];

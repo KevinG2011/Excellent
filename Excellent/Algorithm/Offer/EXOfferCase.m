@@ -45,4 +45,21 @@ void replaceBlankString(char str[], int length, bool *success) {
         *success = true;
     }
 }
+
+long long fibonacciN(unsigned n) {
+    int result[] = {0, 1};
+    if (n < 2) {
+        return (long long)result[n];
+    }
+    
+    unsigned long long fibItemOne = 0;
+    unsigned long long fibItemTwo = 1;
+    unsigned long long fibItemN = 0;
+    for (int i = 2; i < n; ++i) {
+        fibItemN = fibItemOne + fibItemTwo;
+        fibItemOne = fibItemTwo;
+        fibItemTwo = fibItemN;
+    }
+    return fibItemN;
+}
 @end
