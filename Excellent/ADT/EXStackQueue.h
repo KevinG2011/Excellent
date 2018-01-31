@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 /**
  * 用二个栈实现队列
- *  栈: 先进后出
- *  队列: 先进先出
+ *   栈特点: 先进后出
+ *  队列特点: 先进先出
  */
 
-@interface EXStackQueue : NSObject
-- (void)appendTail:(id)obj;
-- (id)deleteHead;
+@interface EXStackQueue<__covariant ObjectType> : NSObject
+- (void)appendTail:(ObjectType)obj;
+- (ObjectType)deleteHead;
 @end

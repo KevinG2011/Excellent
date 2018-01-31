@@ -7,7 +7,7 @@
 //
 
 #import "EXNode.h"
-#import "EXNodeUtil.h"
+#import "EXNodeCase.h"
 
 @implementation EXNode
 -(NSString *)description {
@@ -15,10 +15,10 @@
     NSMutableString* desc = [[NSMutableString alloc] init];
     [desc setString:node.value];
     /* 判断链表是否带环, 如果带环则返回快慢指针交点 */
-    EXNode *crossNode = [EXNodeUtil findCircleCrossNode:node];
+    EXNode *crossNode = [EXNodeCase findCircleCrossNode:node];
     if (crossNode) {
         /* 查找环入口节点 */
-        EXNode *enterNode = [EXNodeUtil findCircleEnterNode:node crossNode:crossNode];
+        EXNode *enterNode = [EXNodeCase findCircleEnterNode:node crossNode:crossNode];
         unsigned int loopCount = 0;
         while (node.next) {
             node = node.next;

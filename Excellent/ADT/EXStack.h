@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/*
+ * 栈
+ */
 @interface EXStack<__covariant ObjectType> : NSObject
 @property (nonatomic, assign,readonly) NSUInteger         size;
 - (EXStack*)copyStack:(EXStack*)s;

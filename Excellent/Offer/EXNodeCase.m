@@ -6,13 +6,13 @@
 //  Copyright © 2018年 Li Jia. All rights reserved.
 //
 
-#import "EXNodeUtil.h"
+#import "EXNodeCase.h"
 
-@interface EXNodeUtil ()
+@interface EXNodeCase ()
 
 @end
 
-@implementation EXNodeUtil
+@implementation EXNodeCase
 
 +(NSUInteger)getNodeLength:(EXNode*)headNode {
     if (headNode == nil) {

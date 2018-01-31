@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface EXQueue : NSObject
+/*
+ * 队列
+ */
+@interface EXQueue<__covariant ObjectType> : NSObject
 @property (nonatomic, assign,readonly) NSUInteger         size;
 - (EXQueue*)copyQueue:(EXQueue*)q;
-- (void)enqueue:(id)obj;
-- (id)dequeue;
+- (void)enqueue:(ObjectType)obj;
+- (ObjectType)dequeue;
 - (BOOL)isEmpty;
 @end

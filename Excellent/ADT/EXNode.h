@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/*
+ * 链表节点
+ */
 @interface EXNode : NSObject
 @property (nonatomic, copy) NSString* value;
 @property (nonatomic, strong) EXNode* next;

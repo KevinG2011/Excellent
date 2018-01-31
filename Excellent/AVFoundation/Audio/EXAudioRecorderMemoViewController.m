@@ -12,7 +12,7 @@
 #import "THMemo.h"
 #import <AVFoundation/AVFoundation.h>
 #import "EXRecorderController.h"
-#import "EXUtil.h"
+#import "EXStringUtils.h"
 
 #define MEMO_CELL        @"memoCell"
 #define MEMOS_ARCHIVE    @"memos.archive"
@@ -88,7 +88,7 @@
     [self.timer invalidate];
     __weak __typeof(self) wself = self;
     _timer = [NSTimer timerWithTimeInterval:0.5f repeats:YES block:^(NSTimer * _Nonnull timer) {
-        wself.timeLabel.text = [EXUtil formattedTime:_controller.recorder.currentTime];
+        wself.timeLabel.text = [EXStringUtils formattedTime:_controller.recorder.currentTime];
     }];
 }
 

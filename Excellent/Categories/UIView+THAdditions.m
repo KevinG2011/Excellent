@@ -129,7 +129,7 @@
 
 - (UIImage *)toImageWithSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
-    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [self drawViewHierarchyInRect:CGRectMake(0, 0, size.width, size.height) afterScreenUpdates:NO];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return image;

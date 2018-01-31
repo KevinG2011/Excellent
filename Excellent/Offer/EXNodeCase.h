@@ -10,7 +10,7 @@
 #import "EXNode.h"
 #import "EXBinaryTreeNode.h"
 
-@interface EXNodeUtil : NSObject
+@interface EXNodeCase : NSObject
 
 /**
  *  获取链表长度

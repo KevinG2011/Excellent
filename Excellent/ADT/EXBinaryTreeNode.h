@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/*
+ * 二叉树节点
+ */
 @interface EXBinaryTreeNode : NSObject
 @property (nonatomic, assign) NSString                 *value;
 @property (nonatomic, strong) EXBinaryTreeNode         *leftNode;

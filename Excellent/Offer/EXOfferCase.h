@@ -16,7 +16,7 @@
  */
 void replaceBlankString(char str[], int length, bool *success);
 /**
- *  求斐波那契数列的第n项
+ *  求斐波那契数列的第n项 (青蛙跳台例子一次跳1阶或者2阶)
  *  参数 n: 输入数字
  *  返回值: 第n项的值
  */

@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface EXUtil : NSObject
+@interface EXStringUtils : NSObject
 +(NSString*)formattedTime:(NSTimeInterval)time;
 @end

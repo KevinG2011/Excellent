@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
+/*
+ * 双端队列
+ */
 @interface EXDeque<__covariant ObjectType> : NSObject
 @property (nonatomic, assign,readonly) NSUInteger         size;
 - (BOOL)isEmpty;

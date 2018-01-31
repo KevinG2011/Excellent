@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface EXRuntime : NSObject
+
 static inline void ex_swizzleSelector(Class class, SEL originalSelector, SEL swizzledSelector);
 @end

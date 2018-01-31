@@ -6,9 +6,9 @@
 //  Copyright © 2017 Li Jia. All rights reserved.
 //
 
-#import "EXUtil.h"
+#import "EXStringUtils.h"
 
-@implementation EXUtil
+@implementation EXStringUtils
 +(NSString*)formattedTime:(NSTimeInterval)timeInterval {
     NSUInteger time = (NSUInteger)timeInterval;
     NSInteger hour = time / 3600;

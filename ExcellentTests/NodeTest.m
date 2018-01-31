@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "EXNodeUtil.h"
+#import "EXNodeCase.h"
 #import "EXNode.h"
 
 @interface NodeTest : XCTestCase
@@ -101,7 +101,7 @@
  *  测试链表长度
  */
 - (void)testNodeLength {
-    NSUInteger len = [EXNodeUtil getNodeLength:self.node];
+    NSUInteger len = [EXNodeCase getNodeLength:self.node];
     XCTAssertTrue(len == 16);
 
 }
@@ -110,10 +110,10 @@
  *  获取环形链表相遇交点
  */
 - (void)testGetCrossNode {
-    EXNode *node = [EXNodeUtil findCircleCrossNode:self.node];
+    EXNode *node = [EXNodeCase findCircleCrossNode:self.node];
     XCTAssertNil(node);
     
-    EXNode *crossNode = [EXNodeUtil findCircleCrossNode:self.circleNodeA];
+    EXNode *crossNode = [EXNodeCase findCircleCrossNode:self.circleNodeA];
     XCTAssertNotNil(crossNode);
 }
 
@@ -121,9 +121,9 @@
  *  是否是环形链表
  */
 - (void)testIsCircleNode {
-    BOOL ret = [EXNodeUtil isCircleNode:self.node];
+    BOOL ret = [EXNodeCase isCircleNode:self.node];
     XCTAssertTrue(!ret);
-    BOOL isCircle = [EXNodeUtil isCircleNode:self.circleNodeA];
+    BOOL isCircle = [EXNodeCase isCircleNode:self.circleNodeA];
     XCTAssertTrue(isCircle);
 }
 
@@ -131,13 +131,13 @@
  *  环形列表入口点
  */
 - (void)testGetEnterNode {
-    EXNode *enterNode = [EXNodeUtil findCircleEnterNode:self.node crossNode:self.node];
+    EXNode *enterNode = [EXNodeCase findCircleEnterNode:self.node crossNode:self.node];
     XCTAssertNil(enterNode);
     
-    EXNode *crossNode = [EXNodeUtil findCircleCrossNode:self.circleNodeA];
+    EXNode *crossNode = [EXNodeCase findCircleCrossNode:self.circleNodeA];
     XCTAssertNotNil(crossNode);
     
-    EXNode *enterANode = [EXNodeUtil findCircleEnterNode:self.circleNodeA crossNode:crossNode];
+    EXNode *enterANode = [EXNodeCase findCircleEnterNode:self.circleNodeA crossNode:crossNode];
     XCTAssertNotNil(enterANode);
 }
 
@@ -146,8 +146,8 @@
  */
 
 - (void)testCircleNodeABCross {
-    EXNode *crossA = [EXNodeUtil findCircleEnterNode:self.circleNodeA];
-    EXNode *crossB = [EXNodeUtil findCircleEnterNode:self.circleNodeB];
+    EXNode *crossA = [EXNodeCase findCircleEnterNode:self.circleNodeA];
+    EXNode *crossB = [EXNodeCase findCircleEnterNode:self.circleNodeB];
     if (crossA == crossB) { //入口点相同
         EXNode *circleNode = crossA.next;
         crossA.next = nil;
@@ -162,13 +162,13 @@
 
 - (EXNode*)findFirstCommonNodeNoCircleWithNode:(EXNode*)node1
                                    withNode:(EXNode*)node2 {
-    if ([EXNodeUtil isCircleNode:node1] || [EXNodeUtil isCircleNode:node2]) {
+    if ([EXNodeCase isCircleNode:node1] || [EXNodeCase isCircleNode:node2]) {
         //任意一个链表是环形链表则忽略
         return nil;
     }
     
-    NSUInteger len1 = [EXNodeUtil getNodeLength:node1];
-    NSUInteger len2 = [EXNodeUtil getNodeLength:node2];
+    NSUInteger len1 = [EXNodeCase getNodeLength:node1];
+    NSUInteger len2 = [EXNodeCase getNodeLength:node2];
     
     EXNode *longNode;
     EXNode *shortNode;

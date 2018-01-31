@@ -9,7 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "EXOfferCase.h"
 #import "EXNode.h"
-#import "EXNodeUtil.h"
+#import "EXNodeCase.h"
 
 @interface EXOfferCaseTests : XCTestCase
 @property (nonatomic, strong) EXNode         *nodeList;
@@ -59,7 +59,7 @@
 
 - (void)testReversePrintNode {
 //    [EXNodeUtil printNodeReversingly:_nodeList];
-    [EXNodeUtil printNodeReversingRecursively:_nodeList];
+    [EXNodeCase printNodeReversingRecursively:_nodeList];
     printf("\n");
 }
 
