@@ -13,9 +13,9 @@
 
 @interface EXSortCase : NSObject
 /**
- * 二分查找法
+ * 排序数组二分查找法
  */
-int binarySearch(int arr[],int len);
+int binarySearch(int arr[],int len, int num);
 /**
  * 快速排序
  */

@@ -9,15 +9,32 @@
 #import "EXSortCase.h"
 
 @implementation EXSortCase
-int binarySearch(int arr[],int len)
-{
-    
-    return -1;
+int binarySearch(int arr[],int len, int num) {
+    int index = -1;
+    if (arr != NULL || len > 0) {
+        int start = 0, end = len - 1;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            int midNum = arr[mid];
+            if (midNum == num) {
+                index = mid;
+                break;
+            } else if (midNum > num) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
+            }
+        }
+    }
+    return index;
 }
 
-int* partition(int arr[],int len)
-{
-    //TODO
-    return NULL;
+int* partition(int arr[],int len) {
+    if (arr == NULL || len <= 0) {
+        return arr;
+    }
+    int index = arc4random_uniform(len);
+    
+    return arr;
 }
 @end

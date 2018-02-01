@@ -10,6 +10,7 @@
 #import "EXOfferCase.h"
 #import "EXNode.h"
 #import "EXNodeCase.h"
+#import "EXSortCase.h"
 
 @interface EXOfferCaseTests : XCTestCase
 @property (nonatomic, strong) EXNode         *nodeList;
@@ -75,6 +76,13 @@
 - (void)testFibonacciN {
     long long n = fibonacciN(6);
     printf("fibonacciN :%lld \n",n);
+}
+
+- (void)testBinarySearch {
+    int arr[] = {1, 2, 5, 7, 8, 9, 11, 14, 18, 20, 24};
+    int len = sizeof(arr) / sizeof(int);
+    int index = binarySearch(arr, len, 10);
+    XCTAssertTrue(index < 0);
 }
 
 - (void)PerformanceExample {
