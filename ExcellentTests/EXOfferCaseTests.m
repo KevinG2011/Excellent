@@ -78,6 +78,13 @@
     printf("fibonacciN :%lld \n",n);
 }
 
+- (void)testMinNumInRotatingArr {
+    int numArr[] = { 7, 8 ,9, 5, 6 };
+    int length = sizeof(numArr) / sizeof(int);
+    int minNum = findMinNumInRotatingArr(numArr, length);
+    XCTAssertTrue(minNum == 5);
+}
+
 - (void)testBinarySearch {
     int arr[] = {1, 2, 5, 7, 8, 9, 11, 14, 18, 20, 24};
     int len = sizeof(arr) / sizeof(int);

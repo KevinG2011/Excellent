@@ -62,4 +62,25 @@ long long fibonacciN(unsigned n) {
     }
     return fibItemN;
 }
+
+int findMinNumInRotatingArr(int arr[], int length) {
+    if (arr == NULL && length <= 0) {
+        return 0;
+    }
+    int startIndex = 0;
+    int endIndex = length - 1;
+    int minIndex = startIndex;
+    while (startIndex + 1 < endIndex) {
+        int midIndex = startIndex + (endIndex - startIndex) / 2;
+        if (arr[midIndex] >= arr[startIndex]) {
+            startIndex = midIndex;
+        } else if(arr[midIndex] < arr[endIndex]) {
+            endIndex = midIndex;
+        }
+    }
+    
+    minIndex = endIndex;
+    
+    return arr[minIndex];
+}
 @end
