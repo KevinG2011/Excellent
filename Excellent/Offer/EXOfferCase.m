@@ -63,6 +63,17 @@ long long fibonacciN(unsigned n) {
     return fibItemN;
 }
 
+int _findMinInOrder(int arr[], int startIndex, int endIndex) {
+
+    int result = arr[startIndex];
+    for (int i = startIndex; i < endIndex; ++i) {
+        if (arr[i] < result) {
+            result = arr[i];
+        }
+    }
+    return result;
+}
+
 int findMinNumInRotatingArr(int arr[], int length) {
     if (arr == NULL && length <= 0) {
         return 0;
@@ -72,7 +83,10 @@ int findMinNumInRotatingArr(int arr[], int length) {
     int minIndex = startIndex;
     while (startIndex + 1 < endIndex) {
         int midIndex = startIndex + (endIndex - startIndex) / 2;
-        if (arr[midIndex] >= arr[startIndex]) {
+        if (arr[startIndex] == arr[minIndex] == arr[endIndex]) {
+            /* 下标index1, index2和indexMid指向的三个数字相等*/
+            return _findMinInOrder(arr, startIndex, endIndex);
+        } else if (arr[midIndex] >= arr[startIndex]) {
             startIndex = midIndex;
         } else if(arr[midIndex] < arr[endIndex]) {
             endIndex = midIndex;

@@ -27,7 +27,7 @@ long long fibonacciN(unsigned n);
  *  参数 str: 数字数组
  *  参数 length: 数字数组的长度
  *  {4, 5, 1, 2, 3}
- *  {1, 0, 1, 1, 1) 特殊情况
+ *  {1, 0, 1, 1, 1) 重复数字,需要顺序查找
  */
 int findMinNumInRotatingArr(int arr[], int length);
 @end
