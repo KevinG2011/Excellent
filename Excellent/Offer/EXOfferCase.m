@@ -62,4 +62,17 @@ long long fibonacciN(unsigned n) {
     }
     return fibItemN;
 }
+
+bool hasSequencePath(char *matrix, int rows, int cols, char *str) {
+    if (matrix == NULL || str == NULL || rows < 1 || cols < 1) {
+        return false;
+    }
+    bool bVisit[rows * cols];
+    memset(&bVisit, 0, rows * cols);
+    for (int i = 0; i < rows * cols; ++i) {
+        printf("%d\n",bVisit[i]);
+    }
+    return false;
+}
+
 @end

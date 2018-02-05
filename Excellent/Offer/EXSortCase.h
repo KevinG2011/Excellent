@@ -19,5 +19,5 @@ int binarySearch(int arr[],int len, int num);
 /**
  * 快速排序
  */
-int* partition(int arr[],int len);
+int* quickSort(int arr[],int len);
 @end

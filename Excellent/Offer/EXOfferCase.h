@@ -21,4 +21,17 @@ void replaceBlankString(char str[], int length, bool *success);
  *  返回值: 第n项的值
  */
 long long fibonacciN(unsigned n);
+/**
+ *  判断矩阵中是否存在某字符串所有字符的路径(回溯法)
+ *  参数 matrix: 矩阵数组
+ *  参数 row: 矩阵行
+ *  参数 col: 矩阵列
+ *  参数 str: 字符串
+ *  返回值:
+ *  a, b, t, g,
+ *  c, f, v, k,
+ *  d, r, t, s,
+ */
+bool hasSequencePath(char *matrix, int row, int col, char *str);
+
 @end

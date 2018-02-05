@@ -85,6 +85,24 @@
     XCTAssertTrue(index < 0);
 }
 
+- (void)testQuickSort {
+    int arr[] = {9, 4, 3, 8, 2, 5, 7, 11, 15, 12, 1};
+    int len = sizeof(arr) / sizeof(int);
+    quickSort(arr, len);
+    for (int i = 0 ; i < len; ++i) {
+        printf("%d",arr[i]);
+    }
+}
+
+- (void)testHasSequencePath {
+    char matrix[] = {'k', 'q', 'u', 'i',
+                     'e', 't', 's', 'o',
+                     'f', 'l', 'h', 'm',
+                     'a', 'n', 'v', 'c'};
+    
+    hasSequencePath(matrix, 4, 4, "ustl");
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
     }];
