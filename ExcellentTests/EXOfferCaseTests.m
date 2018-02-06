@@ -107,7 +107,8 @@
                      'f', 'l', 'h', 'm',
                      'a', 'n', 'v', 'c'};
     
-    hasSequencePath(matrix, 4, 4, "ustl");
+    bool hasPath = hasStringPathInMatrix(matrix, 4, 4, "ustl");
+    XCTAssertTrue(hasPath == true);
 }
 
 - (void)PerformanceExample {

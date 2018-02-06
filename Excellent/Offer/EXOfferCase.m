@@ -98,15 +98,51 @@ int findMinNumInRotatingArr(int arr[], int length) {
     return arr[minIndex];
 }
 
-bool hasSequencePath(char *matrix, int rows, int cols, char *str) {
+bool hasStringPathInMatrix(char *matrix, int rows, int cols, char *str) {
     if (matrix == NULL || str == NULL || rows < 1 || cols < 1) {
         return false;
     }
-    bool bVisit[rows * cols];
-    memset(&bVisit, 0, rows * cols);
-    for (int i = 0; i < rows * cols; ++i) {
-        printf("%d\n",bVisit[i]);
+    /* 保存访问路径 */
+    bool visited[rows * cols];
+    memset(&visited, 0, rows * cols);
+    int pathLength = 0; /* 序列路径 */
+    for (int row = 0 ; row < rows; ++row) {
+        for (int col = 0 ; col < cols; ++col) {
+            bool hasPath = hasStringPathCore(matrix, rows, cols, row, col, str ,&pathLength, visited);
+            if (hasPath) {
+                return true;
+            }
+        }
     }
+    
     return false;
 }
+
+bool hasStringPathCore(char *matrix, int rows, int cols, int row, int col, char* str ,int* pathLength, bool* visited) {
+    if (str[*pathLength] == '\0') {
+        return true;
+    }
+    bool hasPath = false;
+    if (row >= 0 && row <= rows && col >= 0 && col <= cols) {
+        int index = row * cols + col;
+        if (!visited[index]) {
+            char m = matrix[index], c = str[*pathLength];
+            if (m == c) {
+                *pathLength += 1;
+                visited[index] = true;
+                hasPath = hasStringPathCore(matrix, rows, cols, row - 1, col, str, pathLength, visited) ||
+                hasStringPathCore(matrix, rows, cols, row , col - 1, str, pathLength, visited) ||
+                hasStringPathCore(matrix, rows, cols, row + 1 , col, str, pathLength, visited) ||
+                hasStringPathCore(matrix, rows, cols, row , col + 1, str, pathLength, visited);
+                if (!hasPath) {
+                    *pathLength -= 1;
+                    visited[index] = false;
+                }
+            }
+        }
+
+    }
+    return hasPath;
+}
+
 @end

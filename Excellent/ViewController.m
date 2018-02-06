@@ -88,7 +88,6 @@
 }
 #define kSelectedSceneKey @"SelectedSceneKey"
 -(void)encodeRestorableStateWithCoder:(NSCoder *)coder {
-    
     [super encodeRestorableStateWithCoder:coder];
 }
 

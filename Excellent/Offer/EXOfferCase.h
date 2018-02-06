@@ -42,6 +42,6 @@ int findMinNumInRotatingArr(int arr[], int length);
  *  c, f, v, k,
  *  d, r, t, s,
  */
-bool hasSequencePath(char *matrix, int row, int col, char *str);
+bool hasStringPathInMatrix(char *matrix, int row, int col, char *str);
 
 @end
