@@ -111,6 +111,20 @@
     XCTAssertTrue(hasPath == true);
 }
 
+- (void)testmovingCount {
+    /*
+     {3,0}, {3,1}, {3,2}, {3,3}, {3,4}
+     {2,0}, {2,1}, {2,2}, {2,3}, {2,4}
+     {1,0}, {1,1}, {1,2}, {1,3}, {1,4}
+     {0,0}, {0,1}, {0,2}, {0,3}, {0,4}
+     */
+    int rows = 3, cols = 3;
+    int count = movingCountLoop(rows, cols, 1);
+    printf("loop count :%d \n",count);
+    count = movingCountRecursively(rows, cols, 1);
+    printf("recursively count :%d \n",count);
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
     }];

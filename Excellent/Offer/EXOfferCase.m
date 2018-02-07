@@ -9,7 +9,9 @@
 #import "EXOfferCase.h"
 
 @implementation EXOfferCase
-
+/**
+    使用%20替换字符串中的空格,从后置前
+ */
 void replaceBlankString(char str[], int length, bool *success) {
     *success = false;
     if (str != NULL && length > 0) {
@@ -46,6 +48,9 @@ void replaceBlankString(char str[], int length, bool *success) {
     }
 }
 
+/**
+    求斐波那契数列的第n项 (青蛙跳台例子一次跳1阶或者2阶)
+ */
 long long fibonacciN(unsigned n) {
     int result[] = {0, 1};
     if (n < 2) {
@@ -63,17 +68,9 @@ long long fibonacciN(unsigned n) {
     return fibItemN;
 }
 
-int _findMinInOrder(int arr[], int startIndex, int endIndex) {
-
-    int result = arr[startIndex];
-    for (int i = startIndex; i < endIndex; ++i) {
-        if (arr[i] < result) {
-            result = arr[i];
-        }
-    }
-    return result;
-}
-
+/**
+    查找旋转自增数组的最小数字
+ */
 int findMinNumInRotatingArr(int arr[], int length) {
     if (arr == NULL && length <= 0) {
         return 0;
@@ -98,6 +95,20 @@ int findMinNumInRotatingArr(int arr[], int length) {
     return arr[minIndex];
 }
 
+int _findMinInOrder(int arr[], int startIndex, int endIndex) {
+    
+    int result = arr[startIndex];
+    for (int i = startIndex; i < endIndex; ++i) {
+        if (arr[i] < result) {
+            result = arr[i];
+        }
+    }
+    return result;
+}
+
+/**
+    判断矩阵中是否存在某字符串所有字符的路径(回溯法)
+ */
 bool hasStringPathInMatrix(char *matrix, int rows, int cols, char *str) {
     if (matrix == NULL || str == NULL || rows < 1 || cols < 1) {
         return false;
@@ -118,6 +129,7 @@ bool hasStringPathInMatrix(char *matrix, int rows, int cols, char *str) {
     return false;
 }
 
+
 bool hasStringPathCore(char *matrix, int rows, int cols, int row, int col, char* str ,int* pathLength, bool* visited) {
     if (str[*pathLength] == '\0') {
         return true;
@@ -130,6 +142,7 @@ bool hasStringPathCore(char *matrix, int rows, int cols, int row, int col, char*
             if (m == c) {
                 *pathLength += 1;
                 visited[index] = true;
+                /* 上左下右 */
                 hasPath = hasStringPathCore(matrix, rows, cols, row - 1, col, str, pathLength, visited) ||
                 hasStringPathCore(matrix, rows, cols, row , col - 1, str, pathLength, visited) ||
                 hasStringPathCore(matrix, rows, cols, row + 1 , col, str, pathLength, visited) ||
@@ -143,6 +156,71 @@ bool hasStringPathCore(char *matrix, int rows, int cols, int row, int col, char*
 
     }
     return hasPath;
+}
+
+/**
+    机器人的运动范围, 只能进入行坐标和列坐标数位之和小于等于k的格子.
+    实现要点:
+    1. 判断矩阵长宽是否合法, 判断k是否大于0
+    2. 从行开始遍历, 满足+1,不满足跳行从头遍历.直至矩阵结尾
+ */
+
+int movingCountLoop(int rows, int cols, int threshold) {
+    if (rows <= 0 || cols <= 0 || threshold < 0 ) {
+        return 0;
+    }
+    int count = 0;
+    for (int row = 0 ; row < rows; ++row) {
+        for (int col = 0 ; col < cols; ++col) {
+            int sum = _getDigitSum(row) + _getDigitSum(col);
+            if (sum > threshold) {
+                continue;
+            }
+            count += 1;
+        }
+    }
+    return count;
+}
+
+int movingCountRecursively(int rows, int cols, int threshold) {
+    if (rows <= 0 || cols <= 0 || threshold < 0 ) {
+        return 0;
+    }
+    int length = rows * cols;
+    bool visited[length];
+    memset(&visited, false, length);
+    
+    int count = _movingCountCore(rows, cols, 0, 0, threshold, visited);
+    return count;
+}
+
+int _movingCountCore(int rows, int cols, int row, int col, int threshold, bool *visited) {
+    int count = 0;
+    if (row >= 0 && col >= 0 && row < rows && col < cols) {
+        int index = row * rows + col;
+        if (!visited[index]) {
+            int sum = _getDigitSum(row) + _getDigitSum(col);
+            if (sum <= threshold) {
+                visited[index] = true;
+                count = 1 + _movingCountCore(rows, cols, row - 1, col, threshold, visited)
+                          + _movingCountCore(rows, cols, row, col - 1, threshold, visited)
+                          + _movingCountCore(rows, cols, row + 1, col, threshold, visited)
+                          + _movingCountCore(rows, cols, row, col + 1, threshold, visited);
+                
+            }
+        }
+    }
+    
+    return count;
+}
+
+int _getDigitSum(int number) {
+    int sum = 0;
+    while (number > 0) {
+        sum += number % 10;
+        number /= 10;
+    }
+    return sum;
 }
 
 @end
