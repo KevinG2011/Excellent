@@ -125,6 +125,11 @@
     printf("recursively count :%d \n",count);
 }
 
+- (void)testMaxProductAfterCutting_2 {
+    int product = maxProductAfterCutting_2(5);
+    printf("%d\n",product);
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
     }];

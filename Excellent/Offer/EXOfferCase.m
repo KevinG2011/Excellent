@@ -223,4 +223,24 @@ int _getDigitSum(int number) {
     return sum;
 }
 
+/**
+ 长度为n的绳子剪成若干段, 使得到的各段长度乘积最大.
+ 贪婪算法 尽可能剪成长度为3的绳子
+ */
+int maxProductAfterCutting_2(int length) {
+    if (length < 2) {
+        return 0;
+    } else if (length == 2) {
+        return 1;
+    } else if (length == 3) {
+        return 2;
+    }
+    int timesOf3 = length / 3;
+    if (length - timesOf3 * 3 == 1) {
+        timesOf3 -= 1;
+    }
+    int timesOf2 = (length - timesOf3 * 3) / 2;
+    return (int)(pow(3, timesOf3)) + (int)(pow(2, timesOf2));                                                                   
+}
+
 @end
