@@ -240,7 +240,7 @@ int maxProductAfterCutting_2(int length) {
         timesOf3 -= 1;
     }
     int timesOf2 = (length - timesOf3 * 3) / 2;
-    return (int)(pow(3, timesOf3)) + (int)(pow(2, timesOf2));                                                                   
+    return (int)(pow(3, timesOf3)) * (int)(pow(2, timesOf2));
 }
 
 @end
