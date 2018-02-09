@@ -75,4 +75,23 @@ int movingCountRecursively(int rows, int cols, int threshold);
     | 1 | 2 | 3 | 4 | 5 |
  */
 int maxProductAfterCutting_2(int length);
+
+/**
+    输入用字母序列表示的编码,输出它是第几列.
+    参数 str: 输入字母序列
+    返回值: 字母序列所代表的列号 -1表示非法输入
+ */
+int transformToColumnNum(char *str);
+
+/**
+ 输出整数二进制表示中1的个数 (包括负数符号位)
+ 参数 num: 整数
+ 返回值: 1的个数
+ */
+int countBinaryOf1_1(int num);
+/* 改进思路:
+    一个整数减去1之后再和原来的整数做位运算,结果相当于把最右边的1变成0.
+ */
+int countBinaryOf1_2(int num);
+
 @end

@@ -126,12 +126,24 @@
 }
 
 - (void)testMaxProductAfterCutting_2 {
-    int product = maxProductAfterCutting_2(5);
+    int product = maxProductAfterCutting_2(4);
     printf("%d\n",product);
+}
+
+- (void)testTransformToColumnNum {
+    char *charsetSeq = "AAB";
+    int column = transformToColumnNum(charsetSeq);
+    printf("%d\n",column);
+}
+
+- (void)testCountBinary1 {
+    int count = countBinaryOf1_2(11);
+    printf("count :%d\n",count);
 }
 
 - (void)PerformanceExample {
     [self measureBlock:^{
+        
     }];
 }
 

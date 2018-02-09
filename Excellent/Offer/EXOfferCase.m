@@ -243,4 +243,54 @@ int maxProductAfterCutting_2(int length) {
     return (int)(pow(3, timesOf3)) * (int)(pow(2, timesOf2));
 }
 
+/**
+ []
+ 输入用字母序列表示的编码,输出它是第几列.
+ 参数 str: 输入字母序列
+ 返回值: 字母序列所代表的列号
+ */
+
+int transformToColumnNum(char *str) {
+    int column = 0;
+    if (str == NULL) {
+        return column;
+    }
+    
+    char *index = str;
+    while (true) {
+        char c = *index;
+        if (c < 'A' || c > 'Z') { //需要考虑大小写问题
+            return -1;
+        }
+        if (*(++index) == '\0') {
+            column += (c - 'A' + 1);
+            break;
+        }
+        column += 26;
+    }
+    return column;
+}
+
+int countBinaryOf1_1(int num) {
+    int count = 0;
+    unsigned int flag = 1;
+    while (flag > 0) {
+        if (num & flag) {
+            count++;
+        }
+        flag <<= 1;
+    }
+    return count;
+}
+
+int countBinaryOf1_2(int num) {
+    int count = 0;
+    while (num) {
+        count++;
+        num = (num - 1) & num;
+    }
+    return count;
+}
+
+
 @end
