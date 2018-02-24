@@ -320,4 +320,15 @@ double funcPowerf(double base, int exponent) {
     return result;
 }
 
+void printMaxOfNDigit(int n) {
+    if (n < 1) {
+        return;
+    }
+    char numStr[n + 1];
+    numStr[n] = '\0';
+    memset(numStr,'0',n);
+    
+    
+}
+
 @end

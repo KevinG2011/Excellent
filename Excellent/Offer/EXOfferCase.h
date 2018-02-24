@@ -88,6 +88,7 @@ int transformToColumnNum(char *str);
  参数 num: 整数
  返回值: 1的个数
  */
+
 int countBinaryOf1_1(int num);
 /* 改进思路:
     一个整数减去1之后再和原来的整数做位运算,结果相当于把最右边的1变成0.
@@ -104,4 +105,8 @@ int countBinaryOf1_2(int num);
  */
 double funcPowerf(double base, int exponent);
 
+/*
+ 输入数字n, 按顺序打印出从1到最大的n位十进制数, 比如输入3, 打印出1,2,3一直到最大的3位数999
+ */
+void printMaxOfNDigit(int n);
 @end
