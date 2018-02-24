@@ -92,6 +92,16 @@ int countBinaryOf1_1(int num);
 /* 改进思路:
     一个整数减去1之后再和原来的整数做位运算,结果相当于把最右边的1变成0.
  */
+
 int countBinaryOf1_2(int num);
+
+/*
+ 不使用函数库
+ 实现函数power(double base, int exponent),求base的exponent次方.
+ 处理 exponent 负数问题
+ 改进思路:
+ 判断一个数是否是奇数 x & 0x1 == 1, 位运算效率比求余运算的效率高很多.
+ */
+double funcPowerf(double base, int exponent);
 
 @end

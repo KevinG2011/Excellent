@@ -292,5 +292,32 @@ int countBinaryOf1_2(int num) {
     return count;
 }
 
+double funcPowerf(double base, int exponent) {
+    if (exponent == 0) {
+        return 1;
+    }
+    if (exponent == 1) {
+        return base;
+    }
+
+    unsigned int absExponent = (unsigned int)exponent;
+    if (exponent < 0) {
+        absExponent = (unsigned int)-exponent;
+    }
+    double result = base;
+    while (absExponent > 1) {
+        result *= result;
+        absExponent >>= 1;
+    }
+
+    if ((exponent & 0x1) == 1) {
+        result *= base;
+    }
+
+    if (exponent < 0) {
+        result = 1.0 / result;
+    }
+    return result;
+}
 
 @end

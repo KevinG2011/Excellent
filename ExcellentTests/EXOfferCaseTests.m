@@ -141,6 +141,12 @@
     printf("count :%d\n",count);
 }
 
+- (void)testFuncPower {
+    double num = funcPowerf(2, 4);
+    printf("abs :%f\n",num);
+}
+
+
 - (void)PerformanceExample {
     [self measureBlock:^{
         
