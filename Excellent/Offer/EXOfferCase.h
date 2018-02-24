@@ -107,6 +107,7 @@ double funcPowerf(double base, int exponent);
 
 /*
  输入数字n, 按顺序打印出从1到最大的n位十进制数, 比如输入3, 打印出1,2,3一直到最大的3位数999
+ '08','09','99'
  */
 void printMaxOfNDigit(int n);
 @end

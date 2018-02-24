@@ -271,6 +271,10 @@ int transformToColumnNum(char *str) {
     return column;
 }
 
+/**
+ 输出整数二进制表示中1的个数 (包括负数符号位)
+ */
+
 int countBinaryOf1_1(int num) {
     int count = 0;
     unsigned int flag = 1;
@@ -291,6 +295,11 @@ int countBinaryOf1_2(int num) {
     }
     return count;
 }
+
+/*
+ 不使用函数库
+ 实现函数power(double base, int exponent),求base的exponent次方.
+ */
 
 double funcPowerf(double base, int exponent) {
     if (exponent == 0) {
@@ -320,15 +329,61 @@ double funcPowerf(double base, int exponent) {
     return result;
 }
 
+/*
+ 输入数字n, 按顺序打印出从1到最大的n位十进制数
+ */
+
 void printMaxOfNDigit(int n) {
     if (n < 1) {
         return;
     }
     char numStr[n + 1];
     numStr[n] = '\0';
-    memset(numStr,'0',n);
-    
-    
+    for (int i = 0 ; i < n; ++i) {
+        numStr[i] = '0';
+    }
+    while (!_increaseNumStr(numStr, n)) {
+        _printNumStr(numStr);
+    }
+    printf("\n");
 }
+
+bool _increaseNumStr(char numStr[], int n) {
+    bool overflow = false;
+    for (int i = n - 1 ; i >= 0 ; --i) {
+        int sum = numStr[i] - '0';
+        if (sum >= 9) {
+            if (i == 0) {
+                overflow = true;
+                break;
+            }
+            numStr[i] = '0';
+        } else {
+            numStr[i] += 1;
+            break;
+        }
+    }
+    return overflow;
+}
+
+void _printNumStr(char numStr[]) {
+    if (numStr == NULL) {
+        return;
+    }
+    
+    int i = 0;
+    bool isBeginning0 = true;
+    while (numStr[i] != '\0') {
+        if (isBeginning0 && numStr[i] != '0') {
+            isBeginning0 = false;
+        }
+        if (!isBeginning0) {
+            printf("%c",numStr[i]);
+        }
+        ++i;
+    }
+    printf("\t");
+}
+
 
 @end

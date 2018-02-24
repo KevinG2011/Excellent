@@ -147,9 +147,9 @@
 }
 
 - (void)testPrintMaxOfNDigit {
-    double num = funcPowerf(2, 4);
-    printf("abs :%f\n",num);
+    printMaxOfNDigit(3);
 }
+
 
 - (void)PerformanceExample {
     [self measureBlock:^{
