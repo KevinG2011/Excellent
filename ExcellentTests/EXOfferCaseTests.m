@@ -147,7 +147,10 @@
 }
 
 - (void)testPrintMaxOfNDigit {
-    printMaxOfNDigit(3);
+    /* 递归*/
+    printMaxOfNDigit(2, RecursivelyType);
+    /* 递增 */
+//    printMaxOfNDigit(3, IncreaseType);
 }
 
 

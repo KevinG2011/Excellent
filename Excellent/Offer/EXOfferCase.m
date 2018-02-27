@@ -333,7 +333,7 @@ double funcPowerf(double base, int exponent) {
  输入数字n, 按顺序打印出从1到最大的n位十进制数
  */
 
-void printMaxOfNDigit(int n) {
+void printMaxOfNDigit(int n, enum PrintType type) {
     if (n < 1) {
         return;
     }
@@ -342,8 +342,17 @@ void printMaxOfNDigit(int n) {
     for (int i = 0 ; i < n; ++i) {
         numStr[i] = '0';
     }
-    while (!_increaseNumStr(numStr, n)) {
-        _printNumStr(numStr);
+    if (type == IncreaseType) {
+        /* 累加方式 */
+        while (!_increaseNumStr(numStr, n)) {
+            _printNumStr(numStr);
+        }
+    } else if(type == RecursivelyType) {
+        /* 递归方式*/
+        for (int i = 0 ; i < 10; ++i) {
+            numStr[0] = i + '0';
+            printMaxOfNDigitRecursively(numStr, n, 0);
+        }
     }
     printf("\n");
 }
@@ -382,8 +391,23 @@ void _printNumStr(char numStr[]) {
         }
         ++i;
     }
-    printf("\t");
+    
+    if (!isBeginning0) {
+        printf("\t");
+    }
 }
+
+void printMaxOfNDigitRecursively(char numStr[], int n, int index) {
+    if (index == n - 1) {
+        _printNumStr(numStr);
+        return;
+    }
+    for (int i = 0 ; i < 10; ++i) {
+        numStr[index + 1] = i + '0';
+        printMaxOfNDigitRecursively(numStr, n, index + 1);
+    }
+}
+
 
 
 @end
