@@ -409,25 +409,25 @@ void printMaxOfNDigitRecursively(char numStr[], int n, int index) {
 }
 
 /*  调整奇偶顺序 */
-void exchangeOddEven(int arr[], int len) {
+void exchangeOddEven(int arr[], int len,enum ComparisonResult (*compareFunc)(int)) {
     if (arr == NULL || len <= 0) {
         return;
     }
     int startIndex = 0;
     int endIndex = len - 1;
-    _exchangeCore(arr, startIndex, endIndex);
+    _exchangeCore(arr, startIndex, endIndex, compareFunc);
 }
 
-void _exchangeCore(int arr[], int startIndex, int endIndex) {
+void _exchangeCore(int arr[], int startIndex, int endIndex, enum ComparisonResult (*compareFunc)(int)) {
     if (startIndex > endIndex || endIndex < 0 || arr == NULL) {
         return;
     }
     
-    while (_isOdd(arr[startIndex])) {
+    while (compareFunc(arr[startIndex]) == OrderedAscending) {
         startIndex++;
     }
     
-    while (!_isOdd(arr[endIndex])) {
+    while (compareFunc(arr[endIndex]) == OrderedDescending) {
         endIndex--;
     }
     
@@ -435,10 +435,6 @@ void _exchangeCore(int arr[], int startIndex, int endIndex) {
     arr[startIndex] = arr[endIndex];
     arr[endIndex] = startVal;
     
-    _exchangeCore(arr, startIndex + 1, endIndex - 1);
-}
-
-bool _isOdd(int num) {
-    return (num & 0x1) == 1;
+    _exchangeCore(arr, startIndex + 1, endIndex - 1, compareFunc);
 }
 @end

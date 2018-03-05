@@ -153,11 +153,19 @@
 //    printMaxOfNDigit(3, IncreaseType);
 }
 
+enum ComparisonResult _compareFunc(int num) {
+    if ((num & 0x1) == 1) {
+        return OrderedAscending;
+    } else {
+        return OrderedDescending;
+    }
+}
+
 - (void)testExchangeOddEven {
     //测试交换奇偶数
     int arr[] = {3, 2, 4, 5, 8, 0, 11, 6, 3, 7};
     int len = sizeof(arr) / sizeof(int);
-    exchangeOddEven(arr, len);
+    exchangeOddEven(arr, len, _compareFunc);
     for (int i = 0 ; i < len; ++i) {
         printf("%d, ",arr[i]);
     }
