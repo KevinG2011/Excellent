@@ -408,6 +408,37 @@ void printMaxOfNDigitRecursively(char numStr[], int n, int index) {
     }
 }
 
+/*  调整奇偶顺序 */
+void exchangeOddEven(int arr[], int len) {
+    if (arr == NULL || len <= 0) {
+        return;
+    }
+    int startIndex = 0;
+    int endIndex = len - 1;
+    _exchangeCore(arr, startIndex, endIndex);
+}
 
+void _exchangeCore(int arr[], int startIndex, int endIndex) {
+    if (startIndex > endIndex || endIndex < 0 || arr == NULL) {
+        return;
+    }
+    
+    while (_isOdd(arr[startIndex])) {
+        startIndex++;
+    }
+    
+    while (!_isOdd(arr[endIndex])) {
+        endIndex--;
+    }
+    
+    int startVal = arr[startIndex];
+    arr[startIndex] = arr[endIndex];
+    arr[endIndex] = startVal;
+    
+    _exchangeCore(arr, startIndex + 1, endIndex - 1);
+}
 
+bool _isOdd(int num) {
+    return (num & 0x1) == 1;
+}
 @end

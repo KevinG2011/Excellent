@@ -153,6 +153,16 @@
 //    printMaxOfNDigit(3, IncreaseType);
 }
 
+- (void)testExchangeOddEven {
+    //测试交换奇偶数
+    int arr[] = {3, 2, 4, 5, 8, 0, 11, 6, 3, 7};
+    int len = sizeof(arr) / sizeof(int);
+    exchangeOddEven(arr, len);
+    for (int i = 0 ; i < len; ++i) {
+        printf("%d, ",arr[i]);
+    }
+    printf("\n");
+}
 
 - (void)PerformanceExample {
     [self measureBlock:^{

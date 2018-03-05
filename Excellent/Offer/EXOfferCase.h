@@ -115,4 +115,9 @@ enum PrintType {
 };
 
 void printMaxOfNDigit(int n, enum PrintType type);
+
+/*
+ * 调整数组顺序,使得所有奇数位于数组的前半部分,所有偶数位于数组的后半部分
+ */
+void exchangeOddEven(int arr[], int len);
 @end

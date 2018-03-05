@@ -181,6 +181,54 @@ EXBinaryTreeNode* findInorderNextTreeNode(EXBinaryTreeNode* treeNode) {
     return nextNode;
 }
 
+/* 在O(1)时间内删除链表节点 */
+void deleteNode(EXNode** headNode, EXNode *deleteNode) {
+    if (headNode == nil || deleteNode == nil) {
+        return;
+    }
+    if (deleteNode.next != nil) {
+        //不是尾部节点, 复制下一个节点数据
+        EXNode *next = deleteNode.next;
+        deleteNode.value = next.value;
+        deleteNode.next = next.next;
+    } else if(*headNode == deleteNode) {
+        //删除的是头节点
+        (*headNode).value = nil;
+        (*headNode).next = nil;
+        *headNode = nil;
+    } else if(deleteNode.next == nil) {
+        //删除的为尾部节点
+        EXNode* nextNode = *headNode;
+        while (nextNode.next != deleteNode) {
+            nextNode = nextNode.next;
+        }
+        if (nextNode) {
+            nextNode.next = nil;
+        }
+    }
+}
+
+/* 删除重复的链表节点 */
+void deleteDuplicationNode(EXNode** headNode) {
+    if (!headNode || *headNode == nil) {
+        return;
+    }
+    //TODO
+//    EXNode *preNode = *headNode;
+//    EXNode *curNode = *headNode;
+//    while (curNode.next) {
+//        if (curNode == curNode.next) {
+//            EXNode *nextNode = curNode.next;
+//            curNode.next = nextNode.next;
+//            nextNode.next = nil;
+//        } else {
+//            preNode = curNode;
+//            curNode = curNode.next;
+//        }
+//
+//    }
+}
+
 @end
 
 
