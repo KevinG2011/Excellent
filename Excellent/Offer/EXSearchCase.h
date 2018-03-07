@@ -1,5 +1,5 @@
 //
-//  EXSortCase.h
+//  EXSearchCase.h
 //  Excellent
 //
 //  Created by lijia on 2018/1/31.
@@ -11,7 +11,7 @@
  * 查找和排序
  */
 
-@interface EXSortCase : NSObject
+@interface EXSearchCase : NSObject
 /**
  * 排序数组二分查找法
  */

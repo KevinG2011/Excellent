@@ -10,7 +10,7 @@
 #import "EXOfferCase.h"
 #import "EXNode.h"
 #import "EXNodeCase.h"
-#import "EXSortCase.h"
+#import "EXSearchCase.h"
 
 @interface EXOfferCaseTests : XCTestCase
 @property (nonatomic, strong) EXNode         *nodeList;

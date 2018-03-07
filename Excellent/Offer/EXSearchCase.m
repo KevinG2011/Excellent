@@ -1,14 +1,14 @@
 //
-//  EXSortCase.m
+//  EXSearchCase.m
 //  Excellent
 //
 //  Created by lijia on 2018/1/31.
 //  Copyright © 2018年 Li Jia. All rights reserved.
 //
 
-#import "EXSortCase.h"
+#import "EXSearchCase.h"
 
-@implementation EXSortCase
+@implementation EXSearchCase
 int binarySearch(int arr[],int len, int num) {
     int index = -1;
     if (arr != NULL || len > 0) {
