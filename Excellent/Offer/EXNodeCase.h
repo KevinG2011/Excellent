@@ -89,6 +89,10 @@ void deleteNode(EXNode** headNode, EXNode *deleteNode);
  */
 void deleteDuplicationNode(EXNode** headNode);
 
+/*
+ * 链表的倒数第k个节点
+ */
+EXNode* findKthNodeReversely(EXNode* headNode, int k);
 @end
 
 

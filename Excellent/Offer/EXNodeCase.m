@@ -229,6 +229,35 @@ void deleteDuplicationNode(EXNode** headNode) {
 //    }
 }
 
+/* 链表的倒数第k个节点 */
+EXNode* findKthNodeReversely(EXNode* headNode, int k) {
+    if (headNode == NULL || k < 0) {
+        return NULL;
+    }
+    
+    int count = 0;
+    EXNode *nextNode = headNode;
+    EXNode *okNode = headNode;
+    while (nextNode) {
+        count += 1;
+        nextNode = nextNode.next;
+        if (count < k) {
+            okNode = nextNode;
+        }
+    }
+    
+    if (count < k) {
+        return NULL;
+    }
+    
+    EXNode *kNode = headNode;
+    while (okNode != nil) {
+        kNode = kNode.next;
+        okNode = okNode.next;
+    }
+    return kNode;
+}
+
 @end
 
 
