@@ -77,7 +77,7 @@ int movingCountRecursively(int rows, int cols, int threshold);
 int maxProductAfterCutting_2(int length);
 
 /**
-    输入用字母序列表示的编码,输出它是第几列.
+    输入用字母序列表示的编码,输出它是第几列. (类似Excel的列表示法)
     参数 str: 输入字母序列
     返回值: 字母序列所代表的列号 -1表示非法输入
  */
@@ -115,4 +115,16 @@ enum PrintType {
 };
 
 void printMaxOfNDigit(int n, enum PrintType type);
+
+
+/*
+ 判断字符串是否表示数值(整数和小数).
+ 表示数值的字符串遵循模式A[.[B]][e|EC]]或者.B[e|EC],
+ 其中A为数值整数部分,B紧跟小数点为小数部分,C紧跟着e或者E为数值的指数部分.
+ 规则如下:
+ 1.在小数里可能没有数值的整数部分,因此A部分不是必需的;
+ 2.如果没有整数部分,那它的小数部分不能为空.
+ 如1.2e4, .234
+*/
+bool isNumeric(char *str);
 @end

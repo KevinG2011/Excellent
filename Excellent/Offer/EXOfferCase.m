@@ -408,6 +408,39 @@ void printMaxOfNDigitRecursively(char numStr[], int n, int index) {
     }
 }
 
+/*
+ 判断字符串是否表示数值(整数和小数).
+ */
 
+bool isNumeric(char *str) {
+    if (str == NULL) {
+        return false;
+    }
+    bool isNumeric = _scanIntegerStr(&str);
+    if (*str == '.') {
+        //TODO
+        if (*str == 'e' || *str == 'E') {
+            //TODO
+        }
+    }
+    
+    return false;
+}
+
+
+bool _scanIntegerStr(char **str) {
+    if (**str == '+' || **str == '-') {
+        (*str)++;
+    }
+    return _scanUnsigedIntegerStr(str);
+}
+
+bool _scanUnsigedIntegerStr(char **str) {
+    const char *before = *str;
+    while (**str != '\0' && **str >= '0' && **str <= '9') {
+        (*str)++;
+    }
+    return (before < *str);
+}
 
 @end
