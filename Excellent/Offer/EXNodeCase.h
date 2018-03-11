@@ -55,8 +55,8 @@
 
 /**
  *  重建二叉树
- *  前序遍历{1, 2, 4, 7, 3, 5, 6, 8} 中序遍历{4, 7, 2, 1, 5, 3, 8, 6}
- *  根->左子树->右子树                 左子树->根->右子树
+ *  前序遍历{1, 2, 4, 7, 3, 5, 6, 8} 根->左子树->右子树
+ *  中序遍历{4, 7, 2, 1, 5, 3, 8, 6} 左子树->根->右子树
  *  参数 preorder 前序遍历结果
  *  参数 inorder  中序遍历结果
  */
@@ -78,6 +78,21 @@ void recursivePrintTree(EXBinaryTreeNode* tree);
  *      3   6  11
  */
 EXBinaryTreeNode* findInorderNextTreeNode(EXBinaryTreeNode* tree);
+
+/*
+ * 在O(1)时间内删除链表节点 (复制法)
+ */
+void deleteNode(EXNode** headNode, EXNode *deleteNode);
+
+/*
+ * 删除重复的链表节点
+ */
+void deleteDuplicationNode(EXNode** headNode);
+
+/*
+ * 链表的倒数第k个节点
+ */
+EXNode* findKthNodeReversely(EXNode* headNode, int k);
 @end
 
 

@@ -116,7 +116,6 @@ enum PrintType {
 
 void printMaxOfNDigit(int n, enum PrintType type);
 
-
 /*
  判断字符串是否表示数值(整数和小数).
  表示数值的字符串遵循模式A[.[B]][e|EC]]或者.B[e|EC],
@@ -127,4 +126,15 @@ void printMaxOfNDigit(int n, enum PrintType type);
  如1.2e4, .234
 */
 bool isNumeric(char *str);
+
+/*
+ *  调整数组顺序,使得所有奇数位于数组的前半部分,所有偶数位于数组的后半部分
+ *  扩展比较函数
+ */
+enum ComparisonResult {
+    OrderedAscending = 0,
+//    OrderedSame,
+    OrderedDescending,
+};
+void exchangeOddEven(int arr[], int len, enum ComparisonResult (*compareFunc)(int));
 @end
