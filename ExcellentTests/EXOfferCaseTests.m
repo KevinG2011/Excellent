@@ -172,9 +172,9 @@ enum ComparisonResult _compareFunc(int num) {
     printf("\n");
 }
 
-- (void)testfindKthNodeReversely {
+- (void)testfindKthNodeToTail {
     //测试交换奇偶数
-    EXNode *kNode = findKthNodeReversely(self.nodeList, 2);
+    EXNode *kNode = findKthNodeToTail(self.nodeList, 2);
     NSLog(@"kNode value :%@",kNode.value);
 }
 
