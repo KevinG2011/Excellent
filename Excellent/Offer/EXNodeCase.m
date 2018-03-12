@@ -231,7 +231,7 @@ void deleteDuplicationNode(EXNode** headNode) {
 
 /* 链表的倒数第k个节点 */
 EXNode* findKthNodeReversely(EXNode* headNode, int k) {
-    if (headNode == NULL || k < 0) {
+    if (headNode == NULL || k <= 0) {
         return NULL;
     }
     
@@ -240,10 +240,10 @@ EXNode* findKthNodeReversely(EXNode* headNode, int k) {
     EXNode *okNode = headNode;
     while (nextNode) {
         count += 1;
-        nextNode = nextNode.next;
-        if (count < k) {
+        if (count <= k) {
             okNode = nextNode;
         }
+        nextNode = nextNode.next;
     }
     
     if (count < k) {
@@ -251,7 +251,7 @@ EXNode* findKthNodeReversely(EXNode* headNode, int k) {
     }
     
     EXNode *kNode = headNode;
-    while (okNode != nil) {
+    while (okNode.next) {
         kNode = kNode.next;
         okNode = okNode.next;
     }
