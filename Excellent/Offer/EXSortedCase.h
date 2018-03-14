@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface EXSortedCase : NSObject
-
+/*
+ 选择排序
+ 思想:
+ */
+void selectionSorted(int arr[], int len);
 @end

@@ -9,7 +9,23 @@
 #import "EXSortedCase.h"
 
 @implementation EXSortedCase
-+(void)initialize {
-    NSLog(@"11111");
+void selectionSorted(int arr[], int len) {
+    if (arr == NULL || len <= 0) {
+        return;
+    }
+    
+    for (int i = 0 ; i < len; ++i) {
+        int min = i;
+        for (int j = i + 1 ; i < len; ++j) {
+            if (arr[j] < arr[min]) {
+                min = j;
+            }
+        }
+        
+        int tmp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = tmp;
+    }
 }
+
 @end
