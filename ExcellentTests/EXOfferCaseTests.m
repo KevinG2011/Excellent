@@ -11,6 +11,7 @@
 #import "EXNode.h"
 #import "EXNodeCase.h"
 #import "EXSearchCase.h"
+#import "EXSortedCase.h"
 
 @interface EXOfferCaseTests : XCTestCase
 @property (nonatomic, strong) EXNode         *nodeList;
@@ -173,9 +174,17 @@ enum ComparisonResult _compareFunc(int num) {
 }
 
 - (void)testfindKthNodeToTail {
-    //测试交换奇偶数
     EXNode *kNode = findKthNodeToTail(self.nodeList, 2);
     NSLog(@"kNode value :%@",kNode.value);
+}
+
+- (void)testInsertSorted {
+    int arr[] = {3, 2, 4, 5, 8, 0, 11, 6, 3, 7};
+    int len = sizeof(arr) / sizeof(int);
+    insertSorted(arr, len);
+    for (int i = 0 ; i < len; ++i) {
+        printf("%d, ",arr[i]);
+    }
 }
 
 - (void)PerformanceExample {
