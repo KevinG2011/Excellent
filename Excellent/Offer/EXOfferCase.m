@@ -473,4 +473,18 @@ void _exchangeCore(int arr[], int startIndex, int endIndex, enum ComparisonResul
     _exchangeCore(arr, startIndex + 1, endIndex - 1, compareFunc);
 }
 
+void mirrorBinaryTree(EXBinaryTreeNode *treeNode) {
+    if (treeNode == nil) {
+        return;
+    }
+    
+    /* 交换左右子树 */
+    EXBinaryTreeNode *leftNode = treeNode.leftNode;
+    treeNode.leftNode = treeNode.rightNode;
+    treeNode.rightNode = leftNode;
+    
+    /* 递归交换左右子树 */
+    mirrorBinaryTree(treeNode.leftNode);
+    mirrorBinaryTree(treeNode.rightNode);
+}
 @end
