@@ -147,13 +147,13 @@ EXBinaryTreeNode* constructBinaryTree(int preorder[], int inorder[], int length)
 }
 
 void recursivePrintTree(EXBinaryTreeNode* tree) {
+    NSLog(@"value :%@",tree.value);
     if (tree.leftNode) {
         recursivePrintTree(tree.leftNode);
     }
     if (tree.rightNode) {
         recursivePrintTree(tree.rightNode);
     }
-    NSLog(@"value :%@",tree.value);
 }
 
 EXBinaryTreeNode* findInorderNextTreeNode(EXBinaryTreeNode* treeNode) {

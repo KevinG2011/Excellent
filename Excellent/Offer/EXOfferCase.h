@@ -144,4 +144,58 @@ void exchangeOddEven(int arr[], int len, enum ComparisonResult (*compareFunc)(in
  *  递归交换左右子树,递增左右子节点.
  */
 void mirrorBinaryTree(EXBinaryTreeNode *treeNode);
+/*
+ *  28.对称的二叉树
+ */
+
+/*
+ *  29.顺时针打印矩阵
+ */
+
+/*
+ *  30.包含min函数的栈
+ */
+
+/*
+ *  31.栈的压入弹出序列
+ */
+
+/*
+ *  32.1 从上到下打印二叉树
+ */
+void printBinaryTreeLayer(EXBinaryTreeNode *treeNode);
+/*
+ *  32.2 分行从上到下打印二叉树
+ */
+
+/*
+ *  33.二叉搜索树的后序遍历序列
+ */
+bool verifySequenceOfBST(EXBinaryTreeNode *treeNode);
+
+/*
+ *  34.二叉树中和为某一值的路径
+ *  从树根节点开始一直往下一直到叶节点所经过的节点形成一条路径.
+ */
+void findExpectedSumPath(EXBinaryTreeNode *treeNode, int expectedSum);
+
+/*
+ *  35.复杂链表的复制
+ *
+ */
+
+/*
+ *  36.二叉搜索树和双向链表
+ *
+ */
+
+/*
+ *  37.序列化二叉树
+ *
+ */
+
+/*
+ *  37.字符串的排列
+ *
+ */
 @end

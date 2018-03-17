@@ -487,4 +487,20 @@ void mirrorBinaryTree(EXBinaryTreeNode *treeNode) {
     mirrorBinaryTree(treeNode.leftNode);
     mirrorBinaryTree(treeNode.rightNode);
 }
+
+void printBinaryTreeLayer(EXBinaryTreeNode *treeNode) {
+    if (treeNode == nil) {
+        return;
+    }
+    //TODO
+}
+
+bool verifySequenceOfBST(EXBinaryTreeNode *treeNode) {
+    //TODO
+    return false;
+}
+
+void findExpectedSumPath(EXBinaryTreeNode *treeNode, int expectedSum) {
+    //TODO
+}
 @end
