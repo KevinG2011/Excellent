@@ -178,10 +178,10 @@ enum ComparisonResult _compareFunc(int num) {
     NSLog(@"kNode value :%@",kNode.value);
 }
 
-- (void)testInsertSorted {
+- (void)testSelectionSorted {
     int arr[] = {3, 2, 4, 5, 8, 0, 11, 6, 3, 7};
     int len = sizeof(arr) / sizeof(int);
-    insertSorted(arr, len);
+    selectionSorted(arr, len);
     for (int i = 0 ; i < len; ++i) {
         printf("%d, ",arr[i]);
     }
@@ -194,6 +194,11 @@ enum ComparisonResult _compareFunc(int num) {
     for (int i = 0 ; i < len; ++i) {
         printf("%d, ",arr[i]);
     }
+}
+
+- (void) testPermutation {
+    char str[] = "ab";
+    permutation(str, str);
 }
 
 - (void)PerformanceExample {

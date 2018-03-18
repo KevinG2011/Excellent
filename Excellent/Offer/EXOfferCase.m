@@ -460,6 +460,11 @@ EXNode* reverseNodeList(EXNode *headNode) {
     return reversedNodeHead;
 }
 
+/* 25.合并两个排序的链表 */
+void mergeOrderedList(EXNode* headNode1, EXNode *headNode2) {
+    //TODO
+}
+
 /*  调整奇偶顺序 */
 void exchangeOddEven(int arr[], int len,enum ComparisonResult (*compareFunc)(int)) {
     if (arr == NULL || len <= 0) {
@@ -520,4 +525,29 @@ bool verifySequenceOfBST(EXBinaryTreeNode *treeNode) {
 void findExpectedSumPath(EXBinaryTreeNode *treeNode, int expectedSum) {
     //TODO
 }
+
+/* 38.字符串的全排列 */
+void permutation(char str[], char begin[]) {
+    if (str == NULL) {
+        return;
+    }
+    
+    if (*begin == '\0') {
+        printf("%s", str);
+        return;
+    }
+    
+    for (char *ch = begin; *ch != '\0'; ++ch) {
+        char tmp = *ch;
+        *ch = *begin;
+        *begin = tmp;
+        
+        permutation(str, begin + 1);
+        
+        tmp = *begin;
+        *begin = *ch;
+        *ch = tmp;
+    }
+}
+
 @end

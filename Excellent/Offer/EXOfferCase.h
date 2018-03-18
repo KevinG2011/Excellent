@@ -147,6 +147,11 @@ void exchangeOddEven(int arr[], int len, enum ComparisonResult (*compareFunc)(in
 EXNode* reverseNodeList(EXNode* headNode);
 
 /*
+ *  25.合并两个排序的链表
+ */
+void mergeOrderedList(EXNode* headNode1, EXNode *headNode2);
+
+/*
  *  二叉树的镜像
  *  递归交换左右子树,递增左右子节点.
  */
@@ -202,7 +207,7 @@ void findExpectedSumPath(EXBinaryTreeNode *treeNode, int expectedSum);
  */
 
 /*
- *  37.字符串的排列
- *
+ *  38.字符串的全排列
  */
+void permutation(char str[], char begin[]);
 @end
