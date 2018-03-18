@@ -196,9 +196,13 @@ enum ComparisonResult _compareFunc(int num) {
     }
 }
 
-- (void) testPermutation {
+- (void)testPermutation {
     char str[] = "ab";
     permutation(str, str);
+}
+
+- (void)testMoreThanHalfLength {
+    
 }
 
 - (void)PerformanceExample {
