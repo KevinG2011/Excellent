@@ -443,6 +443,23 @@ bool _scanUnsigedIntegerStr(char **str) {
     return (before < *str);
 }
 
+/* 24.反转链表 */
+EXNode* reverseNodeList(EXNode *headNode) {
+    EXNode *reversedNodeHead = nil;
+    EXNode *prevNode = nil;
+    EXNode *currentNode = headNode;
+    while (currentNode) {
+        EXNode *nextNode = currentNode.next;
+        if (nextNode == nil) {
+            reversedNodeHead = currentNode;
+        }
+        currentNode.next = prevNode;
+        prevNode = currentNode;
+        currentNode = nextNode;
+    }
+    return reversedNodeHead;
+}
+
 /*  调整奇偶顺序 */
 void exchangeOddEven(int arr[], int len,enum ComparisonResult (*compareFunc)(int)) {
     if (arr == NULL || len <= 0) {

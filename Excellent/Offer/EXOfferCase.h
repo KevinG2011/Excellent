@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EXNode.h"
 #import "EXBinaryTreeNode.h"
 
 @interface EXOfferCase : NSObject
@@ -138,6 +139,12 @@ enum ComparisonResult {
     OrderedDescending,
 };
 void exchangeOddEven(int arr[], int len, enum ComparisonResult (*compareFunc)(int));
+
+/*
+ *  24.反转链表
+ */
+
+EXNode* reverseNodeList(EXNode* headNode);
 
 /*
  *  二叉树的镜像
