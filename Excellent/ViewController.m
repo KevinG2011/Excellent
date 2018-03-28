@@ -11,10 +11,12 @@
 #import "EXVideoPlayerViewController.h"
 #import "EXUIKitViewController.h"
 #import "EXAlgorithmViewController.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray*  scenes;
+@property (nonatomic, strong) NSOperation         *op;
 @end
 
 @implementation ViewController
@@ -37,6 +39,11 @@
                 @"UIKit Test",
                 @"Algorithm Test"
                 ];
+    
+    self.op = [NSOperation new];
+    NSLog(@"%@", object_getClass(self.op));
+    [self.op addObserver:self forKeyPath:@"concurrent" options:NSKeyValueObservingOptionNew context:NULL];
+    NSLog(@"%@", object_getClass(self.op));
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -6,8 +6,9 @@
 //  Copyright © 2016年 Li Jia. All rights reserved.
 //
 
-//#import "AppDelegate.h"
+#import "AppDelegate.h"
 #import <Foundation/Foundation.h>
+
 //clang -rewrite-objc main.m
 @interface TestObject : NSObject
 @property (atomic, strong) NSString         *name;
@@ -30,6 +31,6 @@
 
 int main(int argc, char * argv[]) {    
     @autoreleasepool {
-//        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
