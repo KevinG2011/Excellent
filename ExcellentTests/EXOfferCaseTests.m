@@ -205,6 +205,29 @@ enum ComparisonResult _compareFunc(int num) {
     
 }
 
+- (void)testMergeOrderedList {
+    NSArray* values = @[@"1",@"2",@"4"];
+    EXNode *node1 = [EXNode nodeWithValue:@"1" next:nil];
+    EXNode *node = node1;
+    int index = 1;
+    while (index < 3) {
+        node.next = [EXNode nodeWithValue:values[index++] next:nil];
+        node = node.next;
+    }
+    
+    values = @[@"3",@"5",@"8"];
+    EXNode *node2 = [EXNode nodeWithValue:@"3" next:nil];
+    index = 1;
+    node = node2;
+    while (index < 3) {
+        node.next = [EXNode nodeWithValue:values[index++] next:nil];
+        node = node.next;
+    }
+    
+    EXNode *mergeNode = mergeOrderedList(node1, node2);
+    NSLog(@"%@",mergeNode);
+}
+
 - (void)PerformanceExample {
     [self measureBlock:^{
         

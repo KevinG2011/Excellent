@@ -149,7 +149,7 @@ EXNode* reverseNodeList(EXNode* headNode);
 /*
  *  25.合并两个排序的链表
  */
-void mergeOrderedList(EXNode* headNode1, EXNode *headNode2);
+EXNode* mergeOrderedList(EXNode* headNode1, EXNode *headNode2);
 
 /*
  *  二叉树的镜像

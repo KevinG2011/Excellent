@@ -41,4 +41,29 @@
 
     return [desc copy];
 }
+
++(instancetype)nodeWithValue:(NSString*)value next:(EXNode*)next {
+    EXNode *node = [[EXNode alloc] initWithValue:value next:next];
+    return node;
+}
+
+-(instancetype)initWithValue:(NSString*)value next:(EXNode*)next {
+    self = [super init];
+    if (self) {
+        _value = value;
+        _next = next;
+    }
+    return self;
+}
 @end
+
+
+
+
+
+
+
+
+
+
+

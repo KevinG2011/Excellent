@@ -13,4 +13,7 @@
 @interface EXNode : NSObject
 @property (nonatomic, copy) NSString* value;
 @property (nonatomic, strong) EXNode* next;
+
++(instancetype)nodeWithValue:(NSString*)value next:(EXNode*)next;
+-(instancetype)initWithValue:(NSString*)value next:(EXNode*)next;
 @end

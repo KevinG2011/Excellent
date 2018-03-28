@@ -460,9 +460,49 @@ EXNode* reverseNodeList(EXNode *headNode) {
     return reversedNodeHead;
 }
 
-/* 25.合并两个排序的链表 */
-void mergeOrderedList(EXNode* headNode1, EXNode *headNode2) {
-    //TODO
+/*
+ 25.合并两个排序的链表
+ 3->5->8
+ 1->2->4
+ */
+EXNode* mergeOrderedList(EXNode* headNode1, EXNode *headNode2) {
+    if (headNode1 == NULL) {
+        return headNode2;
+    }
+    
+    if (headNode2 == NULL) {
+        return headNode1;
+    }
+    
+    EXNode *lowNode;
+    EXNode *highNode;
+    if (headNode1.value.intValue >= headNode2.value.intValue) {
+        lowNode = headNode2;
+        highNode = headNode1;
+    } else {
+        lowNode = headNode1;
+        highNode = headNode2;
+    }
+    
+    EXNode *mergeNode = lowNode;
+    while (highNode) {
+        while (lowNode.next.value && lowNode.next.value.intValue < highNode.value.intValue) {
+            lowNode = lowNode.next;
+        }
+        
+        if (lowNode.next == NULL) {
+            lowNode.next = highNode;
+            break;
+        }
+        
+        EXNode *lowNext = lowNode.next;
+        lowNode.next = highNode;
+        lowNode = highNode;
+        highNode = highNode.next;
+        lowNode.next = lowNext;
+    }
+    
+    return mergeNode;
 }
 
 /*  调整奇偶顺序 */
