@@ -461,7 +461,7 @@ EXNode* reverseNodeList(EXNode *headNode) {
 }
 
 /*
- 25.合并两个排序的链表
+ 25.1. 合并两个排序的链表 循环实现
  3->5->8
  1->2->4
  */
@@ -503,6 +503,17 @@ EXNode* mergeOrderedList(EXNode* headNode1, EXNode *headNode2) {
     }
     
     return mergeNode;
+}
+
+/*
+ 25.1. 合并两个排序的链表 递归实现
+ 3->5->8
+ 1->2->4
+ */
+
+EXNode* mergeOrderedListRecursively(EXNode* headNode1, EXNode *headNode2) {
+    //TODO
+    return nil;
 }
 
 /*  调整奇偶顺序 */

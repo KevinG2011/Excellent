@@ -13,7 +13,7 @@
 @interface EXOfferCase : NSObject
 
 /**
-    [尾部预分配]
+    尾部预分配
     使用%20替换字符串中的空格,从后置前
     参数 str: 字符串数组
     参数 length: 字符串数组长度
@@ -21,7 +21,7 @@
 void replaceBlankString(char str[], int length, bool *success);
 
 /**
-    [斐波那契数列]
+    10.斐波那契数列
     求斐波那契数列的第n项(青蛙跳台例子一次跳1阶或者2阶)
     参数 n: 输入数字
     返回值: 第n项的值
@@ -29,7 +29,7 @@ void replaceBlankString(char str[], int length, bool *success);
 long long fibonacciN(unsigned n);
 
 /**
-    [二分查找法]
+    二分查找法
     查找旋转自增数组的最小数字
     参数 str: 数字数组
     参数 length: 数字数组的长度
@@ -39,7 +39,7 @@ long long fibonacciN(unsigned n);
 int findMinNumInRotatingArr(int arr[], int length);
 
 /**
-    [回溯法]
+    回溯法
     判断矩阵中是否存在某字符串所有字符的路径
     参数 matrix: 矩阵数组
     参数 row: 矩阵行
@@ -53,7 +53,7 @@ int findMinNumInRotatingArr(int arr[], int length);
 bool hasStringPathInMatrix(char *matrix, int row, int col, char *str);
 
 /**
-    [回溯法]
+    回溯法
     机器人的运动范围, 只能抵达行坐标和列坐标数位之和小于等于k的格子.
     参数 matrix: 矩阵数组 m行n列
     参数 row: 矩阵行
@@ -147,9 +147,13 @@ void exchangeOddEven(int arr[], int len, enum ComparisonResult (*compareFunc)(in
 EXNode* reverseNodeList(EXNode* headNode);
 
 /*
- *  25.合并两个排序的链表
+ *  25.1 合并两个排序的链表循环实现
  */
 EXNode* mergeOrderedList(EXNode* headNode1, EXNode *headNode2);
+/*
+ *  25.2 合并两个排序的链表递归实现
+ */
+EXNode* mergeOrderedListRecursively(EXNode* headNode1, EXNode *headNode2);
 
 /*
  *  二叉树的镜像
