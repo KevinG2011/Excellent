@@ -278,4 +278,10 @@ void permutation(char str[], char begin[]);
 /*
  *  52.求树中两个节点的最低公共祖先
  */
+
+/*
+ *  53.在排序数组中查找数字
+ *  数字在排序数组中出现的次数
+ */
+int countNum(int arr[], int num);
 @end
