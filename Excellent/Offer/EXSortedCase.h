@@ -26,7 +26,11 @@ void insertSorted(int arr[], int len);
 /*
  希尔排序
  思想:
- 
  */
 void shellSorted(int arr[], int len);
+/*
+ 快速排序
+ 思想:
+ */
+void quickSorted(int arr[], int len);
 @end

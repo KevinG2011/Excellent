@@ -10,7 +10,7 @@
 
 @implementation EXSortedCase
 
-void exchangeArrayElement(int arr[], int len, int idx1, int idx2) {
+void __exchangeArrayElement(int arr[], int len, int idx1, int idx2) {
     if (arr == NULL || len < 0) {
         return;
     }
@@ -36,7 +36,7 @@ void selectionSorted(int arr[], int len) {
             }
         }
         
-        exchangeArrayElement(arr, len, i, min);
+        __exchangeArrayElement(arr, len, i, min);
     }
 }
 
@@ -48,7 +48,7 @@ void insertSorted(int arr[], int len) {
     for (int i = low; i <= high; ++i) {
         for (int j = high; j > i ; --j) {
             if (arr[j] < arr[j - 1]) {
-                exchangeArrayElement(arr, len, j, j - 1);
+                __exchangeArrayElement(arr, len, j, j - 1);
             }
         }
     }
@@ -58,6 +58,28 @@ void shellSorted(int arr[], int len) {
     
 }
 
+int __partition(int arr[], int low , int high) {
+    int i = low, j = high;
+    int medVal = arr[low];
+    //TODO
+    
+    return j;
+}
+
+void __quickSortedCore(int arr[], int low, int high) {
+    int mid = __partition(arr, low, high);
+    __quickSortedCore(arr, low, mid - 1);
+    __quickSortedCore(arr, mid + 1, high);
+}
+
+/* 快速排序 */
+void quickSorted(int arr[], int len) {
+    if (arr == NULL || len <= 0) {
+        return;
+    }
+    int low = 0, high = len - 1;
+    __quickSortedCore(arr, low, high);
+}
 
 
 @end

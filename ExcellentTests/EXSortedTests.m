@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "EXSortedController.h"
 #import "NSArray+Additions.h"
+#import "EXSortedCase.h"
 
 @interface EXSortedTests : XCTestCase
 @property (nonatomic, strong) EXSortedController*   sortedController;
@@ -46,12 +47,27 @@
     }];
 }
 
+- (void)testQuick {
+    int arr[] = {6,4,3,7,5,2,1};
+    quickSorted(arr, 7);
+    for (int i = 0; i < 7; ++i) {
+        printf("%i, ",arr[i]);
+    }
+}
+
+- (void)testMod {
+    int rem = 1590 % 399;
+    printf("%d\n",rem);
+}
+
+
 - (void)testMergeSorted {
     [self measureBlock:^{
         [self.sortedController mergeSorted];
         [self.sortedController show];
     }];
 }
+
 
 
 @end

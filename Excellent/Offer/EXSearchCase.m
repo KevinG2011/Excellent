@@ -29,17 +29,4 @@ int binarySearch(int arr[],int len, int num) {
     return index;
 }
 
-int* p_quickSort(int arr[], int start, int end) {
-    return arr;
-}
-
-int* quickSort(int arr[],int len) {
-    if (arr == NULL || len <= 0) {
-        return arr;
-    }
-    int index = arc4random_uniform(len);
-    
-    
-    return arr;
-}
 @end

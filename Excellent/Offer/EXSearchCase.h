@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 /**
- * 查找和排序
+ * 查找
  */
 
 @interface EXSearchCase : NSObject
@@ -16,8 +16,4 @@
  * 排序数组二分查找法
  */
 int binarySearch(int arr[],int len, int num);
-/**
- * 快速排序
- */
-int* quickSort(int arr[],int len);
 @end

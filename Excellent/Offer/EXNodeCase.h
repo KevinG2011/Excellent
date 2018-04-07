@@ -18,15 +18,15 @@
 +(NSUInteger)getNodeLength:(EXNode*)headNode;
 
 /**
+ *  链表是否为环形链表
+ */
++(BOOL)isCircleNode:(EXNode*)headNode;
+
+/**
  *  是环形链表返回相遇交点
  *  不是的话返回空
  */
 +(EXNode*)findCircleCrossNode:(EXNode*)headNode;
-
-/**
- *  链表是否为环形链表
- */
-+(BOOL)isCircleNode:(EXNode*)headNode;
 
 /**
  *  获取环形链表环入口点.
@@ -45,7 +45,7 @@
 /**
  *  从尾到头反相打印链表(不改变原有链表结构), 循环方式
  */
-+(void)printNodeReversingly:(EXNode*)headNode;
++(void)printNodeReversing:(EXNode*)headNode;
 
 /**
  *  从尾到头反相打印链表(不改变原有链表结构), 递归方式,

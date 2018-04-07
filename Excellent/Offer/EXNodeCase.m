@@ -72,7 +72,7 @@
     return nil;
 }
 
-+(void)printNodeReversingly:(EXNode*)headNode {
++(void)printNodeReversing:(EXNode*)headNode {
     EXNode *nextNode = headNode;
     if (nextNode) {
         unsigned int len = 128;

@@ -228,6 +228,8 @@ enum ComparisonResult _compareFunc(int num) {
     NSLog(@"%@",mergeNode);
 }
 
+
+
 - (void)PerformanceExample {
     [self measureBlock:^{
         
