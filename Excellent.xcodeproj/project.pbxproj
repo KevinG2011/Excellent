@@ -70,6 +70,7 @@
 		2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADFFC691CAAB663000C8C21 /* ViewController.m */; };
 		2ADFFC6D1CAAB663000C8C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC6B1CAAB663000C8C21 /* Main.storyboard */; };
 		2ADFFC721CAAB663000C8C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ADFFC701CAAB663000C8C21 /* LaunchScreen.storyboard */; };
+		2AE8181D207F3B13008ED748 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE8181C207F3B13008ED748 /* NSDate+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +206,8 @@
 		2ADFFC6C1CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2ADFFC711CAAB663000C8C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2ADFFC731CAAB663000C8C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE8181B207F3B13008ED748 /* NSDate+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		2AE8181C207F3B13008ED748 /* NSDate+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
 		B343AE0B1CB816F8000BF86F /* Excellent.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Excellent.pch; sourceTree = "<group>"; };
 		BD66AF2CEC700E1A08022F8A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -369,6 +372,8 @@
 				2A2DBAEF1E642713008C78AF /* UIView+THAdditions.m */,
 				2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */,
 				2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */,
+				2AE8181B207F3B13008ED748 /* NSDate+Additions.h */,
+				2AE8181C207F3B13008ED748 /* NSDate+Additions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -712,6 +717,7 @@
 				2A2DBABD1E641356008C78AF /* THLevelMeterColorThreshold.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
+				2AE8181D207F3B13008ED748 /* NSDate+Additions.m in Sources */,
 				0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */,
 				2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
