@@ -96,7 +96,7 @@
 - (void)testQuickSort {
     int arr[] = {9, 4, 3, 8, 2, 5, 7, 11, 15, 12, 1};
     int len = sizeof(arr) / sizeof(int);
-    quickSort(arr, len);
+    quickSorted(arr, len);
     for (int i = 0 ; i < len; ++i) {
         printf("%d",arr[i]);
     }

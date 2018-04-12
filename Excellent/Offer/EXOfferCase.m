@@ -601,6 +601,13 @@ void permutation(char str[], char begin[]) {
     }
 }
 
-
+/* 48.最长不含重复字符的子字符串 (动态规划) */
+uint32_t longestSubstringWithoutDuplication(char str[]) {
+    if (str == NULL) {
+        return 0;
+    }
+    
+    return -1;
+}
 
 @end

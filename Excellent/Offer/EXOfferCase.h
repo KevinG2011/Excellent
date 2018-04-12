@@ -228,7 +228,13 @@ void permutation(char str[], char begin[]);
  */
 
 /*
- *  42.连续子数组的最大和
+ *  42.1 连续子数组的最大和 (重要)
+ *  {1, -2, 3, 10, -4, 7, 2, -5}
+ */
+
+/*
+ *  42.2 连续子数组的最大和下标 (重要)
+ *  {1, -2, 3, 10, -4, 7, 2, -5}
  */
 
 /*
@@ -252,9 +258,10 @@ void permutation(char str[], char begin[]);
  */
 
 /*
- *  48.最长不含重复字符的子字符串
+ *  48.最长不含重复字符的子字符串 (动态规划)
+ *  字符串中只包含'a'-'z'的字符, 在字符串中arabcacfr,最长不含重复字串是'acfr',长度为4
  */
-
+uint32_t longestSubstringWithoutDuplication(char str[]);
 /*
  *  49.丑数
  */

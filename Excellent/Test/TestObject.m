@@ -10,6 +10,11 @@
 #import <objc/runtime.h>
 
 @implementation TestObject
+- (void)dealloc
+{
+    [self.op removeObserver:self forKeyPath:@"finished"];
+}
+
 - (instancetype)init
 {
     self = [super init];
