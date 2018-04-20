@@ -27,6 +27,14 @@
 #define kScreenWidth            kScreenBounds.size.width
 #define kScreenHeight           kScreenBounds.size.height
 
+#define C_ASSERT(test) \
+    switch(0) {\
+        case 0:\
+        case test:;\
+    }
+
+#define keypath2(OBJ, PATH) \
+(((void)(NO && ((void)OBJ.PATH, NO)), # PATH))
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)

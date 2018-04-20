@@ -58,11 +58,17 @@ void shellSorted(int arr[], int len) {
     
 }
 
+//{4, 9, 8, 3, 5, 1, 7}
 int __partition(int arr[], int low , int high) {
     int i = low, j = high;
-    int medVal = arr[low];
+    int medVal = arr[i];
     //TODO
-    
+    while (true) {
+        while (arr[j] > medVal) {
+            --j;
+        }
+        
+    }
     return j;
 }
 
