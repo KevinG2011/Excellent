@@ -8,6 +8,7 @@
 
 #import "EXUIKitViewController.h"
 #import "EXCornerRadiusView.h"
+#import "CheckmarkView.h"
 
 @interface EXUIKitViewController ()<UIPopoverPresentationControllerDelegate>
 @property (weak, nonatomic) IBOutlet EXCornerRadiusView *ringView;
@@ -77,15 +78,31 @@
     }];
 }
 
+- (void)testGesture {
+    CheckmarkView *cv = [[CheckmarkView alloc] initWithFrame: self.view.bounds];
+    cv.backgroundColor = [UIColor lightTextColor];
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(onLongPressed:)];
+    [self.view addSubview:cv];
+    [cv addGestureRecognizer:recognizer];
+    return;
+}
+
+- (void)onLongPressed:(UILongPressGestureRecognizer*)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        NSLog(@"long pressed");
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupData];
-    [self testRoundCorner];
-    [self testAsset];
-    [self testHashTable];
-    [self testInvocation];
-    [self testAvailability];
-    [self testVisualEffectAlpha];
+//    [self setupData];
+//    [self testRoundCorner];
+//    [self testAsset];
+//    [self testHashTable];
+//    [self testInvocation];
+//    [self testAvailability];
+//    [self testVisualEffectAlpha];
+    [self testGesture];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

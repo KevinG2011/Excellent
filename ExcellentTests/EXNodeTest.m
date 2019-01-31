@@ -1,5 +1,5 @@
 //
-//  CollectionTest.m
+//  EXNodeTest.m
 //  Excellent
 //
 //  Created by lijia on 11/04/2017.
@@ -10,13 +10,13 @@
 #import "EXNodeCase.h"
 #import "EXNode.h"
 
-@interface NodeTest : XCTestCase
+@interface EXNodeTest : XCTestCase
 @property (nonatomic, strong) EXNode*         node;
 @property (nonatomic, strong) EXNode*         circleNodeA;
 @property (nonatomic, strong) EXNode*         circleNodeB;
 @end
 
-@implementation NodeTest
+@implementation EXNodeTest
 - (void)tearDown {
     self.node = nil;
     self.circleNodeA = nil;
@@ -30,29 +30,29 @@
     self.node = [[EXNode alloc] init];
     EXNode* currentNode = self.node;
     currentNode.value = @"1";
-    
+
     for (int i = 0 ; i < 15; ++i) {
         EXNode* node = [[EXNode alloc] init];
         node.value = [NSString stringWithFormat:@"%d",i + 2];
-        
+
         currentNode.next = node;
         currentNode = currentNode.next;
     }
-    
+
     //环形链表A
     self.circleNodeA = [[EXNode alloc] init];
     currentNode = self.circleNodeA;
     currentNode.value = @"1";
-    
+
     EXNode *enterNode = currentNode;
     EXNode *commonNode = currentNode;
     for (int i = 2 ; i < 17; ++i) {
         EXNode* node = [[EXNode alloc] init];
         node.value = [NSString stringWithFormat:@"%d", i];
-        
+
         currentNode.next = node;
         currentNode = currentNode.next;
-        
+
         if (i == 4) {
             commonNode = currentNode;
         }
@@ -60,23 +60,23 @@
             enterNode = currentNode;
         }
     }
-    
+
     currentNode.next = enterNode;
     NSLog(@"A: %@", self.circleNodeA);
-    
+
     //环形链表B
     self.circleNodeB = [[EXNode alloc] init];
     currentNode = self.circleNodeB;
     currentNode.value = @"-5";
-    
+
     for (int i = -4 ; i < 0; ++i) {
         EXNode* node = [[EXNode alloc] init];
         node.value = [NSString stringWithFormat:@"%d",i];
-        
+
         currentNode.next = node;
         currentNode = currentNode.next;
     }
-    
+
     currentNode.next = commonNode;
     NSLog(@"B: %@", self.circleNodeB);
 }
@@ -161,7 +161,7 @@
 }
 
 - (EXNode*)findFirstCommonNodeNoCircleWithNode:(EXNode*)node1
-                                   withNode:(EXNode*)node2 {
+                                      withNode:(EXNode*)node2 {
     if ([EXNodeCase isCircleNode:node1] || [EXNodeCase isCircleNode:node2]) {
         //任意一个链表是环形链表则忽略
         return nil;
@@ -192,6 +192,7 @@
     EXNode *commonNode = longNode;
     return commonNode;
 }
+
 
 
 

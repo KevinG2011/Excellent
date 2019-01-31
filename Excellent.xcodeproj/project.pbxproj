@@ -54,13 +54,16 @@
 		2A8FBDE02050064800AD6CA0 /* EXSortedCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FBDDF2050064800AD6CA0 /* EXSortedCase.m */; };
 		2A92BE3C2016D13400428DE5 /* EXOfferCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A92BE3A2015FBAA00428DE5 /* EXOfferCase.m */; };
 		2A92BE3E2016D1D300428DE5 /* EXOfferCaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A92BE3D2016D1D300428DE5 /* EXOfferCaseTests.m */; };
+		2A9FE20321D0FE08006D5C2A /* CheckmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9FE20221D0FE08006D5C2A /* CheckmarkView.m */; };
+		2AA5082D2202E75900CF4BD6 /* TTNode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5082C2202E75900CF4BD6 /* TTNode.c */; };
+		2AA508302203062600CF4BD6 /* TTNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5082F2203062600CF4BD6 /* TTNodeTest.m */; };
 		2AA64B1820119CF100D72084 /* EXNodeCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AA64B1720119CF100D72084 /* EXNodeCase.m */; };
 		2AAAA11B1EC01BED001C6A84 /* EXSearchUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11A1EC01BED001C6A84 /* EXSearchUtil.m */; };
 		2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */; };
 		2AAAA1261EC04610001C6A84 /* EXSortedBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AAAA1251EC04610001C6A84 /* EXSortedBaseController.m */; };
 		2AAB463C1E28D0580072D903 /* Ray.png in Resources */ = {isa = PBXBuildFile; fileRef = 2AAB463B1E28D0580072D903 /* Ray.png */; };
 		2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */; };
-		2ACF2CDB1E9CBBE300636A14 /* NodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */; };
+		2ACF2CDB1E9CBBE300636A14 /* EXNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDA1E9CBBE300636A14 /* EXNodeTest.m */; };
 		2ACF2CE31E9CBC3000636A14 /* EXNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CDE1E9CBC3000636A14 /* EXNode.m */; };
 		2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE01E9CBC3000636A14 /* EXQueue.m */; };
 		2ACF2CE51E9CBC3000636A14 /* EXStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACF2CE21E9CBC3000636A14 /* EXStack.m */; };
@@ -175,6 +178,12 @@
 		2A92BE392015FBAA00428DE5 /* EXOfferCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXOfferCase.h; sourceTree = "<group>"; };
 		2A92BE3A2015FBAA00428DE5 /* EXOfferCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXOfferCase.m; sourceTree = "<group>"; };
 		2A92BE3D2016D1D300428DE5 /* EXOfferCaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXOfferCaseTests.m; sourceTree = "<group>"; };
+		2A9FE20121D0FE08006D5C2A /* CheckmarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckmarkView.h; sourceTree = "<group>"; };
+		2A9FE20221D0FE08006D5C2A /* CheckmarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckmarkView.m; sourceTree = "<group>"; };
+		2AA5082B2202E75900CF4BD6 /* TTNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTNode.h; sourceTree = "<group>"; };
+		2AA5082C2202E75900CF4BD6 /* TTNode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TTNode.c; sourceTree = "<group>"; };
+		2AA5082E220301A600CF4BD6 /* TTConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTConstants.h; sourceTree = "<group>"; };
+		2AA5082F2203062600CF4BD6 /* TTNodeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTNodeTest.m; sourceTree = "<group>"; };
 		2AA64B1620119CF100D72084 /* EXNodeCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXNodeCase.h; sourceTree = "<group>"; };
 		2AA64B1720119CF100D72084 /* EXNodeCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXNodeCase.m; sourceTree = "<group>"; };
 		2AAAA1191EC01BED001C6A84 /* EXSearchUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchUtil.h; sourceTree = "<group>"; };
@@ -187,7 +196,7 @@
 		2AAB46DC1E2E33C20072D903 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		2AC982CD1E979C8400AF2342 /* NSArray+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Additions.h"; sourceTree = "<group>"; };
 		2AC982CE1E979C8400AF2342 /* NSArray+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Additions.m"; sourceTree = "<group>"; };
-		2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeTest.m; sourceTree = "<group>"; };
+		2ACF2CDA1E9CBBE300636A14 /* EXNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXNodeTest.m; sourceTree = "<group>"; };
 		2ACF2CDD1E9CBC3000636A14 /* EXNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXNode.h; sourceTree = "<group>"; };
 		2ACF2CDE1E9CBC3000636A14 /* EXNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXNode.m; sourceTree = "<group>"; };
 		2ACF2CDF1E9CBC3000636A14 /* EXQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXQueue.h; sourceTree = "<group>"; };
@@ -236,7 +245,8 @@
 				2A92BE3D2016D1D300428DE5 /* EXOfferCaseTests.m */,
 				0B26749D1E968DFF00698715 /* EXSearchTests.m */,
 				2AAAA11C1EC023C8001C6A84 /* EXSortedTests.m */,
-				2ACF2CDA1E9CBBE300636A14 /* NodeTest.m */,
+				2ACF2CDA1E9CBBE300636A14 /* EXNodeTest.m */,
+				2AA5082F2203062600CF4BD6 /* TTNodeTest.m */,
 				0B26749F1E968DFF00698715 /* Info.plist */,
 			);
 			path = ExcellentTests;
@@ -256,6 +266,8 @@
 			children = (
 				0BA68DA31EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.h */,
 				0BA68DA41EDDCA620024EBDB /* EXCheckmarkGestureRecognizer.m */,
+				2A9FE20121D0FE08006D5C2A /* CheckmarkView.h */,
+				2A9FE20221D0FE08006D5C2A /* CheckmarkView.m */,
 			);
 			path = Gesture;
 			sourceTree = "<group>";
@@ -475,6 +487,16 @@
 			path = Offer;
 			sourceTree = "<group>";
 		};
+		2AA508312203075200CF4BD6 /* TTDS */ = {
+			isa = PBXGroup;
+			children = (
+				2AA5082E220301A600CF4BD6 /* TTConstants.h */,
+				2AA5082B2202E75900CF4BD6 /* TTNode.h */,
+				2AA5082C2202E75900CF4BD6 /* TTNode.c */,
+			);
+			path = TTDS;
+			sourceTree = "<group>";
+		};
 		2AA64B1420119C8900D72084 /* Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +561,7 @@
 				2A53074E1CAABABA00B63205 /* Macro */,
 				2A2DBAFA1E642873008C78AF /* Utils */,
 				2ACF2CDC1E9CBC3000636A14 /* ADT */,
+				2AA508312203075200CF4BD6 /* TTDS */,
 				2A2DBAE71E642713008C78AF /* Categories */,
 				2A2DBAE31E6426C8008C78AF /* Notification */,
 				2A3E314F1E8CB2CE006BE219 /* UIKit */,
@@ -626,7 +649,7 @@
 					};
 					2ADFFC5E1CAAB662000C8C21 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8DHLQ2UE6S;
+						DevelopmentTeam = Y68G5C7724;
 					};
 				};
 			};
@@ -703,7 +726,8 @@
 				2A92BE3E2016D1D300428DE5 /* EXOfferCaseTests.m in Sources */,
 				0B26749E1E968DFF00698715 /* EXSearchTests.m in Sources */,
 				2AAAA11D1EC023C8001C6A84 /* EXSortedTests.m in Sources */,
-				2ACF2CDB1E9CBBE300636A14 /* NodeTest.m in Sources */,
+				2ACF2CDB1E9CBBE300636A14 /* EXNodeTest.m in Sources */,
+				2AA508302203062600CF4BD6 /* TTNodeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +739,7 @@
 				2ACF2CE31E9CBC3000636A14 /* EXNode.m in Sources */,
 				2A2DBAF01E642713008C78AF /* AVAsset+THAdditions.m in Sources */,
 				2A2DBABD1E641356008C78AF /* THLevelMeterColorThreshold.m in Sources */,
+				2A9FE20321D0FE08006D5C2A /* CheckmarkView.m in Sources */,
 				2ADFFC6A1CAAB663000C8C21 /* ViewController.m in Sources */,
 				2AC982CF1E979C8400AF2342 /* NSArray+Additions.m in Sources */,
 				2AE8181D207F3B13008ED748 /* NSDate+Additions.m in Sources */,
@@ -758,6 +783,7 @@
 				2A3E31591E8CB497006BE219 /* EXUIKitViewController.m in Sources */,
 				2A2DBAC21E641356008C78AF /* THMeterTable.m in Sources */,
 				2A2DBB031E642B22008C78AF /* THPlayerController.m in Sources */,
+				2AA5082D2202E75900CF4BD6 /* TTNode.c in Sources */,
 				2A2DBAF11E642713008C78AF /* NSTimer+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,7 +947,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
+				DEVELOPMENT_TEAM = Y68G5C7724;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -950,7 +976,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 8DHLQ2UE6S;
+				DEVELOPMENT_TEAM = Y68G5C7724;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
