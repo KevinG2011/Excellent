@@ -20,11 +20,15 @@ typedef struct TTNode {
 } TTNode;
 
 typedef struct EXNode* linkList;
-
-/* 单链表反转 */
-TTNode* reverseLinkList(TTNode *linkList);
-/* 单链表的删除 */
-STATUS linkListDeleteElem(TTNode *linkList, EXCElemType elem);
-/* 单链表的插入 */
-STATUS linkListInsertElem(TTNode *linkList, int i, EXCElemType elem);
+/* 创建 */
+TTNode* createNode(EXCElemType elem);
+/* 销毁整个链表 */
+void clearLinkedList(TTNode* node);
+/* 反转 */
+TTNode* reverseLinkedList(TTNode *linkList);
+/* 在位置i上插入元素 */
+STATUS linkedListInsertElem(TTNode *linkList, int i, EXCElemType elem);
+/* 删除某个元素 */
+STATUS linkedListDeleteElem(TTNode *linkList, EXCElemType elem);
+/* 删除第i个位置上的元素 */
 #endif /* EXCNode_h */

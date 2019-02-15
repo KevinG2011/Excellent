@@ -55,7 +55,7 @@ void printLinkList(TTNode* linkList) {
 
 - (void)testNodeReverse {
     printLinkList(_linkList);
-    TTNode *rHeadNode = reverseLinkList(_linkList);
+    TTNode *rHeadNode = reverseLinkedList(_linkList);
     printLinkList(rHeadNode);
 }
 

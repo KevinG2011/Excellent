@@ -17,7 +17,7 @@
     for (NSUInteger i = 0; i < self.array.count; ++i) {
         NSUInteger min = i;
         for (NSUInteger j = i + 1; j < self.array.count; ++j) {
-            if ([self lessThan:self.array[j] anthor:self.array[min]]) {
+            if ([self lessThan:self.array[j] anothor:self.array[min]]) {
                 min = j;
             }
         }
@@ -27,7 +27,7 @@
 
 - (void)p__insertionLow:(NSUInteger)lo high:(NSUInteger)hi {
     for (NSUInteger i = lo; i <= hi; ++i) {
-        for (NSUInteger j = i; j > 0 && [self lessThan:self.array[j] anthor:self.array[j - 1]]; --j) {
+        for (NSUInteger j = i; j > 0 && [self lessThan:self.array[j] anothor:self.array[j - 1]]; --j) {
             [self exchObjectAtIndex:j withObjectAtIndex:j - 1];
         }
     }
@@ -47,7 +47,7 @@
         for (NSUInteger i = h; i < self.array.count; ++i) {
             for (NSInteger j = i; j > h; j -= h) {
                 NSInteger idx = j - h;
-                if ([self lessThan:self.array[j] anthor:self.array[idx]]) {
+                if ([self lessThan:self.array[j] anothor:self.array[idx]]) {
                     [self exchObjectAtIndex:j withObjectAtIndex:idx];
                 }
                 j -= h;
@@ -68,7 +68,7 @@
             self.array[i] = arr[n++];
         } else if (n > hi) {
             self.array[i] = arr[m++];
-        } else if ([self lessThan:arr[m] anthor:arr[n]]) {
+        } else if ([self lessThan:arr[m] anothor:arr[n]]) {
             self.array[i] = arr[m++];
         } else {
             self.array[i] = arr[n++];
@@ -98,12 +98,12 @@
     NSUInteger i = lo,j = hi;
     NSNumber* v = self.array[lo];
     while (true) {
-        while ([self lessThan:self.array[++i] anthor:v]) {
+        while ([self lessThan:self.array[++i] anothor:v]) {
             if (i == j) {
                 break;
             }
         }
-        while ([self lessThan:v anthor:self.array[j--]]) {
+        while ([self lessThan:v anothor:self.array[j--]]) {
             if (j == i) {
                 break;
             }

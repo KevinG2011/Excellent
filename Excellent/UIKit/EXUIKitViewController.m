@@ -34,7 +34,7 @@
 }
 
 - (void)testAsset {
-    NSLog(@"min version :%zd",__IPHONE_OS_VERSION_MIN_REQUIRED);
+    NSLog(@"min version :%d",__IPHONE_OS_VERSION_MIN_REQUIRED);
     if ([NSDataAsset self]) {
         NSDataAsset* asset = [[NSDataAsset alloc] initWithName:@"superstar"];
         NSLog(@"data :%@",asset.data);

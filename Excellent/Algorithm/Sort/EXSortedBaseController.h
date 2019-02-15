@@ -11,7 +11,7 @@
 @interface EXSortedBaseController : NSObject
 @property (nonatomic, strong) NSMutableArray<NSNumber*>* array;
 -(void)rangeCheck:(NSUInteger)index;
--(BOOL)lessThan:(NSNumber*)n1 anthor:(NSNumber*)n2;
+-(BOOL)lessThan:(NSNumber*)n1 anothor:(NSNumber*)n2;
 -(void)exchObjectAtIndex:(NSUInteger)idx1
        withObjectAtIndex:(NSUInteger)idx2;
 -(void)show;
