@@ -14,6 +14,7 @@
 		0BC32D851E93F2F200963484 /* EXAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BC32D841E93F2F200963484 /* EXAlgorithmViewController.m */; };
 		0BDEBF8A1EBF73D4007FB3EF /* EXSortedController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */; };
 		2A13EABA206CBC64008A54A8 /* TestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A13EAB9206CBC64008A54A8 /* TestObject.m */; };
+		2A153F3A221AD054004C1ED3 /* TTSqQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A153F39221AD054004C1ED3 /* TTSqQueue.c */; };
 		2A2DBAA71E641334008C78AF /* AudioRecorderMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */; };
 		2A2DBAA81E641334008C78AF /* AVToy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA971E641334008C78AF /* AVToy.m */; };
 		2A2DBAA91E641334008C78AF /* EXAudioRecorderMemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DBA991E641334008C78AF /* EXAudioRecorderMemoViewController.m */; };
@@ -104,6 +105,8 @@
 		0BDEBF891EBF73D4007FB3EF /* EXSortedController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EXSortedController.mm; sourceTree = "<group>"; };
 		2A13EAB8206CBC64008A54A8 /* TestObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObject.h; sourceTree = "<group>"; };
 		2A13EAB9206CBC64008A54A8 /* TestObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObject.m; sourceTree = "<group>"; };
+		2A153F38221AD054004C1ED3 /* TTSqQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTSqQueue.h; sourceTree = "<group>"; };
+		2A153F39221AD054004C1ED3 /* TTSqQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TTSqQueue.c; sourceTree = "<group>"; };
 		2A2DBA951E641334008C78AF /* AudioRecorderMemo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioRecorderMemo.storyboard; sourceTree = "<group>"; };
 		2A2DBA961E641334008C78AF /* AVToy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVToy.h; sourceTree = "<group>"; };
 		2A2DBA971E641334008C78AF /* AVToy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVToy.m; sourceTree = "<group>"; };
@@ -493,6 +496,8 @@
 				2AA5082E220301A600CF4BD6 /* TTConstants.h */,
 				2AA5082B2202E75900CF4BD6 /* TTNode.h */,
 				2AA5082C2202E75900CF4BD6 /* TTNode.c */,
+				2A153F38221AD054004C1ED3 /* TTSqQueue.h */,
+				2A153F39221AD054004C1ED3 /* TTSqQueue.c */,
 			);
 			path = TTDS;
 			sourceTree = "<group>";
@@ -745,6 +750,7 @@
 				2AE8181D207F3B13008ED748 /* NSDate+Additions.m in Sources */,
 				0B99A9A21EE312BB0018564D /* EXRuntime.m in Sources */,
 				2ACF2CE41E9CBC3000636A14 /* EXQueue.m in Sources */,
+				2A153F3A221AD054004C1ED3 /* TTSqQueue.c in Sources */,
 				2A2DBAE11E642659008C78AF /* THOverlayView.m in Sources */,
 				2A2DBAF21E642713008C78AF /* UIAlertView+THAdditions.m in Sources */,
 				2A2DBAC01E641356008C78AF /* THMemo.m in Sources */,

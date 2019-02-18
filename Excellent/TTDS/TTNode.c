@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "TTNode.h"
 
-TTNode* createNode(EXCElemType elem) {
+TTNode* createNode(TTElemType elem) {
     TTNode *node = (TTNode*)malloc(sizeof(TTNode));
     node->data = elem;
     return node;
@@ -39,22 +39,22 @@ TTNode* reverseLinkedList(TTNode *linkList) {
 }
 
 
-STATUS linkedListInsertElem(TTNode *linkList, int i, EXCElemType elem) {
+STATUS linkedListInsertElem(TTNode *linkList, int i, TTElemType elem) {
     //TODO
-    return EX_OK;
+    return TT_OK;
 }
 
-STATUS linkedListDeleteElem(TTNode *linkList, EXCElemType elem) {
+STATUS linkedListDeleteElem(TTNode *linkList, TTElemType elem) {
     TTNode *prevNode = NULL;
     TTNode *pNode = linkList;
     while (pNode) {
         if (pNode->data == elem) {
             prevNode->next = pNode->next;
             free(pNode);
-            return EX_OK;
+            return TT_OK;
         }
         prevNode = pNode;
         pNode = pNode->next;
     }
-    return EX_ERROR;
+    return TT_ERROR;
 }

@@ -9,9 +9,12 @@
 #ifndef TTConstants_h
 #define TTConstants_h
 
-#define EX_OK 0
-#define EX_ERROR -1
+#define TT_OK 0
+#define TT_ERROR -1
+#define MAXSIZE 5
 
+typedef int TTElemType;
 typedef int STATUS;
+
 
 #endif /* EXCConstants_h */
