@@ -13,7 +13,7 @@
 #include "TTConstants.h"
 
 
-typedef struct TTNode {
+typedef struct {
     TTElemType data;
     struct TTNode *next;
 } TTNode;

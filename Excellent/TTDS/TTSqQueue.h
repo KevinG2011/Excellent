@@ -12,8 +12,8 @@
 #include <stdbool.h>
 #include "TTConstants.h"
 
-/* 顺序队列 */
-typedef struct SqQueue {
+/* 顺序队列, 数组实现 */
+typedef struct {
     TTElemType data[MAXSIZE];
     int front;
     int rear;
