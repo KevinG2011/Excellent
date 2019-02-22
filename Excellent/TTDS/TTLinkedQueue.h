@@ -12,15 +12,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "TTConstants.h"
+#include "TTNode.h"
 
 /* 链式队列， 链表实现 */
 typedef struct {
-    TTElemType data;
-    struct QNode *next;
-} QNode;
-
-typedef struct {
-    QNode *front, rear;
+    TTNode *front, rear;
 } LinkedQueue;
 
 void initQueue(LinkedQueue *queue);
