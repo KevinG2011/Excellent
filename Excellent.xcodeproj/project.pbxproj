@@ -51,6 +51,7 @@
 		2A4497A51F0DD328000F94BA /* EXCornerRadiusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4497A41F0DD328000F94BA /* EXCornerRadiusView.m */; };
 		2A5DBB57201F30730008EEDA /* EXStackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DBB56201F30730008EEDA /* EXStackQueue.m */; };
 		2A63FAD31E496D3C00DA75D3 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A63FAD21E496D3C00DA75D3 /* music.mp3 */; };
+		2A72AE1A221FF47400E5212D /* TTBiTree.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A72AE19221FF47400E5212D /* TTBiTree.c */; };
 		2A7EE2A11CD887920028D67C /* ExcellentUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */; };
 		2A8829B42021D66100D72FB1 /* EXSearchCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8829B32021D66100D72FB1 /* EXSearchCase.m */; };
 		2A8FBDE02050064800AD6CA0 /* EXSortedCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A8FBDDF2050064800AD6CA0 /* EXSortedCase.m */; };
@@ -175,6 +176,8 @@
 		2A5DBB55201F30730008EEDA /* EXStackQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXStackQueue.h; sourceTree = "<group>"; };
 		2A5DBB56201F30730008EEDA /* EXStackQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EXStackQueue.m; sourceTree = "<group>"; };
 		2A63FAD21E496D3C00DA75D3 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		2A72AE18221FF47400E5212D /* TTBiTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTBiTree.h; sourceTree = "<group>"; };
+		2A72AE19221FF47400E5212D /* TTBiTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TTBiTree.c; sourceTree = "<group>"; };
 		2A7EE2881CD87D800028D67C /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Debug-iphoneos/Pods.framework"; sourceTree = SOURCE_ROOT; };
 		2A7EE29F1CD8876D0028D67C /* ExcellentUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ExcellentUI.bundle; sourceTree = "<group>"; };
 		2A8829B22021D66100D72FB1 /* EXSearchCase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EXSearchCase.h; sourceTree = "<group>"; };
@@ -503,6 +506,8 @@
 				2A153F39221AD054004C1ED3 /* TTSqQueue.c */,
 				2A153F3B221BE72F004C1ED3 /* TTLinkedQueue.h */,
 				2A153F3C221BE72F004C1ED3 /* TTLinkedQueue.c */,
+				2A72AE18221FF47400E5212D /* TTBiTree.h */,
+				2A72AE19221FF47400E5212D /* TTBiTree.c */,
 			);
 			path = TTDS;
 			sourceTree = "<group>";
@@ -745,6 +750,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A72AE1A221FF47400E5212D /* TTBiTree.c in Sources */,
 				2A2DBAA91E641334008C78AF /* EXAudioRecorderMemoViewController.m in Sources */,
 				2ACF2CE31E9CBC3000636A14 /* EXNode.m in Sources */,
 				2A2DBAF01E642713008C78AF /* AVAsset+THAdditions.m in Sources */,
